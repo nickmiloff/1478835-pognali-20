@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Никита Милованов](https://up.htmlacademy.ru/adaptive/20/user/1478835).
-* Наставник: `Неизвестно`.
+* Наставник: [Станислав Кузнецов](https://htmlacademy.ru/profile/id237925).
 
 ---
 
