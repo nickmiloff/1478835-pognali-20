@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo">
+    <header class="header">
+      <a href="index.html" class="header__logo">
         <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
       </a>
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">
+            <a href="#" class="main-nav__link">
               О сервисе
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">
+            <a href="form.html" class="main-nav__link">
               Направления
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">
+            <a href="#" class="main-nav__link">
               Попутчики
             </a>
           </li>
@@ -51,8 +51,286 @@
       </nav>
     </header>
 
-    <main class="page-main">
-      <h1 class="visually-hidden">Cтраница выбора попутчика сервиса Погнали</h1>
+    <main class="main">
+      <h1 class="main__title">Попутчики</h1>
+
+      <section class="countries-filter">
+        <h2 class="countries-filter__title">Фильтрация по странам:</h2>
+        <button type="button" class="countries-filter__toggle" aria-label="Открыть фильтр по странам"></button>
+        <div class="countries-filter__wrapper countries-filter__wrapper--open">
+          <ul class="countries-filter__list">
+            <li class="countries-filter__item">
+              <a href="" class="countries-filter__link">
+                Европа
+              </a>
+            </li>
+            <li class="countries-filter__item">
+              <a href="" class="countries-filter__link">
+                Азия
+              </a>
+            </li>
+            <li class="countries-filter__item">
+              <a href="" class="countries-filter__link">
+                Америка
+              </a>
+            </li>
+            <li class="countries-filter__item">
+              <a href="" class="countries-filter__link">
+                Остова
+              </a>
+            </li>
+          </ul>
+          <ul class="countries-filter__list countries-alphabet">
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter countries-alphabet__letter--active">
+                А
+              </span>
+              <ul class="countries-alphabet__list cities">
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Австралия
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Австрия
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Азербайджан
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Албания
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Алжир
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Ангола
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Андорра
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Антигуа и Барбуда
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Аргентина
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Армения
+                  </a>
+                </li>
+                <li class="cities__item">
+                  <a href="" class="cities__link">
+                    Афганистан
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Б
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                В
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Г
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Д
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Е
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                З
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                И
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                К
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Л
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                М
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Н
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                О
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                П
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Р
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                С
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Т
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                У
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Ф
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Х
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Ц
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Ш
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Э
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Ю
+              </span>
+            </li>
+            <li class="countries-alphabet__item">
+              <span class="countries-alphabet__letter">
+                Я
+              </span>
+            </li>
+          </ul>
+          <button type="button" class="countries-filter__button" aria-label="Свернуть">Свернуть</button>
+        </div>
+      </section>
+
+      <section class="filter">
+        <h2 class="filter__title">Подберите идеального попутчика</h2>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="filter__item">
+            <h3 class="filter__subtitle">Хобби</h3>
+            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+          </fieldset>
+          <fieldset class="filter__item">
+            <h3 class="filter__subtitle">Музыка</h3>
+            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+            <div class="filter__category filter__category--open">
+              <input class="filter__checkbox" type="checkbox" name="music" id="music-1" value="Тяжелый рок" checked>
+              <label class="filter__label" for="music-1">Тяжелый рок</label>
+              <input class="filter__checkbox" type="checkbox" name="music" id="music-2" value="Русский рэп" checked>
+              <label class="filter__label" for="music-2">Русский рэп</label>
+              <input class="filter__checkbox" type="checkbox" name="music" id="music-3" value="Евроденс">
+              <label class="filter__label" for="music-3">Евроденс</label>
+            </div>
+          </fieldset>
+          <fieldset class="filter__item">
+            <h3 class="filter__subtitle">Еда</h3>
+            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+          </fieldset>
+          <fieldset class="filter__item">
+            <h3 class="filter__subtitle">Транспорт</h3>
+            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+            <div class="filter__category filter__category--open">
+              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-1" value="Самолет" checked>
+              <label class="filter__label filter__label--bubble" for="transport-1">Самолет</label>
+              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-2" value="Поезд" checked>
+              <label class="filter__label filter__label--bubble" for="transport-2">Поезд</label>
+              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-3" value="Велосипед">
+              <label class="filter__label filter__label--bubble" for="transport-3">Велосипед</label>
+              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-4" value="Пешком">
+              <label class="filter__label filter__label--bubble" for="transport-4">Пешком</label>
+            </div>
+          </fieldset>
+          <fieldset class="filter__item">
+            <h3 class="filter__subtitle">Еда</h3>
+            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+          </fieldset>
+          <fieldset class="filter__item">
+            <h3 class="filter__subtitle">Левел</h3>
+            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+            <div class="filter__category filter__category--open">
+              <div class="filter__value-level value-level">
+                <label class="value-level__label value-level__label--first" aria-label="Уровень от">
+                    <input class="value-level__value value-level__value--first" type="number" name="value-level" min="0" max="100" value="30">
+                </label>
+                <label class="value-level__label value-level__label--second" aria-label="Уровень до">
+                    <input class="value-level__value value-level__value--second" type="number" name="value-level" min="0" max="100" value="100">
+                </label>
+                <div class="value-level__line">
+                  <button class="value-level__pin value-level__pin--first" type="button" aria-label="Левая кнопка контроля"></button>
+                  <button class="value-level__pin value-level__pin--second" type="button" aria-label="Правая кнопка контроля"></button>
+                  <div class="value-level__depth"></div>
+                </div>
+            </div>
+            </div>
+          </fieldset>
+          <button class="filter__submit button" type="submit">Показать</button>
+        </form>
+      </section>
 
       <section class="users">
         <ul class="users__list">
@@ -62,7 +340,7 @@
             <button class="user__like user__like--active" aria-label="Добавить в избранное"></button>
             <p class="user__info">1,5 М</p>
             <p class="user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
-            <h4 class="user__subtitle">хочет посетить:</h4>
+            <h4 class="user__subtitle">Хочет посетить:</h4>
             <ul class="user__list flags">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">Шри-Ланка</span>
@@ -74,7 +352,7 @@
                 <span class="flags__name">Сейшелы</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">транспорт:</h4>
+            <h4 class="user__subtitle">Транспорт:</h4>
             <ul class="user__list transport">
               <li class="transport__item transport__item--active transport__item--plane">
                 <span class="transport__name">Самолет</span>
@@ -89,7 +367,7 @@
                 <span class="transport__name">Пешком</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">левел:</h4>
+            <h4 class="user__subtitle">Левел:</h4>
             <div class="user__level level">
               <span class="level__value">99</span>
             </div>
@@ -101,7 +379,7 @@
             <button class="user__like" aria-label="Добавить в избранное"></button>
             <p class="user__info">1500</p>
             <p class="user__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <h4 class="user__subtitle">хочет посетить:</h4>
+            <h4 class="user__subtitle">Чочет посетить:</h4>
             <ul class="user__list flags">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">Бельгия</span>
@@ -110,7 +388,7 @@
                 <span class="flags__name">Чехия</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">транспорт:</h4>
+            <h4 class="user__subtitle">Транспорт:</h4>
             <ul class="user__list transport">
               <li class="transport__item transport__item--active transport__item--plane">
                 <span class="transport__name">Самолет</span>
@@ -125,7 +403,7 @@
                 <span class="transport__name">Пешком</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">левел:</h4>
+            <h4 class="user__subtitle">Левел:</h4>
             <div class="user__level level">
               <span class="level__value">80</span>
             </div>
@@ -137,7 +415,7 @@
             <button class="user__like" aria-label="Добавить в избранное"></button>
             <p class="user__info">170</p>
             <p class="user__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
-            <h4 class="user__subtitle">хочет посетить:</h4>
+            <h4 class="user__subtitle">Хочет посетить:</h4>
             <ul class="user__list flags">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">США</span>
@@ -149,7 +427,7 @@
                 <span class="flags__name">Доминикана</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">транспорт:</h4>
+            <h4 class="user__subtitle">Транспорт:</h4>
             <ul class="user__list transport">
               <li class="transport__item transport__item--active transport__item--plane">
                 <span class="transport__name">Самолет</span>
@@ -164,7 +442,7 @@
                 <span class="transport__name">Пешком</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">левел:</h4>
+            <h4 class="user__subtitle">Левел:</h4>
             <div class="user__level level">
               <span class="level__value">25</span>
             </div>
@@ -176,7 +454,7 @@
             <button class="user__like" aria-label="Добавить в избранное"></button>
             <p class="user__info">23</p>
             <p class="user__tags">#образование #карьера #учеба #линкедин</p>
-            <h4 class="user__subtitle">хочет посетить:</h4>
+            <h4 class="user__subtitle">Хочет посетить:</h4>
             <ul class="user__list flags">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">Великобритания</span>
@@ -185,7 +463,7 @@
                 <span class="flags__name">Германия</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">транспорт:</h4>
+            <h4 class="user__subtitle">Транспорт:</h4>
             <ul class="user__list transport">
               <li class="transport__item transport__item--active transport__item--plane">
                 <span class="transport__name">Самолет</span>
@@ -200,24 +478,24 @@
                 <span class="transport__name">Пешком</span>
               </li>
             </ul>
-            <h4 class="user__subtitle">левел:</h4>
+            <h4 class="user__subtitle">Левел:</h4>
             <div class="user__level level">
               <span class="level__value">50</span>
             </div>
             <a href="#" class="user__link">Позвать!</a>
           </li>
         </ul>
-        <button type="button" class="users__more" aria-label="Показать больше попутчиков">показать еще</button>
-        <button type="button" class="users__prev" aria-label="Следующие попутчики"></button>
-        <button type="button" class="users__next" aria-label="Предыдущие попутчики"></button>
+        <a class="users__more" aria-label="Показать больше попутчиков">Показать еще</a>
+        <a class="users__prev" aria-label="Следующие попутчики"></a>
+        <a class="users__next" aria-label="Предыдущие попутчики"></a>
       </section>
     </main>
 
-    <footer class="page-footer">
-      <a class="page-footer__logo">
+    <footer class="footer">
+      <a class="footer__logo">
         <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
       </a>
-      <ul class="page-footer__socials socials">
+      <ul class="footer__socials socials">
         <li class="socials__item">
           <a href="" class="socials__link socials__link--fb">
             Facebook
@@ -234,7 +512,7 @@
           </a>
         </li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="33"></a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="33"></a>
     </footer>
 
   </body>
