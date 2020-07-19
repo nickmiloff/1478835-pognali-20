@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="ru" class="page">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
   </head>
   <body class="page__body">
-    <header class="page-header">
-      <a class="page-header__logo">
+    <header class="header">
+      <a class="header__logo">
         <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
       </a>
       <nav class="main-nav">
         <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">
+            <a href="#" class="main-nav__link">
               О сервисе
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">
+            <a href="form.html" class="main-nav__link">
               Направления
             </a>
           </li>
           <li class="main-nav__item">
-            <a href="" class="main-nav__link">
+            <a href="catalog.html" class="main-nav__link">
               Попутчики
             </a>
           </li>
@@ -51,14 +51,14 @@
       </nav>
     </header>
 
-    <main class="page-main">
+    <main class="main">
       <h1 class="visually-hidden">Главная страница сервиса Погнали</h1>
       <section class="promo">
         <h2 class="promo__slogan">В путешествие с крутыми попутчиками!</h2>
         <a href="tel:+78005558628" class="promo__link" aria-label="Позвоните нам">8 800 555-86-28</a>
         <a href="mailto:mail@htmlacademy.ru" class="promo__link" aria-label="Напишите нам">mail@htmlacademy.ru</a>
         <a href="#" class="promo__link">Авторизация</a>
-        <blockquote class="promo__review">
+        <blockquote class="promo__review review">
           <p class="review__text">
             «Лучшее приложение, что я видел в жизни!»
           </p>
@@ -206,13 +206,36 @@
         </dl>
         <a href="#" class="profile__link">Показать тарифы для бизнеса</a>
       </section>
+
+      <section class="feedback">
+        <h2 class="feedback__title">Заинтересовались?</h2>
+        <p class="feedback__desc">
+          Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#" class="feedback__link">авторизуйтесь</a>.
+        </p>
+        <form action="https://echo.htmlacademy.ru" method="POST">
+          <input type="email" name="feedback-email" placeholder="E-mail">
+          <button type="submit" class="feedback__submit"></button>
+        </form>
+        <p class="feedback__desc">
+          Остались вопросы? Мы с радостью на них ответим!
+        </p>
+        <a href="tel:+78005558628" class="feedback__tel">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru" class="feedback__email">mail@htmlacademy.ru</a>
+      </section>
+
+      <section class="map">
+        <h2 class="visually-hidden">Как добраться до нашего офиса</h2>
+        <p class="map__adress">ул. Большая Конюшенная, 19/8</p>
+        <a href="https://www.google.com/maps/dir/home/Bolshaya+Konyushennaya+St,+19%2F8,+Sankt-Peterburg,+191186/" class="map__link">Проложить маршрут</a>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716222368!3d59.93871916905405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1595151358583!5m2!1sen!2sru" width="320" height="424" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </section>
     </main>
 
-    <footer class="page-footer">
-      <a class="page-footer__logo">
+    <footer class="footer">
+      <a class="footer__logo">
         <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
       </a>
-      <ul class="page-footer__socials socials">
+      <ul class="footer__socials socials">
         <li class="socials__item">
           <a href="" class="socials__link socials__link--fb">
             Facebook
@@ -229,8 +252,23 @@
           </a>
         </li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="33"></a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="33"></a>
     </footer>
+
+    <section class="busines-service modal">
+      <h2 class="busines-service__title title">Бизнес-тарифы</h2>
+      <dl class="busines-service__table services">
+        <dt class="busines-service__name">Реклама у блоггера</dt>
+        <dd class="busines-service__price">300 000 руб./пост</dd>
+        <dt class="busines-service__name">Накрутка подписчиков</dt>
+        <dd class="busines-service__price">от 1 руб./шт.</dd>
+        <dt class="busines-service__name">Лайки от ботов</dt>
+        <dd class="busines-service__price">от 20 коп./лайк</dd>
+        <dt class="busines-service__name">Ваш продакт-плейсмент</dt>
+        <dd class="busines-service__price">Индивидуально</dd>
+      </dl>
+      <button type="button" class="busines-service__close-button">Закрыть окно</button>
+    </section>
 
   </body>
 </html>
