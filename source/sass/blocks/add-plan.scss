@@ -1,0 +1,16 @@
+.add-plan {
+  background-color: $special-grey--dark;
+}
+
+.add-plan__title {
+  color: $basic-blue--dark;
+}
+
+.add-plan__dot {
+  color: $basic-blue--dark;
+  opacity: 0.3;
+
+  &--active {
+    color: $basic-blue--dark;
+  }
+}

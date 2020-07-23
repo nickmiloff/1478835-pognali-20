@@ -1,0 +1,56 @@
+.countrie__img,
+.countrie__desc {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.countrie__desc {
+  background-color: $basic-white;
+}
+
+.countrie__name {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+
+  color: $basic-black;
+}
+
+.countrie__slogan {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: rgba($special-grey, 0.3);
+}
+
+.countrie__users {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: rgba($special-grey, 0.3);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+
+    margin-right: 7px;
+
+    vertical-align: middle;
+
+    background-image: url("../../img/user.svg");
+    background-size: 11px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+  }
+}

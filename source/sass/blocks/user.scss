@@ -1,0 +1,228 @@
+.user {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  position: relative;
+  width: 270px;
+
+  border-radius: 10px;
+
+  background-color: $basic-white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+}
+
+.user__avatar {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  &--user-card {
+    border-radius: 50%;
+  }
+}
+
+.user__level {
+  width: 60px;
+  height: 60px;
+
+  position: absolute;
+  top: 17px;
+  left: 17px;
+
+  border-radius: 50%;
+
+  background-color: rgba($basic-black, 0.6);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+
+    position: absolute;
+    top: 36px;
+    left: 15px;
+
+    background-color: rgba($basic-white, 0.3);
+  }
+
+  &--user-card {
+    background-color: transparent;
+    top: unset;
+    left: unset;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  &--user-card::after {
+    content: none;
+  }
+}
+
+.user__level .level__value {
+  position: absolute;
+  width: 100%;
+  top: 13px;
+  text-align: center;
+
+  font-size: 24px;
+  line-height: 24px;
+
+  color: $basic-white;
+
+  &--user-card {
+    top: unset;
+    bottom: 10px;
+    right: 10px;
+    color: $basic-blue--dark;
+  }
+}
+
+.user__level .level__text {
+  position: absolute;
+  top: 39px;
+  left: 17px;
+
+  font-size: 14px;
+  line-height: 14px;
+
+  color: $basic-white;
+}
+
+.user__list {
+  margin-bottom: 20px;
+}
+
+.user__list.flags {
+  position: absolute;
+  top: 259px;
+}
+
+.user__name {
+  position: relative;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+
+  margin-top: 26px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: $basic-blue--dark;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+
+    position: absolute;
+    top: 9px;
+    left: -16px;
+
+    border-radius: 50%;
+
+    background-color: $special-red--offline;
+  }
+
+  &--user-card {
+    position: static;
+  }
+
+  &--user-card::before {
+    top: 10px;
+    left: unset;
+    right: 100px;
+  }
+
+  &--online::before {
+    background-color: $special-green--online;
+  }
+}
+
+.user__info {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  text-transform: uppercase;
+
+  color: $basic-blue--dark;
+}
+
+.user__tags {
+  max-width: 190px;
+
+  margin-top: 15px;
+  margin-right: 9px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-align: center;
+
+  &--user-card {
+    font-size: 15px;
+    text-align: left;
+    color: $special-grey;
+  }
+}
+
+.user__like {
+  width: 31px;
+  height: 31px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: $special-grey--filter;
+  background-image: url("../../img/heart.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 10px;
+  background-position: center;
+
+  &--active {
+    background-color: $special-pink;
+    background-image: url("../../img/heart-active.svg");
+  }
+}
+
+.user__subtitle {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+
+  color: $special-grey;
+}
+
+.user__link {
+  display: block;
+  width: 230px;
+
+  padding: 14px 0;
+
+  border-radius: 25px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: $basic-yellow;
+  color: $basic-blue;
+}

@@ -1,0 +1,45 @@
+.countrie-dropdown {
+  position: relative;
+  width: 220px;
+}
+
+.countrie-dropdown__title {
+  padding: 12px 17px 12px 17px;
+  margin: 0;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  color: $basic-white;
+  background-color: $basic-blue--dark;
+}
+
+.countrie-dropdown__close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  display: block;
+
+  width: 9px;
+  height: 9px;
+
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../../img/close.svg");
+  background-repeat: no-repeat;
+  background-size: 8px 8px;
+  background-position: center;
+
+  filter: invert(100%) sepia(7%) saturate(0%) hue-rotate(26deg) brightness(112%) contrast(100%);
+}

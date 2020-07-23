@@ -1,0 +1,29 @@
+.guide {
+  list-style: none;
+}
+
+.guide__item {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: $basic-blue;
+}
+
+.guide__item:first-child {
+  background-color: $special-orange;
+}
+
+.guide__item:nth-child(2) {
+  background-color: $special-orange--light;
+}
+
+.guide__item:nth-child(3) {
+  background-color: $basic-yellow--dark;
+}
+
+.guide__item:nth-child(4) {
+  background-color: $basic-yellow;
+}

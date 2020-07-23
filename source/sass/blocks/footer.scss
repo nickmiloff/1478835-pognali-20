@@ -1,0 +1,23 @@
+.footer__socials .socials__link {
+  background-color: $basic-yellow;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  width: 270px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+
+  text-decoration: none;
+
+  color: $special-grey;
+}
+
+.footer__in-link-logo {
+  margin-left: auto;
+}

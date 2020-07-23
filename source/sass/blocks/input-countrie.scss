@@ -1,0 +1,99 @@
+.input-countrie {
+  position: relative;
+  width: 220px;
+
+  &--empty {
+    .input-countrie__input {
+      width: 100%;
+    }
+
+    .input-countrie__dropdown-button {
+      right: 4px;
+    }
+  }
+}
+
+.input-countrie__input {
+  width: 168px;
+  box-sizing: border-box;
+
+  padding: 11px 38px 11px 9px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: $basic-blue--dark;
+
+  border: 1px solid $special-grey--light;
+  border-radius: 5px;
+}
+
+.input-countrie__dropdown-button {
+  position: absolute;
+  right: 55px;
+  top: 4px;
+  width: 52px;
+  height: 36px;
+
+  padding: 0;
+
+  border: none;
+
+  background-color: transparent;
+  background-image: linear-gradient(90deg, transparent, #ffffff 35%);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../img/dropdown-form.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+    background-position: 29px 12px;
+
+    opacity: 0.3;
+  }
+}
+
+.input-countrie__delete-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+
+  display: block;
+  width: 21px;
+  height: 21px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: $basic-grey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../img/filter-close.svg");
+    background-repeat: no-repeat;
+    background-size: 7px 7px;
+    background-position: center;
+
+    opacity: 0.5;
+  }
+}

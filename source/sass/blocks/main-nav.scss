@@ -1,0 +1,61 @@
+.main-nav {
+  background-color: $basic-white;
+}
+
+.main-nav__toggle {
+  display: inline-block;
+  width: 25px;
+  height: 11px;
+
+  vertical-align: middle;
+
+  border: none;
+  background-color: transparent;
+
+  background-image: url("../../img/menu.svg");
+  background-repeat: no-repeat;
+}
+
+.main-nav__list {
+  list-style: none;
+}
+
+.main-nav__link {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $special-blue--dark;
+}
+
+.main-nav__auth {
+  display: block;
+  width: 270px;
+  padding: 10px 0;
+  border-radius: 50px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $basic-blue;
+  background-color: $basic-yellow;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-nav__tel,
+.main-nav__email {
+  color: $special-blue--dark;
+}

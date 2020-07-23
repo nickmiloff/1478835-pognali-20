@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body>
     <header class="header">
       <a href="index.html" class="header__logo">
-        <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
+        <img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="96" height="15">
       </a>
+      <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">
@@ -29,8 +30,8 @@
           </li>
         </ul>
         <a href="#" class="main-nav__auth">Авторизация</a>
-        <a href="tel:+78005558628" class="main-nav__tel">8 800 555-86-28</a>
-        <a href="mailto:mail@htmlacademy.ru" class="main-nav__email">mail@htmlacademy.ru</a>
+        <a href="tel:+78005558628" class="main-nav__tel tel">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru" class="main-nav__email email">mail@htmlacademy.ru</a>
         <ul class="main-nav__socials socials">
           <li class="socials__item">
             <a href="" class="socials__link socials__link--fb">
@@ -51,8 +52,8 @@
       </nav>
     </header>
 
-    <main class="main">
-      <h1 class="main__title">Попутчики</h1>
+    <main class="main main--catalog">
+      <h1 class="main__title title title--page">Попутчики</h1>
 
       <section class="countries-filter">
         <h2 class="countries-filter__title">Фильтрация по странам:</h2>
@@ -60,7 +61,7 @@
         <div class="countries-filter__wrapper countries-filter__wrapper--open">
           <ul class="countries-filter__list">
             <li class="countries-filter__item">
-              <a href="" class="countries-filter__link">
+              <a href="" class="countries-filter__link countries-filter__link--active">
                 Европа
               </a>
             </li>
@@ -277,7 +278,7 @@
           </fieldset>
           <fieldset class="filter__item">
             <h3 class="filter__subtitle">Музыка</h3>
-            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+            <button type="button" class="filter__toggle filter__toggle--active" aria-label="Показать элементы пункта"></button>
             <div class="filter__category filter__category--open">
               <input class="filter__checkbox" type="checkbox" name="music" id="music-1" value="Тяжелый рок" checked>
               <label class="filter__label" for="music-1">Тяжелый рок</label>
@@ -293,33 +294,35 @@
           </fieldset>
           <fieldset class="filter__item">
             <h3 class="filter__subtitle">Транспорт</h3>
-            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
-            <div class="filter__category filter__category--open">
-              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-1" value="Самолет" checked>
-              <label class="filter__label filter__label--bubble" for="transport-1">Самолет</label>
-              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-2" value="Поезд" checked>
-              <label class="filter__label filter__label--bubble" for="transport-2">Поезд</label>
-              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-3" value="Велосипед">
-              <label class="filter__label filter__label--bubble" for="transport-3">Велосипед</label>
-              <input class="filter__checkbox" type="checkbox" name="transport" id="transport-4" value="Пешком">
-              <label class="filter__label filter__label--bubble" for="transport-4">Пешком</label>
+            <button type="button" class="filter__toggle filter__toggle--active" aria-label="Показать элементы пункта"></button>
+            <div class="filter__category filter__category--open transport">
+              <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-1" value="Самолет" checked>
+              <label class="transport__item transport__item--input transport__item--plane" for="transport-1">Самолет</label>
+              <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-2" value="Поезд" checked>
+              <label class="transport__item transport__item--input transport__item--train" for="transport-2">Поезд</label>
+              <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-3" value="Велосипед">
+              <label class="transport__item transport__item--input transport__item--bicycle" for="transport-3">Велосипед</label>
+              <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-4" value="Пешком" checked>
+              <label class="transport__item transport__item--input transport__item--foot" for="transport-4">Пешком</label>
             </div>
           </fieldset>
           <fieldset class="filter__item">
             <h3 class="filter__subtitle">Еда</h3>
-            <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
+            <button type="button" class="filter__toggle filter__toggle--active" aria-label="Показать элементы пункта"></button>
           </fieldset>
           <fieldset class="filter__item">
             <h3 class="filter__subtitle">Левел</h3>
             <button type="button" class="filter__toggle" aria-label="Показать элементы пункта"></button>
             <div class="filter__category filter__category--open">
               <div class="filter__value-level value-level">
-                <label class="value-level__label value-level__label--first" aria-label="Уровень от">
-                    <input class="value-level__value value-level__value--first" type="number" name="value-level" min="0" max="100" value="30">
-                </label>
-                <label class="value-level__label value-level__label--second" aria-label="Уровень до">
-                    <input class="value-level__value value-level__value--second" type="number" name="value-level" min="0" max="100" value="100">
-                </label>
+                <div class="value-level__inputs">
+                  <label class="value-level__label value-level__label--first" aria-label="Уровень от">
+                    <input class="value-level__value level__value--user-card value-level__value level__value--user-card--first" type="text" pattern="[0-9]+" name="value-level" min="0" max="100" value="30">
+                  </label>
+                  <label class="value-level__label value-level__label--second" aria-label="Уровень до">
+                    <input class="value-level__value level__value--user-card value-level__value level__value--user-card--second" type="text" pattern="[0-9]+" name="value-level" min="0" max="100" value="100">
+                  </label>
+                </div>
                 <div class="value-level__line">
                   <button class="value-level__pin value-level__pin--first" type="button" aria-label="Левая кнопка контроля"></button>
                   <button class="value-level__pin value-level__pin--second" type="button" aria-label="Правая кнопка контроля"></button>
@@ -328,20 +331,20 @@
             </div>
             </div>
           </fieldset>
-          <button class="filter__submit button" type="submit">Показать</button>
+          <button class="filter__submit" type="submit">Показать</button>
         </form>
       </section>
 
-      <section class="users">
+      <section class="users--catalog">
         <ul class="users__list">
           <li class="users__item user">
-            <img src="https://via.placeholder.com/270x270" alt="Таня Фирсова" class="user__avatar">
-            <h3 class="user__name"><a href="#">Таня Фирсова</a></h3>
+            <img src="https://via.placeholder.com/270x270" alt="Таня Фирсова" class="user__avatar user__avatar--user-card" width="70" height="70">
+            <a class="user__name user__name--user-card" href="#">Таня Фирсова</a>
             <button class="user__like user__like--active" aria-label="Добавить в избранное"></button>
             <p class="user__info">1,5 М</p>
-            <p class="user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+            <p class="user__tags user__tags--user-card">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <h4 class="user__subtitle">Хочет посетить:</h4>
-            <ul class="user__list flags">
+            <ul class="user__list flags flags--list">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">Шри-Ланка</span>
               </li>
@@ -368,19 +371,19 @@
               </li>
             </ul>
             <h4 class="user__subtitle">Левел:</h4>
-            <div class="user__level level">
-              <span class="level__value">99</span>
+            <div class="user__level user__level--user-card level">
+              <span class="level__value level__value--user-card">99</span>
             </div>
             <a href="#" class="user__link">Позвать!</a>
           </li>
           <li class="users__item user">
-            <img src="https://via.placeholder.com/270x270" alt="Петя Демин" class="user__avatar">
-            <h3 class="user__name"><a href="#">Петя Демин</a></h3>
+            <img src="https://via.placeholder.com/270x270" alt="Петя Демин" class="user__avatar user__avatar--user-card" width="70" height="70">
+            <a class="user__name user__name--user-card" href="#">Петя Демин</a>
             <button class="user__like" aria-label="Добавить в избранное"></button>
             <p class="user__info">1500</p>
-            <p class="user__tags">#бургер #бар #футбол #концерт #крафт</p>
-            <h4 class="user__subtitle">Чочет посетить:</h4>
-            <ul class="user__list flags">
+            <p class="user__tags user__tags--user-card">#бургер #бар #футбол #концерт #крафт</p>
+            <h4 class="user__subtitle">Хочет посетить:</h4>
+            <ul class="user__list flags flags--list">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">Бельгия</span>
               </li>
@@ -404,19 +407,19 @@
               </li>
             </ul>
             <h4 class="user__subtitle">Левел:</h4>
-            <div class="user__level level">
-              <span class="level__value">80</span>
+            <div class="user__level user__level--user-card level">
+              <span class="level__value level__value--user-card">80</span>
             </div>
             <a href="#" class="user__link">Позвать!</a>
           </li>
           <li class="users__item user">
-            <img src="https://via.placeholder.com/270x270" alt="Марк Смолов" class="user__avatar">
-            <h3 class="user__name"><a href="#">Марк Смолов</a></h3>
+            <img src="https://via.placeholder.com/270x270" alt="Марк Смолов" class="user__avatar user__avatar--user-card" width="70" height="70">
+            <a class="user__name user__name--user-card" href="#">Марк Смолов</a>
             <button class="user__like" aria-label="Добавить в избранное"></button>
             <p class="user__info">170</p>
-            <p class="user__tags">#рэп #тату #хайпбист #кроссовки #суприм</p>
+            <p class="user__tags user__tags--user-card">#рэп #тату #хайпбист #кроссовки #суприм</p>
             <h4 class="user__subtitle">Хочет посетить:</h4>
-            <ul class="user__list flags">
+            <ul class="user__list flags flags--list">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">США</span>
               </li>
@@ -443,19 +446,19 @@
               </li>
             </ul>
             <h4 class="user__subtitle">Левел:</h4>
-            <div class="user__level level">
-              <span class="level__value">25</span>
+            <div class="user__level user__level--user-card level">
+              <span class="level__value level__value--user-card">25</span>
             </div>
             <a href="#" class="user__link">Позвать!</a>
           </li>
           <li class="users__item user">
-            <img src="https://via.placeholder.com/270x270" alt="Лариса Роговая" class="user__avatar">
-            <h3 class="user__name"><a href="#">Лариса Роговая</a></h3>
+            <img src="https://via.placeholder.com/270x270" alt="Лариса Роговая" class="user__avatar user__avatar--user-card" width="70" height="70">
+            <a class="user__name user__name--user-card" href="#">Лариса Роговая</a>
             <button class="user__like" aria-label="Добавить в избранное"></button>
             <p class="user__info">23</p>
-            <p class="user__tags">#образование #карьера #учеба #линкедин</p>
+            <p class="user__tags user__tags--user-card">#образование #карьера #учеба #линкедин</p>
             <h4 class="user__subtitle">Хочет посетить:</h4>
-            <ul class="user__list flags">
+            <ul class="user__list flags flags--list">
               <li class="flags__item flags__item--shri-lanka">
                 <span class="flags__name">Великобритания</span>
               </li>
@@ -479,21 +482,21 @@
               </li>
             </ul>
             <h4 class="user__subtitle">Левел:</h4>
-            <div class="user__level level">
-              <span class="level__value">50</span>
+            <div class="user__level user__level--user-card level">
+              <span class="level__value level__value--user-card">50</span>
             </div>
             <a href="#" class="user__link">Позвать!</a>
           </li>
         </ul>
-        <a class="users__more" aria-label="Показать больше попутчиков">Показать еще</a>
-        <a class="users__prev" aria-label="Следующие попутчики"></a>
-        <a class="users__next" aria-label="Предыдущие попутчики"></a>
+        <a href="" class="users__more" aria-label="Показать больше попутчиков">Показать еще</a>
+        <a href="" class="users__prev" aria-label="Следующие попутчики"></a>
+        <a href="" class="users__next" aria-label="Предыдущие попутчики"></a>
       </section>
     </main>
 
     <footer class="footer">
       <a class="footer__logo">
-        <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
+        <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="96" height="15">
       </a>
       <ul class="footer__socials socials">
         <li class="socials__item">

@@ -1,0 +1,66 @@
+.promo {
+  background-image:
+    url("../../img/globe-back-mobile@1x.jpg"),
+    linear-gradient($basic-blue, $basic-blue 668px, $special-blue--dark 668px);
+  background-repeat: no-repeat;
+}
+
+.promo__slogan {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+
+  text-align: center;
+
+  color: $basic-white;
+}
+
+.promo__tel,
+.promo__email {
+  font-size: 0;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.promo__tel {
+  background-color: $special-orange;
+  background-image: url("../../img/topmenu-phone.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: center;
+}
+
+.promo__email {
+  background-color: $basic-yellow--dark;
+  background-image: url("../../img/topmenu-mail.svg");
+  background-repeat: no-repeat;
+  background-size: 18px 16px;
+  background-position: center;
+}
+
+.promo__auth {
+  display: block;
+  width: 190px;
+  padding: 10px 0;
+
+  border-radius: 50px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $basic-blue;
+  background-color: $basic-yellow;
+}
