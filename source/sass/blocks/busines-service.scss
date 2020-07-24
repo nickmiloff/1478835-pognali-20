@@ -1,0 +1,37 @@
+.busines-service {
+  background-color: $basic-white;
+}
+
+.busines-service__name,
+.busines-service__price {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $special-grey;
+}
+
+.busines-service__close-button {
+  display: block;
+  width: 270px;
+
+  padding: 21px 0;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $basic-grey--button;
+  color: $basic-blue--dark;
+}

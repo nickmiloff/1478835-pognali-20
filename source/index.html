@@ -3,14 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body class="page__body">
+  <body>
     <header class="header">
       <a class="header__logo">
-        <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
+        <img src="img/logo-mobile-white@1x.png" alt="Логотип Погнали" width="96" height="15">
       </a>
+      <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
       <nav class="main-nav">
-        <button type="button" class="main-nav__toggle" aria-label="Открыть меню"></button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">
@@ -29,8 +30,8 @@
           </li>
         </ul>
         <a href="#" class="main-nav__auth">Авторизация</a>
-        <a href="tel:+78005558628" class="main-nav__tel">8 800 555-86-28</a>
-        <a href="mailto:mail@htmlacademy.ru" class="main-nav__email">mail@htmlacademy.ru</a>
+        <a href="tel:+78005558628" class="main-nav__tel tel">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru" class="main-nav__email email">mail@htmlacademy.ru</a>
         <ul class="main-nav__socials socials">
           <li class="socials__item">
             <a href="" class="socials__link socials__link--fb">
@@ -55,9 +56,9 @@
       <h1 class="visually-hidden">Главная страница сервиса Погнали</h1>
       <section class="promo">
         <h2 class="promo__slogan">В путешествие с крутыми попутчиками!</h2>
-        <a href="tel:+78005558628" class="promo__link" aria-label="Позвоните нам">8 800 555-86-28</a>
-        <a href="mailto:mail@htmlacademy.ru" class="promo__link" aria-label="Напишите нам">mail@htmlacademy.ru</a>
-        <a href="#" class="promo__link">Авторизация</a>
+        <a href="tel:+78005558628" class="promo__tel" aria-label="Позвоните нам">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru" class="promo__email" aria-label="Напишите нам">mail@htmlacademy.ru</a>
+        <a href="#" class="promo__auth">Авторизация</a>
         <blockquote class="promo__review review">
           <p class="review__text">
             «Лучшее приложение, что я видел в жизни!»
@@ -90,10 +91,10 @@
 
       <section class="countries">
         <h2 class="countries__title title">Направления</h2>
-        <p class="countries__desc desk">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        <p class="countries__desc desc">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
         <ul class="countries__list">
           <li class="countries__item countrie">
-            <img src="https://via.placeholder.com/270x110" alt="Таиланд" class="countrie__img">
+            <img src="img/thailand-mobile@1x.jpg" alt="Таиланд" width="270" height="110" class="countrie__img">
             <div class="countrie__desc">
               <h3 class="countrie__name">Таиланд</h3>
               <p class="countrie__slogan">Джунгли зовут!</p>
@@ -101,7 +102,7 @@
             </div>
           </li>
           <li class="countries__item countrie">
-            <img src="https://via.placeholder.com/270x110" alt="Франция" class="countrie__img">
+            <img src="img/france-mobile@1x.jpg" alt="Франция" width="270" height="110" class="countrie__img">
             <div class="countrie__desc">
               <h3 class="countrie__name">Франция</h3>
               <p class="countrie__slogan">Трэ бьен, манифик!</p>
@@ -109,7 +110,7 @@
             </div>
           </li>
           <li class="countries__item countrie">
-            <img src="https://via.placeholder.com/270x110" alt="Чехия" class="countrie__img">
+            <img src="img/czech-mobile@1x.jpg" alt="Чехия" width="270" height="110" class="countrie__img">
             <div class="countrie__desc">
               <h3 class="countrie__name">Чехия</h3>
               <p class="countrie__slogan">Закоулки старой Европы</p>
@@ -117,7 +118,7 @@
             </div>
           </li>
         </ul>
-        <a href="form.html" class="countries__link">Показать все</a>
+        <a href="form.html" class="countries__link show-all-button">Показать все</a>
       </section>
 
       <section class="users">
@@ -126,7 +127,7 @@
         <p class="users__desc desc desc--important">Теперь можно легко найти единомышленников!</p>
         <ul class="users__list">
           <li class="users__item user">
-            <img src="https://via.placeholder.com/270x270" alt="Таня Фирсова" class="user__avatar">
+            <img src="img/firsova-desktop@1x.jpg" alt="Таня Фирсова" width="270" height="270" class="user__avatar">
             <div class="user__level level">
               <span class="level__value">99</span>
               <span class="level__text">level</span>
@@ -142,7 +143,7 @@
                 <span class="flags__name">Сейшелы</span>
               </li>
             </ul>
-            <h3 class="user__name"><a href="#">Таня Фирсова</a></h3>
+            <a href="#" class="user__name">Таня Фирсова</a>
             <p class="user__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
             <ul class="user__list transport">
               <li class="transport__item transport__item--active transport__item--plane">
@@ -160,7 +161,7 @@
             </ul>
           </li>
           <li class="users__item user">
-            <img src="https://via.placeholder.com/270x270" alt="Петя Демин" class="user__avatar">
+            <img src="img/demin-desktop@1x.jpg" alt="Петя Демин" width="270" height="270" class="user__avatar">
             <div class="user__level level">
               <span class="level__value">80</span>
               <span class="level__text">level</span>
@@ -173,7 +174,7 @@
                 <span class="flags__name">Чехия</span>
               </li>
             </ul>
-            <h3 class="user__name"><a href="#">Петя Демин</a></h3>
+            <a href="#" class="user__name user__name--online">Петя Демин</a>
             <p class="user__tags">#бургер #бар #футбол #концерт #крафт</p>
             <ul class="user__list transport">
               <li class="transport__item transport__item--active transport__item--plane">
@@ -191,7 +192,7 @@
             </ul>
           </li>
         </ul>
-        <a href="#" class="users__link">Показать всех</a>
+        <a href="#" class="users__link show-all-button">Показать всех</a>
       </section>
 
       <section class="profile">
@@ -208,32 +209,34 @@
       </section>
 
       <section class="feedback">
-        <h2 class="feedback__title">Заинтересовались?</h2>
-        <p class="feedback__desc">
+        <h2 class="feedback__title title">Заинтересовались?</h2>
+        <p class="feedback__desc desc">
           Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее <a href="#" class="feedback__link">авторизуйтесь</a>.
         </p>
-        <form action="https://echo.htmlacademy.ru" method="POST">
-          <input type="email" name="feedback-email" placeholder="E-mail">
+        <form class="feedback__form" action="https://echo.htmlacademy.ru" method="POST">
+          <input type="email" class="feedback__input-email" name="feedback-email" placeholder="E-mail">
           <button type="submit" class="feedback__submit"></button>
         </form>
-        <p class="feedback__desc">
+        <p class="feedback__desc desc">
           Остались вопросы? Мы с радостью на них ответим!
         </p>
-        <a href="tel:+78005558628" class="feedback__tel">8 800 555-86-28</a>
-        <a href="mailto:mail@htmlacademy.ru" class="feedback__email">mail@htmlacademy.ru</a>
+        <a href="tel:+78005558628" class="feedback__tel tel">8 800 555-86-28</a>
+        <a href="mailto:mail@htmlacademy.ru" class="feedback__email email">mail@htmlacademy.ru</a>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Как добраться до нашего офиса</h2>
-        <p class="map__adress">ул. Большая Конюшенная, 19/8</p>
-        <a href="https://www.google.com/maps/dir/home/Bolshaya+Konyushennaya+St,+19%2F8,+Sankt-Peterburg,+191186/" class="map__link">Проложить маршрут</a>
+        <div class="map__header">
+          <p class="map__adress">ул. Большая Конюшенная, 19/8</p>
+          <a href="https://www.google.com/maps/dir/home/Bolshaya+Konyushennaya+St,+19%2F8,+Sankt-Peterburg,+191186/" class="map__link show-all-button show-all-button--bordered">Проложить маршрут</a>
+        </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003183!2d30.320858716222368!3d59.93871916905405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1595151358583!5m2!1sen!2sru" width="320" height="424" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
     </main>
 
     <footer class="footer">
       <a class="footer__logo">
-        <img src="img/logo_mobile-1.svg" alt="Логотип Погнали" width="100" height="15">
+        <img src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="96" height="15">
       </a>
       <ul class="footer__socials socials">
         <li class="socials__item">
@@ -252,7 +255,7 @@
           </a>
         </li>
       </ul>
-      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="33"></a>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="footer__in-link-logo" width="27" height="33"></a>
     </footer>
 
     <section class="busines-service modal">

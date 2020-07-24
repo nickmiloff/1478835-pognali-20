@@ -1,0 +1,35 @@
+.countrie-plan__countrie {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+
+  color: $basic-blue--dark;
+}
+
+.countrie-plan__plan {
+  box-sizing: border-box;
+
+  padding: 10px 14px;
+
+  width: 220px;
+  height: 220px;
+  resize: none;
+
+  border: 1px solid $special-grey--light;
+  border-radius: 5px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: $special-grey;
+}
+
+.countrie-plan__plan::placeholder {
+  color: $special-grey;
+  opacity: 0.3;
+}

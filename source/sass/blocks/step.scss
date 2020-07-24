@@ -1,0 +1,54 @@
+.step {
+  border: none;
+  border-radius: 10px;
+
+  background-color: $basic-white;
+}
+
+.step__title {
+  color: $basic-blue--dark;
+}
+
+.step__desc {
+  color: $special-grey;
+}
+
+.step__label {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+
+  color: $basic-blue--dark;
+}
+
+.step__button {
+  display: block;
+  width: 229px;
+  padding: 5px 0;
+
+  border-radius: 50px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.01em;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $basic-blue;
+  background-color: $basic-yellow;
+
+  &--prev {
+    background-color: transparent;
+  }
+
+  &--submit {
+    border: none;
+  }
+}

@@ -1,0 +1,84 @@
+.input-area__title {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  color: $basic-blue--dark;
+}
+
+.input-area__unit {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+
+  text-align: right;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+
+  color: $basic-blue--dark;
+  opacity: 0.3;
+}
+
+.input-area__control {
+  display: flex;
+}
+
+.input-area__button {
+  width: 42px;
+  height: 43px;
+
+  box-sizing: border-box;
+
+  border: 1px solid $basic-blue--dark;
+
+  opacity: 0.3;
+
+  background-color: transparent;
+
+  &--minus {
+    border-right: none;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    background-image: url("../../img/qty-minus-mobile.svg");
+    background-size: 14px 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--plus {
+    border-left: none;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+    background-image: url("../../img/qty-plus-mobile.svg");
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.input-area__value {
+  width: 220px - 42px * 2;
+  height: 43px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+  vertical-align: middle;
+
+  padding: 0;
+  margin: 0;
+
+  border: 1px solid rgba($basic-blue--dark, 0.3);
+
+  border-left: 0;
+  border-right: 0;
+}

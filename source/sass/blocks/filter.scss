@@ -1,0 +1,84 @@
+.filter {
+  background-color: $basic-yellow;
+}
+
+.filter__title {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+
+  letter-spacing: 0.02em;
+
+  color: $basic-blue--dark;
+}
+
+.filter__subtitle {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+  color: $basic-blue--dark;
+}
+
+.filter__item {
+  border: none;
+}
+
+.filter__toggle {
+  display: block;
+  width: 10px;
+  height: 6px;
+
+  border: none;
+
+  background-color: transparent;
+  background-image: url("../../img/dropdown.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+  background-position: center;
+
+  &--active {
+    transform: rotate(180deg);
+  }
+}
+
+.filter__label {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+
+  color: $basic-black;
+
+  &--bubble {
+    font-size: 0;
+    background-color: $basic-white;
+  }
+}
+
+.filter__submit {
+  width: 230px;
+  padding: 14px 0 15px 0;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 25px;
+
+  color: $basic-blue;
+  background-color: $basic-white;
+}

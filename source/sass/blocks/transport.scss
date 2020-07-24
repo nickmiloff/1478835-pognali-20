@@ -1,0 +1,68 @@
+.transport {
+  display: flex;
+  width: 100%;
+
+  padding: 0;
+
+  justify-content: center;
+}
+
+.transport__item {
+  position: relative;
+
+  width: 32px;
+  height: 32px;
+
+  font-size: 0;
+
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.15;
+  }
+
+  &--active::before {
+    opacity: 1;
+  }
+
+  &--plane::before {
+    background-image: url("../../img/plane.svg");
+    background-size: 21px 21px;
+  }
+
+  &--train::before {
+    background-image: url("../../img/bus.svg");
+    background-size: 17px 19px;
+  }
+
+  &--bicycle::before {
+    background-image: url("../../img/bike.svg");
+    background-size: 21px 18px;
+  }
+
+  &--foot::before {
+    background-image: url("../../img/run.svg");
+    background-size: 16px 19px;
+  }
+
+  &--input {
+    background-color: $basic-white;
+  }
+
+  &--input::before {
+    background-size: 17px 16px;
+  }
+}
+
+.transport__checkbox:checked + .transport__item--input::before {
+  opacity: 1;
+}

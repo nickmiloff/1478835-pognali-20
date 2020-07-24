@@ -1,0 +1,57 @@
+.calendar__day {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  color: $special-grey;
+
+  &--day-off {
+    color: $special-red--calendar;
+  }
+}
+
+.calendar__table {
+  border-collapse: collapse;
+}
+
+.calendar__number {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border: 1px solid $special-grey--calendar;
+}
+
+.calendar__link {
+  display: inline-block;
+  width: 100%;
+
+  text-align: center;
+
+  padding: 7px 0 5px 0;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+
+  color: $basic-blue--dark;
+  background-color: $special-grey--light;
+
+  text-decoration: none;
+
+  &--active {
+    color: $basic-white;
+    background-color: $basic-blue--dark;
+  }
+
+  &--disabled {
+    color: $special-grey;
+    background-color: transparent;
+    opacity: 0.3;
+  }
+}
