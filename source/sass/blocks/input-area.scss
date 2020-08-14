@@ -1,84 +1,209 @@
-.input-area__title {
+.input-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-
-  letter-spacing: 0.09em;
   text-transform: uppercase;
 
   color: $basic-blue--dark;
+
+  @media (max-width: $mobile-width-only) {
+    width: 220px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 531px;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: min-content;
+  }
+}
+
+.input-area__title {
+  @media (max-width: $mobile-width-only) {
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 185px;
+    margin-right: 36px;
+
+    letter-spacing: unset;
+  }
 }
 
 .input-area__unit {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 16px;
-
-  text-align: right;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-
-  color: $basic-blue--dark;
   opacity: 0.3;
+
+  @media (max-width: $mobile-width-only) {
+    letter-spacing: 0.07em;
+  }
+
+  @media (min-width: $tablet-width) {
+    letter-spacing: 0.08em;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 1;
+    max-width: 50px;
+
+    opacity: 1;
+    letter-spacing: unset;
+  }
 }
 
 .input-area__control {
   display: flex;
-}
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
-.input-area__button {
-  width: 42px;
-  height: 43px;
+  border: 1px solid $special-grey--light;
+  border-radius: 4px;
 
-  box-sizing: border-box;
-
-  border: 1px solid $basic-blue--dark;
-
-  opacity: 0.3;
-
-  background-color: transparent;
-
-  &--minus {
-    border-right: none;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-
-    background-image: url("../../img/qty-minus-mobile.svg");
-    background-size: 14px 2px;
-    background-repeat: no-repeat;
-    background-position: center;
+  @media (max-width: $mobile-width-only) {
+    margin-top: 9px;
+    padding-top: 12px;
+    padding-bottom: 11px;
   }
 
-  &--plus {
-    border-left: none;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+  @media (min-width: $tablet-width) {
+    margin-top: 26px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
 
-    background-image: url("../../img/qty-plus-mobile.svg");
-    background-size: 14px 14px;
-    background-repeat: no-repeat;
-    background-position: center;
+  @media (min-width: $desktop-width) {
+    width: 180px;
+    margin-top: 0;
+    margin-right: 35px;
+  }
+
+  &--invalid {
+    border-color: #f47e7e;
+  }
+
+  &:hover {
+    border-color: $special-grey--border;
+  }
+
+  &:focus-within {
+    border-color: $basic-blue;
   }
 }
 
 .input-area__value {
-  width: 220px - 42px * 2;
-  height: 43px;
-
-  box-sizing: border-box;
-
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: uppercase;
   text-align: center;
+
+  border: none;
+
+  color: $basic-blue--dark;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width-only) {
+    width: 164px;
+
+    font-size: 14.86px;
+    line-height: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 451px;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+  }
+
+  &--invalid {
+    color: #ff0000;
+  }
+}
+
+.input-area__button {
+  display: inline-block;
   vertical-align: middle;
 
-  padding: 0;
-  margin: 0;
+  border: none;
+  background-color: transparent;
 
-  border: 1px solid rgba($basic-blue--dark, 0.3);
+  background-position: center;
+  background-repeat: no-repeat;
 
-  border-left: 0;
-  border-right: 0;
+  opacity: 0.2;
+
+  @media (max-width: $mobile-width-only) {
+    width: 14px;
+    height: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--minus {
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../../img/qty-minus-mobile.svg");
+      background-size: 14px 2px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/qty-minus.svg");
+      background-size: 20px 2px;
+    }
+  }
+
+  &--plus {
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../../img/qty-plus-mobile.svg");
+      background-size: 14px 14px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/qty-plus.svg");
+      background-size: 20px 20px;
+    }
+  }
+
+  &:hover {
+    opacity: 0.4;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &:focus {
+    border: none;
+  }
+
+  &--inactive {
+    pointer-events: none;
+    opacity: 0.1;
+  }
 }

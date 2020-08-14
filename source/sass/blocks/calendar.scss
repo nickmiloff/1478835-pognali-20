@@ -1,14 +1,161 @@
+.calendar__control {
+  position: relative;
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+
+    background-color: $special-grey--calendar;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 220px;
+    padding-top: 9px;
+    padding-bottom: 10px;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 532px;
+    padding-left: 17px;
+    padding-top: 21px;
+    padding-bottom: 22px;
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1000px;
+    padding-left: 0;
+    padding-top: 22px;
+    padding-bottom: 21px;
+    margin-bottom: 16px;
+  }
+}
+
+.calendar__button {
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  opacity: 0.3;
+
+  &--prev {
+    background-image: url("../img/month-arrow-left.svg");
+  }
+
+  &--next {
+    background-image: url("../img/month-arrow-right.svg");
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 9px;
+    height: 18px;
+
+    background-size: 9px 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 19px;
+    height: 34px;
+
+    background-size: 19px 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 16px;
+    height: 34px;
+
+    background-size: 16px 28px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+.calendar__date {
+  vertical-align: text-bottom;
+
+  border: none;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  text-transform: capitalize;
+
+  color: $basic-blue--dark;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width-only) {
+    width: 194px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 452px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 959px;
+  }
+}
+
 .calendar__day {
+  padding-bottom: 8px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
 
   color: $special-grey;
 
   &--day-off {
     color: $special-red--calendar;
+  }
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 0;
+    line-height: 0;
+
+    &::first-letter {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 16px;
+    padding-bottom: 21px;
+    text-align: left;
   }
 }
 
@@ -17,32 +164,75 @@
 }
 
 .calendar__number {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-
   border: 1px solid $special-grey--calendar;
+
+  @media (max-width: $mobile-width-only) {
+    height: 31px;
+
+    &:nth-child(2n + 1) {
+      width: 31px;
+    }
+
+    &:nth-child(2n + 2) {
+      width: 32px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 76px;
+    height: 69px;
+
+    &:last-child {
+      width: 74px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 143px;
+    height: 71px;
+
+    &:first-child {
+      width: 142px;
+    }
+
+    &:last-child {
+      width: 142px;
+    }
+  }
 }
 
 .calendar__link {
-  display: inline-block;
-  width: 100%;
-
-  text-align: center;
-
-  padding: 7px 0 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
-
 
   color: $basic-blue--dark;
-  background-color: $special-grey--light;
+  background-color: $basic-blue--light;
 
   text-decoration: none;
+
+  @media (max-width: $mobile-width-only) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding-top: 13px;
+    padding-left: 16px;
+  }
 
   &--active {
     color: $basic-white;
@@ -53,5 +243,55 @@
     color: $special-grey;
     background-color: transparent;
     opacity: 0.3;
+
+    pointer-events: none;
   }
+
+  &--check-in,
+  &--check-out {
+    position: relative;
+  }
+
+  &--check-in::after,
+  &--check-out::after {
+    display: none;
+    left: 15px;
+    bottom: 13px;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  &--check-in::after {
+    content: "Заезд";
+    position: absolute;
+  }
+
+  &--check-out::after {
+    content: "Выезд";
+    position: absolute;
+  }
+
+  &:hover {
+    outline: 4px solid $special-red--calendar;
+    outline-offset: -3px;
+
+    color: $basic-white;
+    background-color: $basic-blue--dark;
+  }
+}
+
+.calendar__first-day {
+  display: none;
+  pointer-events: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    margin-left: 4px;
+  }
+}
+
+.calendar__input {
+  display: none;
 }

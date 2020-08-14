@@ -1,0 +1,114 @@
+.show-all-button {
+  position: relative;
+  display: block;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+
+  text-decoration: none;
+
+  background-color: $basic-yellow;
+  color: $basic-blue--dark;
+
+  @media (max-width: $mobile-width-only) {
+    width: 270px;
+    padding: 22px 60px 22px 23px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 616px;
+    padding: 26px 60px 30px 32px;
+
+    border-radius: 20px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 275px;
+    padding-left: 34px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    border: 7px solid transparent;
+    border-right: 0;
+    border-left: 10px solid #1d2e5b;
+
+    @media (max-width: $mobile-width-only) {
+      top: 25px;
+      right: 19px;
+    }
+
+    @media (min-width: $tablet-width) {
+      top: 33px;
+      right: 29px;
+    }
+  }
+
+  &--bordered {
+    border: 3px solid $special-blue--dark;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 19px 60px 19px 19px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 618px;
+      padding: 24px 60px 26px 34px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 324px;
+    }
+  }
+
+  &--bordered::after {
+    @media (max-width: $mobile-width-only) {
+      top: 21px;
+      right: 17px;
+    }
+
+    @media (min-width: $tablet-width) {
+      top: 31px;
+      right: 30px;
+    }
+  }
+
+  &:hover {
+    background-color: $basic-yellow--dark;
+  }
+
+  &:active {
+    color: rgba($basic-blue--dark, 0.3);
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  &--bordered:hover {
+    background-color: $special-blue--dark;
+    color: $basic-white;
+  }
+
+  &--bordered:hover::after {
+    border-left-color: $basic-white;
+  }
+
+  &--bordered:active {
+    background-color: $special-blue--dark;
+    color: rgba($basic-white, 0.3);
+  }
+}

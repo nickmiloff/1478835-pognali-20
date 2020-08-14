@@ -1,56 +1,179 @@
-.countrie__img,
-.countrie__desc {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.countrie {
+  display: flex;
+
+  list-style: none;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.countrie__picture {
+  @media (min-width: $tablet-width) {
+    order: 1;
+  }
+}
+
+.countrie__img {
+  vertical-align: top;
+
+  @media (max-width: $mobile-width-only) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 186px;
+    height: 140px;
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }
 
 .countrie__desc {
-  background-color: $basic-white;
-}
+  display: flex;
 
-.countrie__name {
+  min-height: 89px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 21px;
-  line-height: 21px;
 
+  background-color: $basic-white;
+  color: rgba($special-grey, 0.3);
+
+  @media (max-width: $mobile-width-only) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    width: 270px;
+    padding: 26px 24px 5px 24px;
+    margin-top: -11px;
+
+    border-radius: 10px;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    width: 431px;
+    padding: 28px 29px 19px 29px;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 374px;
+    padding: 22px 30px 19px 30px;
+  }
+}
+
+.countrie__name {
   color: $basic-black;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 80px;
+    margin-top: -2px;
+
+    font-size: 21px;
+    line-height: 21px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 300px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 280px;
+  }
 }
 
 .countrie__slogan {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  @media (max-width: $mobile-width-only) {
+    grid-column: 1 / -1;
+    max-width: 120px;
 
-  color: rgba($special-grey, 0.3);
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 300px;
+    margin-top: 5px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 280px;
+    margin-top: 4px;
+  }
 }
 
 .countrie__users {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-
-  color: rgba($special-grey, 0.3);
-
   &::before {
     content: "";
     display: inline-block;
-    width: 14px;
-    height: 14px;
-
-    margin-right: 7px;
-
     vertical-align: middle;
 
-    background-image: url("../../img/user.svg");
-    background-size: 11px 12px;
+    background-image: url("../img/user.svg");
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.1;
+
+    @media (max-width: $mobile-width-only) {
+      width: 14px;
+      height: 14px;
+      margin-right: 5px;
+
+      background-size: 11px 12px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+
+      background-size: 18px 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-right: 7px;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    justify-self: flex-end;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 1;
+
+    max-width: 300px;
+    margin-top: 20px;
+    margin-left: -3px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 280px;
+    margin-top: 26px;
+    margin-left: 0;
   }
 }

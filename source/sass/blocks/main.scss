@@ -1,7 +1,106 @@
-.main--catalog {
+.main {
   background-color: $basic-blue--light;
+
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+
+  &--active {
+    @media (max-width: $mobile-width-only) {
+      margin-top: 73px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-top: 132px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-top: 118px;
+    }
+  }
 }
 
-.main__title {
-  background-color: $basic-blue;
+.main__title-wrapper {
+  position: relative;
+  z-index: 8;
+  margin: 0 auto;
+
+  background-color: $special-blue--dark;
+
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
+    padding: 27px 25px 15px 25px;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 90px 75px 70px 75px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 102px 125px 71px 125px;
+
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+  }
+}
+
+.main__catalog-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 21px;
+    margin-bottom: 143px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 43px;
+    margin-bottom: 129px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 949px 285px;
+    grid-column-gap: 84px;
+    margin-bottom: 172px;
+  }
+}
+
+.main__button {
+  float: right;
+  margin-top: 23px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $basic-white;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }

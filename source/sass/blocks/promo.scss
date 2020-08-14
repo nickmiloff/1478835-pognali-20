@@ -1,66 +1,124 @@
 .promo {
-  background-image:
-    url("../../img/globe-back-mobile@1x.jpg"),
-    linear-gradient($basic-blue, $basic-blue 668px, $special-blue--dark 668px);
+  position: relative;
+  z-index: 8;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $basic-blue;
   background-repeat: no-repeat;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 18px;
+    padding-bottom: 39px;
+
+    background-image:
+      linear-gradient(transparent, transparent 404px, $basic-blue 404px, $basic-blue 689px, $special-blue--dark 689px, $special-blue--dark),
+      url("../../img/globe-back-mobile@1x.jpg");
+    background-size: cover, 320px 569px;
+    background-position-y: 0, -74px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 26px;
+    padding-bottom: 96px;
+
+    background-color: $special-blue--bg;
+    background-image: url("../../img/globe-back-tablet@1x.jpg");
+    background-size: 1479px 612px;
+    background-position: -355px 250px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-top: 87px;
+    padding-bottom: 123px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    background-image: url("../../img/globe-back-desktop@1x.jpg");
+    background-size: 1800px 750px;
+    background-position: -180px -118px;
+  }
+}
+
+.promo__review {
+  align-self: flex-start;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 27px;
+    margin-left: 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 88px;
+    margin-left: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-self: center;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 21px;
+  }
 }
 
 .promo__slogan {
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 40px;
 
   text-align: center;
 
   color: $basic-white;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 240px;
+
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 400px;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 420px;
+    margin-left: 67px;
+
+    text-align: left;
+  }
 }
 
-.promo__tel,
-.promo__email {
-  font-size: 0;
+.promo__contacts {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 246px;
+  }
 
-  display: block;
-  width: 40px;
-  height: 40px;
-
-  border-radius: 50%;
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
-.promo__tel {
-  background-color: $special-orange;
-  background-image: url("../../img/topmenu-phone.svg");
-  background-repeat: no-repeat;
-  background-size: 18px 18px;
-  background-position: center;
-}
+.promo__list {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 30px;
+  }
 
-.promo__email {
-  background-color: $basic-yellow--dark;
-  background-image: url("../../img/topmenu-mail.svg");
-  background-repeat: no-repeat;
-  background-size: 18px 16px;
-  background-position: center;
-}
+  @media (min-width: $tablet-width) {
+    margin-top: 213px;
+  }
 
-.promo__auth {
-  display: block;
-  width: 190px;
-  padding: 10px 0;
-
-  border-radius: 50px;
-
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 20px;
-
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-
-  color: $basic-blue;
-  background-color: $basic-yellow;
+  @media (min-width: $desktop-width) {
+    margin-top: 105px;
+  }
 }

@@ -1,32 +1,90 @@
 .profile {
-  background-color: $basic-grey--dark;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    justify-content: space-around;
+    padding-top: 24px;
+    padding-bottom: 34px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-top: 65px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-end;
+    padding-right: 60px;
+    padding-top: 74px;
+    padding-bottom: 65px;
+  }
 }
 
-.profile__head-field {
-  border: none;
+.profile__level {
+  @media (min-width: $tablet-width) {
+    order: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    z-index: 9;
+    top: -148px;
+    right: 389px;
+  }
 }
 
-.profile__level .level__value {
-  font-size: 38px;
-  line-height: 38px;
-}
+.profile__img-wrapper {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
 
-.profile__level .level__text {
-  font-size: 18px;
-  line-height: 18px;
+  @media (min-width: $desktop-width) {
+    display: block;
+    position: absolute;
+    z-index: 9;
+    top: -190px;
+    right: 155px;
+  }
 }
 
 .profile__avatar {
-  border-radius: 50%;
+  vertical-align: top;
+
+  @media (max-width: $mobile-width-only) {
+    border-radius: 50%;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+
+    border-radius: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
-.profile__change-button {
-  display: block;
-  width: 270px;
+.profile__photo-button {
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 14px;
 
-  border-radius: 40px;
-
-  padding: 11px 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -39,70 +97,208 @@
 
   color: $basic-blue;
   background-color: $special-blue--light;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+
+  &:hover {
+    background-color: $special-grey--photo-button;
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.3);
+  }
 }
 
-.profile__field {
-  display: flex;
-  justify-content: center;
-  width: 270px;
-
-  position: relative;
-
-  margin-top: 33px;
-  padding: 16px 25px;
-
-  box-sizing: border-box;
-  border: 1px solid $special-grey--light;
-  border-radius: 10px;
-}
-
-.profile__subtitle {
-  position: absolute;
-  top: -8px;
-
-  width: min-content;
-  padding: 0 17px;
-  margin: 0;
+.profile__change-button {
+  display: block;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
+  font-weight: 500;
 
+  text-align: center;
   text-transform: uppercase;
 
-  color: $basic-blue--dark;
-  background-color: $basic-grey--dark;
+  color: $basic-blue;
+  background-color: $special-blue--light;
+
+  @media (max-width: $mobile-width-only) {
+    width: 270px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    margin-top: 18px;
+
+    border-radius: 40px;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+    width: 618px;
+    padding-top: 20px;
+    padding-bottom: 22px;
+    margin-top: 51px;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $special-grey--photo-button;
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.3);
+  }
+}
+
+.profile__field {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  border: 1px solid rgba($special-grey--light, 0.3);
+  border-radius: 10px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 270px;
+  }
+
+  &--tags {
+    @media (max-width: $mobile-width-only) {
+      padding-top: 25px;
+      padding-bottom: 26px;
+      margin-top: 33px;
+    }
+
+    @media (min-width: $tablet-width) {
+      order: 4;
+      width: 618px;
+      margin-top: 53px;
+      padding-top: 32px;
+      padding-bottom: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 0;
+      width: 732px;
+      padding-left: 38px;
+      margin-top: 0;
+      justify-content: left;
+    }
+
+    .profile__subtitle {
+      @media (min-width: $desktop-width) {
+        left: 21px;
+      }
+    }
+  }
+
+  &--transport {
+    @media (max-width: $mobile-width-only) {
+      padding-top: 15px;
+      padding-bottom: 14px;
+      margin-top: 25px;
+    }
+
+    @media (min-width: $tablet-width) {
+      order: 1;
+      width: 308px;
+
+      padding-top: 23px;
+      padding-bottom: 26px;
+    }
+
+    @media (min-width: $desktop-width) {
+      order: 1;
+      width: 384px;
+      margin-left: 140px;
+    }
+  }
+
+  &:hover {
+    border-color: rgba($special-grey--light, 0.6);
+  }
+
+  &:focus-within {
+    border-color: $special-grey--light;
+  }
 }
 
 .profile__tags {
-  width: 220px;
   resize: none;
-
-  margin: 11px 0;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
 
   border: none;
 
-  color: $special-grey;
-  opacity: 0.6;
+  color: rgba($special-grey, 0.6);
   background-color: transparent;
+
+  @media (max-width: $mobile-width-only) {
+    width: 220px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 538px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 656px;
+  }
+
+  &:focus {
+    color: $special-grey;
+  }
 }
 
-.profile__link {
+.profile__subtitle {
+  position: absolute;
+
+  width: min-content;
+  padding: 0 17px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 16px;
 
-  color: $dark-blue;
+  text-transform: uppercase;
 
-  text-decoration: none;
+  color: $basic-blue--dark;
+  background-color: $basic-blue--light;
+
+  @media (max-width: $mobile-width-only) {
+    top: -10px;
+
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    bottom: -9px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    letter-spacing: 0.08em;
+  }
 }

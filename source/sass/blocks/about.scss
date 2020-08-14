@@ -1,10 +1,104 @@
 .about {
-  background-color: $special-blue--dark;
-  background-image: url("../../img/about-mobile@1x.png");
-  background-size: 292px 353px;
+  position: relative;
+  z-index: 7;
+
   background-repeat: no-repeat;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 31px;
+    padding-bottom: 84px;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    background-color: $special-blue--dark;
+    background-image: url("../img/about-mobile@1x.png");
+    background-size: 292px 353px;
+    background-position-x: 18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 37px;
+    padding-bottom: 89px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    background-color: $special-blue--bg;
+    background-image: url("../img/about-tablet@1x.png");
+    background-size: 376px 548px;
+    background-position: 384px 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 188px;
+    padding-bottom: 163px;
+    margin-top: -60px;
+
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+
+    background-color: $special-blue--dark;
+    background-image: url("../img/about-desktop@1x.png");
+    background-size: 630px 665px;
+    background-position: 750px 145px;
+  }
+}
+
+.about__button {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 276px;
+
+    margin-top: 54px;
+    margin-left: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 274px;
+
+    margin-top: 87px;
+    margin-left: 71px;
+  }
 }
 
 .about__desc {
   color: $basic-white;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 19px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 345px;
+
+    margin-top: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 690px;
+
+    line-height: 34px;
+
+    margin-top: 59px;
+  }
+}
+
+.about__desc.desc--important {
+  @media (min-width: $tablet-width) {
+    margin-top: 31px;
+
+    line-height: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 495px;
+
+    margin-top: 38px;
+
+    line-height: 24px;
+  }
 }

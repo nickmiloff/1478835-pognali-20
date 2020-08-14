@@ -1,0 +1,101 @@
+.profile-level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+
+  color: $basic-blue;
+
+  background-repeat: no-repeat;
+
+  &--80 {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.76698 26.6667C2.08488 33.6324 0 41.5727 0 50C0 77.6142 22.3858 100 50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0V3C75.9574 3 97 24.0426 97 50C97 75.9574 75.9574 97 50 97C24.0426 97 3 75.9574 3 50C3 41.508 5.25217 33.5419 9.19181 26.6667H5.76698Z' fill='%23FF8D30'/%3E%3C/svg%3E");
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 94px;
+    height: 94px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 95px;
+    height: 95px;
+
+    color: $basic-white;
+  }
+}
+
+.profile-level__value {
+  position: relative;
+
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    height: 1px;
+
+    position: absolute;
+
+    background-color: rgba($special-grey, 0.3);
+
+    @media (max-width: $mobile-width-only) {
+      width: 51px;
+
+      bottom: -3px;
+      left: -5px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 48px;
+
+      bottom: -1px;
+      left: -3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 49px;
+      height: 2px;
+
+      bottom: 0;
+      left: -4px;
+
+      background-color: rgba($basic-white, 0.3);
+    }
+  }
+}
+
+.profile-level__text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: 9px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 6px;
+  }
+}

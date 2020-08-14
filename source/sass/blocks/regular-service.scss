@@ -1,0 +1,126 @@
+.regular-service {
+  position: relative;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: $basic-blue--light;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: -30px;
+    padding-top: 81px;
+    padding-bottom: 39px;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    background-color: $basic-grey--dark;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    padding-top: 130px;
+    padding-bottom: 63px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -60px;
+
+    padding-top: 163px;
+    padding-bottom: 165px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+.regular-service__title {
+  @media (max-width: $mobile-width-only) {
+    max-width: 110px;
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+    padding-left: 0;
+  }
+}
+
+.regular-service__table {
+  @media (max-width: $mobile-width-only) {
+    align-self: flex-end;
+
+    margin-top: 57px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 135px;
+    margin-left: 70px;
+  }
+}
+
+.regular-service__link {
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+
+  color: $dark-blue;
+
+  text-decoration: none;
+
+  @media (max-width: $mobile-width-only) {
+    align-self: center;
+
+    margin-top: 45px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 30px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 70px;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: -27px;
+    width: 68px;
+    height: 68px;
+    margin-right: 21px;
+
+    border-radius: 50%;
+
+    background-color: $special-grey--filter;
+    background-image: url("../../img/business.svg");
+    background-repeat: no-repeat;
+    background-size: 26px 22px;
+    background-position: center;
+
+    @media (max-width: $mobile-width-only) {
+      content: none;
+    }
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

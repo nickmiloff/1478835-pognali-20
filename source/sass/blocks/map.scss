@@ -1,28 +1,78 @@
 .map__header {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   background-color: $basic-yellow;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: -30px;
+    padding-top: 61px;
+    padding-bottom: 35px;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    padding-top: 108px;
+    padding-bottom: 84px;
+
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+
+    padding-top: 115px;
+    padding-bottom: 56px;
+  }
 }
 
 .map__adress {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 22px;
 
   text-transform: uppercase;
   text-decoration: none;
 
   color: $basic-blue--dark;
 
+  @media (max-width: $mobile-width-only) {
+    column-gap: 16px;
+
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    column-gap: 26px;
+    margin-right: 95px;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 31px;
+
+    margin: 0 148px;
+  }
+
   &::before {
     content: "";
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-
-    margin-right: 16px;
-
-    vertical-align: middle;
+    display: block;
 
     border-radius: 50%;
 
@@ -30,6 +80,66 @@
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../../img/contacts-location.svg");
-    background-size: 21px 21px;
+
+    @media (max-width: $mobile-width-only) {
+      width: 45px;
+      height: 45px;
+
+      background-size: 21px 21px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 68px;
+      height: 68px;
+
+      background-size: 32px 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 90px;
+      height: 90px;
+
+      background-size: 42px 42px;
+    }
+  }
+}
+
+.map__link {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 33px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 44px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}
+
+.map__wrapper {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    width: 320px;
+    height: 424px;
+    margin-top: -65px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 581px;
+    margin-top: -50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 584px;
+
+    margin-top: -93px;
   }
 }

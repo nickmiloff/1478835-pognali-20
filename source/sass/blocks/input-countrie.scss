@@ -1,85 +1,304 @@
 .input-countrie {
   position: relative;
-  width: 220px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    width: 220px;
+    height: 42px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 535px;
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 994px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 2;
+
+    border-radius: 50%;
+
+    background-color: $basic-blue--dark;
+
+    @media (max-width: $mobile-width-only) {
+      width: 8px;
+      height: 8px;
+
+      top: 17px;
+      right: 49px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 14px;
+      height: 14px;
+
+      top: 26px;
+      right: 133px;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 212px;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+
+    @media (max-width: $mobile-width-only) {
+      width: 8px;
+      height: 11px;
+      bottom: -17px;
+      right: 49px;
+
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.64645 10.3536C3.84171 10.5488 4.15829 10.5488 4.35355 10.3536L7.53553 7.17157C7.7308 6.97631 7.7308 6.65973 7.53553 6.46447C7.34027 6.2692 7.02369 6.2692 6.82843 6.46447L4 9.29289L1.17157 6.46447C0.976311 6.2692 0.659728 6.2692 0.464466 6.46447C0.269204 6.65973 0.269204 6.97631 0.464466 7.17157L3.64645 10.3536ZM3.5 0L3.5 10H4.5L4.5 0L3.5 0Z' fill='%23CBCED9'/%3E%3C/svg%3E");
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 1px;
+      height: 71px;
+      top: -45px;
+      right: 139px;
+
+      background-color: $special-grey--underline;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 219px;
+    }
+  }
 
   &--empty {
+    .input-countrie__flag {
+      display: none;
+    }
+
     .input-countrie__input {
-      width: 100%;
+      @media (max-width: $mobile-width-only) {
+        width: 100%;
+        padding-right: 70px;
+      }
     }
 
     .input-countrie__dropdown-button {
-      right: 4px;
+      @media (max-width: $mobile-width-only) {
+        right: 3px;
+      }
+    }
+
+    &::after {
+      border: 1px solid $special-grey--light;
+
+      background-color: $basic-white;
+    }
+  }
+
+  &:first-of-type::before {
+    @media (min-width: $tablet-width) {
+      height: 68px;
+      top: -42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 88px;
+      top: -62px;
     }
   }
 }
 
 .input-countrie__input {
-  width: 168px;
-  box-sizing: border-box;
-
-  padding: 11px 38px 11px 9px;
+  height: 100%;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 18px;
-
-  letter-spacing: 0.09em;
   text-transform: uppercase;
 
   color: $basic-blue--dark;
 
   border: 1px solid $special-grey--light;
-  border-radius: 5px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-right: 30px;
+    padding-left: 9px;
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.09em;
+
+    border-radius: 5px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 369px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+
+    border-radius: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 730px;
+  }
+
+  &:hover {
+    border-color: $special-grey--border;
+  }
 }
 
 .input-countrie__dropdown-button {
   position: absolute;
-  right: 55px;
-  top: 4px;
-  width: 52px;
-  height: 36px;
-
-  padding: 0;
 
   border: none;
 
   background-color: transparent;
-  background-image: linear-gradient(90deg, transparent, #ffffff 35%);
+
+  @media (max-width: $mobile-width-only) {
+    width: 52px;
+    height: 38px;
+    top: 2px;
+    right: 55px;
+
+    background-image: linear-gradient(90deg, transparent, #ffffff 35%);
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 16px;
+    height: 66px;
+    top: 2px;
+    right: 194px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 21px;
+    right: 289px;
+  }
 
   &::before {
     content: "";
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
 
     background-image: url("../../img/dropdown-form.svg");
     background-repeat: no-repeat;
-    background-size: 12px 12px;
-    background-position: 29px 12px;
 
     opacity: 0.3;
+
+    @media (max-width: $mobile-width-only) {
+      background-size: 12px 12px;
+      background-position: 28px center;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 16px 16px;
+      background-position: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-size: 21px 21px;
+    }
+  }
+
+  &:hover::before {
+    opacity: 0.5;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+}
+
+.input-countrie__flag {
+  display: inline-block;
+
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: $mobile-width-only) {
+    width: 53px;
+    height: 42px;
+    margin-left: -1px;
+
+    border-radius: 5px;
+    border: 1px solid $special-grey--light;
+
+    background-size: 35px 24px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 70px;
+    height: 47px;
+    margin-left: 52px;
+
+    background-size: 70px 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 85px;
+  }
+
+  &--bih {
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../../img/flag-bosnia-and-herzegovina-mobile@1x.png");
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/flag-bosnia-and-herzegovina-tablet@1x.png");
+    }
+  }
+
+  &--cze {
+    @media (max-width: $mobile-width-only) {
+      background-image: url("../../img/flag-czech-mobile@1x.png");
+    }
+
+    @media (min-width: $tablet-width) {
+      background-image: url("../../img/flag-czech-tablet@1x.png");
+    }
   }
 }
 
 .input-countrie__delete-button {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-
   display: block;
-  width: 21px;
-  height: 21px;
-
-  padding: 0;
+  position: absolute;
 
   border: none;
-  border-radius: 50%;
 
-  background-color: $basic-grey;
+  background-color: transparent;
+
+  @media (max-width: $mobile-width-only) {
+    top: -10px;
+    right: -10px;
+    width: 21px;
+    height: 21px;
+
+    border-radius: 50%;
+
+    background-color: $basic-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 22px;
+    right: -2px;
+    width: 24px;
+    height: 24px;
+  }
 
   &::before {
     content: "";
@@ -91,9 +310,24 @@
 
     background-image: url("../../img/filter-close.svg");
     background-repeat: no-repeat;
-    background-size: 7px 7px;
     background-position: center;
 
-    opacity: 0.5;
+    opacity: 0.45;
+
+    @media (max-width: $mobile-width-only) {
+      background-size: 7px 7px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 18px 18px;
+    }
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 }
