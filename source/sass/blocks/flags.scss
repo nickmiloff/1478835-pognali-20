@@ -1,18 +1,13 @@
 .flags {
   display: flex;
-  width: 100%;
   justify-content: center;
-
-  padding: 0;
+  width: 100%;
 
   list-style: none;
-
-  &--list {
-    display: list-item;
-  }
 }
 
 .flags__item {
+  position: relative;
   width: 35px;
   height: 25px;
   margin-right: 20px;
@@ -21,42 +16,70 @@
   background-size: 35px 25px;
 
   &--shri-lanka {
-    background-image: url("../../img/flag-shri-lanka-mobile@1x.png");
+    background-image: url("../img/flag-shri-lanka-mobile@1x.png");
   }
 
   &--tai {
-    background-image: url("../../img/flag-thailand-mobile@1x.png");
+    background-image: url("../img/flag-thailand-mobile@1x.png");
   }
 
   &--sey {
-    background-image: url("../../img/flag-seychelles-mobile@1x.png");
+    background-image: url("../img/flag-seychelles-mobile@1x.png");
   }
 
   &--bel {
-    background-image: url("../../img/flag-belgium-mobile@1x.png");
+    background-image: url("../img/flag-belgium-mobile@1x.png");
   }
 
   &--che {
-    background-image: url("../../img/flag-czech-mobile@1x.png");
+    background-image: url("../img/flag-czech-mobile@1x.png");
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover .flags__name {
+    display: block;
   }
 }
 
-.flags__item:last-child {
-  margin-right: 0;
-}
-
 .flags__name {
-  font-size: 0;
-}
+  display: none;
+  width: max-content;
+  padding: 18px 25px;
 
-.flags--list .flags__name {
+  position: absolute;
+  z-index: 1;
+  bottom: -65px;
+  left: 50%;
+  transform: translate(-50%);
+
+  border-radius: 4px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 16px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
 
-  text-transform: uppercase;
+  background-color: $special-blue--pop-up;
+  color: $basic-white;
 
-  color: $basic-blue--dark;
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 8px;
+
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M7 0L13.9282 7.5H0.0717969L7 0Z' fill='%23101D41'/%3E%3C/svg%3E");
+  }
 }

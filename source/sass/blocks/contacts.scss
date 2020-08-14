@@ -1,0 +1,103 @@
+.contacts {
+  display: flex;
+
+  list-style: none;
+}
+
+.contacts__tel,
+.contacts__email {
+  font-size: 0;
+
+  display: block;
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+
+  border-radius: 50%;
+
+  @media (min-width: $desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
+
+  &::before {
+    content: "svg";
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.contacts__tel {
+  background-color: $special-orange;
+
+  &::before {
+    background-image: url("../img/topmenu-phone.svg");
+    background-size: 18px 18px;
+  }
+
+  &:hover {
+    background-color: $special-orange--dark;
+  }
+}
+
+.contacts__email {
+  background-color: $basic-yellow--dark;
+
+  &::before {
+    background-image: url("../img/topmenu-mail.svg");
+    background-size: 18px 16px;
+  }
+
+  &:hover {
+    background-color: $special-orange;
+  }
+}
+
+.contacts__auth {
+  display: block;
+  width: 190px;
+  padding: 10px 0;
+
+  border-radius: 50px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  color: $basic-blue;
+  background-color: $basic-yellow;
+
+  @media (min-width: $tablet-width) {
+    width: 188px;
+    padding: 15px 10px;
+  }
+
+  &:hover {
+    background-color: $basic-yellow--dark;
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.3);
+    background-color: $basic-yellow--dark;
+  }
+}

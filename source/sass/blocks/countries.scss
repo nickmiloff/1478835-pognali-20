@@ -1,7 +1,125 @@
 .countries {
-  background-color: $basic-grey;
+  position: relative;
+  z-index: 6;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $basic-blue--light;
+
+  @media (max-width: $mobile-width-only) {
+    margin-top: -30px;
+    padding-top: 99px;
+    padding-bottom: 34px;
+
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: -60px;
+    padding-top: 129px;
+    padding-bottom: 81px;
+
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto auto;
+    column-gap: 60px;
+    row-gap: 39px;
+
+    padding-top: 221px;
+    padding-bottom: 138px;
+
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+  }
+}
+
+.countries__title {
+  @media (max-width: $mobile-width-only) {
+    align-self: flex-start;
+  }
+
+  @media (min-width: $tablet-width) {
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 111px;
+  }
+}
+
+.countries__desc {
+  @media (max-width: $mobile-width-only) {
+    align-self: flex-start;
+
+    margin-top: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 415px;
+    margin-top: 59px;
+
+    align-self: flex-start;
+
+    line-height: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 492px;
+    margin-top: 22px;
+
+    padding-left: 112px;
+  }
 }
 
 .countries__list {
-  list-style: none;
+  @media (max-width: $mobile-width-only) {
+    margin-top: 61px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 106px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-row: 1 / -1;
+    justify-self: flex-end;
+    align-self: baseline;
+
+    margin-top: 0;
+  }
+}
+
+.countries__item {
+  margin-top: 11px;
+
+  @media (min-width: $desktop-width) {
+    margin-top: 10px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.countries__link {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 26px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 113px;
+    margin-top: 61px;
+  }
 }

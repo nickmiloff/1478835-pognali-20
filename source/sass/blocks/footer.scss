@@ -1,21 +1,129 @@
+.footer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  background-color: $basic-white;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+
+    margin-top: -97px;
+    padding-top: 37px;
+    padding-bottom: 20px;
+
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+
+    margin-top: -67px;
+    padding-top: 47px;
+    padding-bottom: 31px;
+
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -95px;
+    padding-top: 48px;
+    padding-bottom: 43px;
+
+    border-top-left-radius: 56px;
+    border-top-right-radius: 56px;
+  }
+}
+
+.footer__socials {
+  @media (max-width: $mobile-width-only) {
+    margin-top: 33px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 49px;
+  }
+}
+
 .footer__socials .socials__link {
   background-color: $basic-yellow;
+
+  &:hover {
+    opacity: 1;
+
+    background-color: $basic-yellow--dark;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:active::before {
+    opacity: 0.3;
+  }
 }
 
 .footer__link {
+  position: relative;
   display: flex;
   align-items: center;
-  width: 270px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 16px;
 
   text-decoration: none;
 
   color: $special-grey;
+
+  @media (max-width: $mobile-width-only) {
+    width: 270px;
+    margin-top: 49px;
+
+    font-size: 16px;
+    line-height: 16px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 270px;
+      height: 1px;
+
+      position: absolute;
+      top: -13px;
+      left: 0;
+
+      background-color: $special-grey--upperline;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+    width: 154px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 155px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__in-link-logo {

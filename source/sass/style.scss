@@ -1,129 +1,65 @@
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-@import "../sass/colors.scss";
+// --- Global styles -----------------------------------
+@import "../sass/variables.scss";
 @import "../sass/fonts.scss";
-@import "../sass/blocks/header.scss";
-@import "../sass/blocks/main-nav.scss";
-@import "../sass/blocks/socials.scss";
-@import "../sass/blocks/main.scss";
+@import "../sass/global.scss";
+// --- Elements styles ---------------------------------
+@import "../sass/elements/email.scss";
+@import "../sass/elements/tel.scss";
+@import "../sass/elements/show-all-button.scss";
+@import "../sass/elements/logo.scss";
+// --- Dropdowns ---------------------------------------
+// --- Level 2 --------------------------------------
 @import "../sass/blocks/countries-filter.scss";
-@import "../sass/blocks/countries-alphabet.scss";
-@import "../sass/blocks/cities.scss";
-@import "../sass/blocks/filter.scss";
-@import "../sass/blocks/value-level.scss";
-@import "../sass/blocks/profile.scss";
-@import "../sass/blocks/promo.scss";
-@import "../sass/blocks/review.scss";
-@import "../sass/blocks/guide.scss";
-@import "../sass/blocks/about.scss";
-@import "../sass/blocks/countries.scss";
-@import "../sass/blocks/countrie.scss";
-@import "../sass/blocks/users.scss";
-@import "../sass/blocks/user.scss";
-@import "../sass/blocks/level.scss";
-@import "../sass/blocks/flags.scss";
-@import "../sass/blocks/transport.scss";
-@import "../sass/blocks/services.scss";
-@import "../sass/blocks/feedback.scss";
-@import "../sass/blocks/map.scss";
-@import "../sass/blocks/plans.scss";
-@import "../sass/blocks/add-plan.scss";
-@import "../sass/blocks/step.scss";
-@import "../sass/blocks/input-area.scss";
-@import "../sass/blocks/input-countrie.scss";
-@import "../sass/blocks/new-countrie.scss";
-@import "../sass/blocks/countrie-plan.scss";
-@import "../sass/blocks/calendar.scss";
-@import "../sass/blocks/control.scss";
-@import "../sass/blocks/footer.scss";
 @import "../sass/blocks/busines-service.scss";
 @import "../sass/blocks/countrie-dropdown.scss";
-
-.tel,
-.email {
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
-
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.tel::before,
-.email::before {
-  content: "";
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-
-  margin-right: 16px;
-
-  vertical-align: middle;
-
-  border-radius: 50%;
-
-  background-color: $special-blue--buble;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.tel::before {
-  background-image: url("../../img/contacts-phone.svg");
-  background-size: 18px 17px;
-}
-
-.email::before {
-  background-image: url("../../img/contacts-mail.svg");
-  background-size: 18px 12.5px;
-}
-
-.show-all-button {
-  position: relative;
-  display: block;
-  width: 270px;
-  padding: 22px 60px 22px 23px;
-  box-sizing: border-box;
-
-  border-radius: 10px;
-
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-
-  text-decoration: none;
-
-  background-color: $basic-yellow;
-  color: $basic-blue--dark;
-}
-
-.show-all-button--bordered {
-  border: 3px solid $special-blue--dark;
-}
-
-.show-all-button::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 13px;
-  height: 13px;
-
-  top: 24px;
-  right: 24px;
-
-  background-image: url("../../img/triangle-arrow-right.svg");
-  background-repeat: no-repeat;
-  background-size: 13px 13px;
-}
+// --- Blocks ------------------------------------------
+// --- Level 6 --------------------------------------
+// --- Form -----------------------------------
+@import "../sass/blocks/input-area.scss";
+@import "../sass/blocks/calendar.scss";
+@import "../sass/blocks/countrie-plan.scss";
+@import "../sass/blocks/input-countrie.scss";
+@import "../sass/blocks/new-countrie.scss";
+// --- Main -----------------------------------
+@import "../sass/blocks/level.scss";
+@import "../sass/blocks/transport.scss";
+@import "../sass/blocks/flags.scss";
+// --- Level 5 --------------------------------------
+// --- Form -----------------------------------
+@import "../sass/blocks/step.scss";
+@import "../sass/blocks/profile-level.scss";
+// --- Main -----------------------------------
+@import "../sass/blocks/countrie.scss";
+@import "../sass/blocks/user-card.scss";
+// --- Level 4 --------------------------------------
+// --- Catalog --------------------------------
+@import "../sass/blocks/value-level.scss";
+@import "../sass/blocks/catalog-user.scss";
+@import "../sass/blocks/pagination.scss";
+// --- Main -----------------------------------
+@import "../sass/blocks/contacts.scss";
+@import "../sass/blocks/review.scss";
+@import "../sass/blocks/guide.scss";
+@import "../sass/blocks/services.scss";
+// --- Level 3 --------------------------------------
+// --- Catalog --------------------------------
+@import "../sass/blocks/filter.scss";
+@import "../sass/blocks/users-catalog.scss";
+// --- Form -----------------------------------
+@import "../sass/blocks/profile.scss";
+@import "../sass/blocks/plans.scss";
+@import "../sass/blocks/add-plan.scss";
+// --- Main -----------------------------------
+@import "../sass/blocks/socials.scss";
+@import "../sass/blocks/main-nav.scss";
+@import "../sass/blocks/promo.scss";
+@import "../sass/blocks/about.scss";
+@import "../sass/blocks/countries.scss";
+@import "../sass/blocks/users.scss";
+@import "../sass/blocks/regular-service.scss";
+@import "../sass/blocks/feedback.scss";
+@import "../sass/blocks/map.scss";
+// --- Level 2 --------------------------------------
+@import "../sass/blocks/header.scss";
+@import "../sass/blocks/main.scss";
+@import "../sass/blocks/footer.scss";

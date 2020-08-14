@@ -1,21 +1,26 @@
 .transport {
   display: flex;
+  justify-content: center;
   width: 100%;
 
-  padding: 0;
-
-  justify-content: center;
+  list-style: none;
 }
 
 .transport__item {
   position: relative;
-
-  width: 32px;
-  height: 32px;
-
-  font-size: 0;
+  display: block;
 
   border-radius: 50%;
+
+  @media (max-width: $mobile-width-only) {
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 34px;
+    height: 32px;
+  }
 
   &::before {
     content: "";
@@ -36,33 +41,140 @@
 
   &--plane::before {
     background-image: url("../../img/plane.svg");
-    background-size: 21px 21px;
+
+    @media (max-width: $mobile-width-only) {
+      background-size: 21px 21px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 23px 23px;
+    }
   }
 
-  &--train::before {
+  &--bus::before {
     background-image: url("../../img/bus.svg");
-    background-size: 17px 19px;
+
+    @media (max-width: $mobile-width-only) {
+      background-size: 17px 19px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 18px 20px;
+    }
   }
 
   &--bicycle::before {
     background-image: url("../../img/bike.svg");
-    background-size: 21px 18px;
+
+    @media (max-width: $mobile-width-only) {
+      background-size: 21px 18px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 25px 25px;
+    }
   }
 
   &--foot::before {
     background-image: url("../../img/run.svg");
-    background-size: 16px 19px;
+
+    @media (max-width: $mobile-width-only) {
+      background-size: 16px 19px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 22px 24px;
+    }
   }
 
   &--input {
     background-color: $basic-white;
+
+    @media (min-width: $tablet-width) {
+      width: 43px;
+      height: 43px;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 2px 6px rgba($basic-blue, 0.17));
+    }
+
+    &:hover::before {
+      opacity: 0.3;
+    }
+
+    &:active {
+      background-color: $special-grey--filter;
+    }
+
+    &:active::before {
+      opacity: 0.15;
+    }
   }
 
   &--input::before {
-    background-size: 17px 16px;
+    @media (max-width: $mobile-width-only) {
+      background-size: 17px 16px;
+    }
+
+    @media (min-width: $tablet-width) {
+      background-size: 23px 22px;
+    }
+  }
+
+  &:hover .transport__name {
+    display: block;
+  }
+}
+
+.transport__name {
+  display: none;
+  width: max-content;
+  padding: 18px 25px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: -65px;
+  left: 50%;
+  transform: translate(-50%);
+
+  border-radius: 4px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+
+  background-color: $special-blue--pop-up;
+  color: $basic-white;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 8px;
+
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M7 0L13.9282 7.5H0.0717969L7 0Z' fill='%23101D41'/%3E%3C/svg%3E");
   }
 }
 
 .transport__checkbox:checked + .transport__item--input::before {
   opacity: 1;
+}
+
+.transport__checkbox:checked + .transport__item--input:hover::before {
+  opacity: 0.65;
+}
+
+.transport__checkbox:checked + .transport__item--input:active::before {
+  opacity: 0.3;
 }
