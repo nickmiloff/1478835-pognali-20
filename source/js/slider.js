@@ -48,7 +48,7 @@ var secondPin = {
 
 var MIN = 0;
 var MAX = line.offsetWidth - firstPin.pin.offsetWidth;
-var maxPrice = firstPin.value.max;
+var maxPrice = firstPin.value.getAttribute("data-max");
 
 var toValue = function (pin) {
   if (pin.classList.contains('value-level__pin--first')) {
