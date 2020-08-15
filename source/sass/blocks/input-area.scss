@@ -2,20 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 220px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
   text-transform: uppercase;
 
   color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    width: 220px;
-
-    font-size: 16px;
-    line-height: 16px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 531px;
@@ -33,9 +29,7 @@
 }
 
 .input-area__title {
-  @media (max-width: $mobile-width-only) {
-    letter-spacing: 0.09em;
-  }
+  letter-spacing: 0.09em;
 
   @media (min-width: $tablet-width) {
     letter-spacing: 0.1em;
@@ -50,11 +44,9 @@
 }
 
 .input-area__unit {
-  opacity: 0.3;
+  letter-spacing: 0.07em;
 
-  @media (max-width: $mobile-width-only) {
-    letter-spacing: 0.07em;
-  }
+  opacity: 0.3;
 
   @media (min-width: $tablet-width) {
     letter-spacing: 0.08em;
@@ -74,15 +66,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  margin-top: 9px;
+  padding-top: 12px;
+  padding-bottom: 11px;
 
   border: 1px solid $special-grey--light;
   border-radius: 4px;
-
-  @media (max-width: $mobile-width-only) {
-    margin-top: 9px;
-    padding-top: 12px;
-    padding-bottom: 11px;
-  }
 
   @media (min-width: $tablet-width) {
     margin-top: 26px;
@@ -97,7 +86,7 @@
   }
 
   &--invalid {
-    border-color: #f47e7e;
+    border-color: $special-red;
   }
 
   &:hover {
@@ -110,9 +99,13 @@
 }
 
 .input-area__value {
+  width: 164px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
+  font-size: 14.86px;
+  line-height: 14px;
   text-transform: uppercase;
   text-align: center;
 
@@ -120,13 +113,6 @@
 
   color: $basic-blue--dark;
   background-color: transparent;
-
-  @media (max-width: $mobile-width-only) {
-    width: 164px;
-
-    font-size: 14.86px;
-    line-height: 14px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 451px;
@@ -140,13 +126,15 @@
   }
 
   &--invalid {
-    color: #ff0000;
+    color: $basic-red;
   }
 }
 
 .input-area__button {
   display: inline-block;
   vertical-align: middle;
+  width: 14px;
+  height: 14px;
 
   border: none;
   background-color: transparent;
@@ -156,11 +144,6 @@
 
   opacity: 0.2;
 
-  @media (max-width: $mobile-width-only) {
-    width: 14px;
-    height: 14px;
-  }
-
   @media (min-width: $tablet-width) {
     width: 20px;
     height: 20px;
@@ -168,24 +151,24 @@
 
   &--minus {
     @media (max-width: $mobile-width-only) {
-      background-image: url("../../img/qty-minus-mobile.svg");
+      background-image: url("../img/qty-minus-mobile.svg");
       background-size: 14px 2px;
     }
 
     @media (min-width: $tablet-width) {
-      background-image: url("../../img/qty-minus.svg");
+      background-image: url("../img/qty-minus.svg");
       background-size: 20px 2px;
     }
   }
 
   &--plus {
     @media (max-width: $mobile-width-only) {
-      background-image: url("../../img/qty-plus-mobile.svg");
+      background-image: url("../img/qty-plus-mobile.svg");
       background-size: 14px 14px;
     }
 
     @media (min-width: $tablet-width) {
-      background-image: url("../../img/qty-plus.svg");
+      background-image: url("../img/qty-plus.svg");
       background-size: 20px 20px;
     }
   }

@@ -3,18 +3,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  width: 270px;
+  padding-bottom: 17px;
+
+  border-radius: 10px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
 
   background-color: $basic-white;
-
-  @media (max-width: $mobile-width-only) {
-    width: 270px;
-    padding-bottom: 17px;
-
-    border-radius: 10px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 285px;
@@ -36,10 +33,8 @@
   display: block;
   overflow: hidden;
 
-  @media (max-width: $mobile-width-only) {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   @media (min-width: $tablet-width) {
     border-top-left-radius: 20px;
@@ -49,11 +44,8 @@
 
 .user-card__avatar {
   vertical-align: top;
-
-  @media (max-width: $mobile-width-only) {
-    width: 270px;
-    height: 270px;
-  }
+  width: 270px;
+  height: 270px;
 
   @media (min-width: $tablet-width) {
     width: 285px;
@@ -62,20 +54,16 @@
 }
 
 .user-card__level {
-  position: absolute;
-
   width: 60px;
   height: 60px;
+  position: absolute;
+  top: 17px;
+  left: 17px;
 
   border-radius: 50%;
 
   background-color: rgba($basic-black, 0.6);
   color: $basic-white;
-
-  @media (max-width: $mobile-width-only) {
-    top: 17px;
-    left: 17px;
-  }
 
   @media (min-width: $tablet-width) {
     top: 20px;
@@ -84,9 +72,7 @@
 }
 
 .user-card__flags {
-  @media (max-width: $mobile-width-only) {
-    margin-top: -11px;
-  }
+  margin-top: -11px;
 
   @media (min-width: $tablet-width) {
     margin-top: -12px;
@@ -95,20 +81,15 @@
 
 .user-card__name {
   position: relative;
+  margin-top: 11px;
 
   font-weight: bold;
-
+  font-size: 21px;
+  line-height: 21px;
   text-align: center;
   text-decoration: none;
 
   color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    margin-top: 11px;
-
-    font-size: 21px;
-    line-height: 21px;
-  }
 
   @media (min-width: $tablet-width) {
     margin-top: 16px;
@@ -119,7 +100,8 @@
 
   &::before {
     content: "";
-
+    width: 6px;
+    height: 6px;
     position: absolute;
     top: 9px;
     left: -16px;
@@ -127,13 +109,6 @@
     border-radius: 50%;
 
     background-color: $special-red--offline;
-
-    @media (max-width: $mobile-width-only) {
-      width: 6px;
-      height: 6px;
-
-      left: -16px;
-    }
 
     @media (min-width: $tablet-width) {
       width: 8px;
@@ -157,18 +132,15 @@
 }
 
 .user-card__tags {
+  max-width: 190px;
+  margin-top: 16px;
+
   font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
   text-align: center;
 
   color: $special-grey;
-
-  @media (max-width: $mobile-width-only) {
-    max-width: 190px;
-    margin-top: 16px;
-
-    font-size: 16px;
-    line-height: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     max-width: 225px;
@@ -180,9 +152,7 @@
 }
 
 .user-card__transport {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 11px;
-  }
+  margin-top: 11px;
 
   @media (min-width: $tablet-width) {
     margin-top: 24px;

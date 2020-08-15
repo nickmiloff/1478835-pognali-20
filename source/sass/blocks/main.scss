@@ -1,11 +1,8 @@
 .main {
   background-color: $basic-blue--light;
-
-  margin: 0 auto;
-
-  @media (max-width: $mobile-width-only) {
-    width: 320px;
-  }
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -16,16 +13,14 @@
   }
 
   &--active {
-    @media (max-width: $mobile-width-only) {
-      margin-top: 73px;
-    }
+    margin-top: 73px;
 
     @media (min-width: $tablet-width) {
       margin-top: 132px;
     }
 
     @media (min-width: $desktop-width) {
-      margin-top: 118px;
+      margin-top: 110px;
     }
   }
 }
@@ -33,21 +28,25 @@
 .main__title-wrapper {
   position: relative;
   z-index: 8;
-  margin: 0 auto;
+  width: 320px;
+  padding-top: 27px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   background-color: $special-blue--dark;
 
-  @media (max-width: $mobile-width-only) {
-    width: 320px;
-    padding: 27px 25px 15px 25px;
-
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-
   @media (min-width: $tablet-width) {
     width: 768px;
-    padding: 90px 75px 70px 75px;
+    padding-top: 90px;
+    padding-bottom: 70px;
+    padding-left: 75px;
+    padding-right: 75px;
 
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -55,7 +54,10 @@
 
   @media (min-width: $desktop-width) {
     width: 1440px;
-    padding: 102px 125px 71px 125px;
+    padding-top: 102px;
+    padding-bottom: 71px;
+    padding-left: 125px;
+    padding-right: 125px;
 
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
@@ -66,11 +68,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  @media (max-width: $mobile-width-only) {
-    margin-top: 21px;
-    margin-bottom: 143px;
-  }
+  margin-top: 21px;
+  margin-bottom: 143px;
 
   @media (min-width: $tablet-width) {
     margin-top: 43px;

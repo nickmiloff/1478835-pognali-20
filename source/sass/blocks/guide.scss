@@ -10,7 +10,6 @@
   }
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
     flex-wrap: wrap;
   }
 
@@ -21,12 +20,20 @@
 
 .guide__item {
   position: relative;
+  width: 270px;
+  padding-top: 21px;
+  padding-bottom: 33px;
+  padding-left: 24px;
+  padding-right: 96px;
+  margin-top: -10px;
 
   counter-increment: countrie-iterator;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
 
   color: $basic-blue;
 
@@ -49,13 +56,10 @@
   &::after {
     content: counter(countrie-iterator);
     position: absolute;
+    top: 22px;
+    left: 239px;
 
     color: $basic-white;
-
-    @media (max-width: $mobile-width-only) {
-      top: 22px;
-      left: 239px;
-    }
 
     @media (min-width: $tablet-width) {
       top: unset;
@@ -77,15 +81,8 @@
   }
 
   @media (max-width: $mobile-width-only) {
-    width: 270px;
-    padding: 21px 96px 33px 24px;
-    margin-top: -10px;
-
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
-    font-size: 18px;
-    line-height: 18px;
 
     &:first-child {
       margin-top: 0;
@@ -100,7 +97,10 @@
 
   @media (min-width: $tablet-width) {
     width: 365px;
-    padding: 29px 140px 63px 33px;
+    padding-top: 29px;
+    padding-bottom: 63px;
+    padding-left: 33px;
+    padding-right: 140px;
     margin-top: 0;
 
     font-size: 24px;
@@ -132,7 +132,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 28px 140px 31px 32px;
+    padding-top: 28px;
+    padding-bottom: 31px;
+    padding-left: 31px;
 
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;

@@ -1,21 +1,17 @@
 .plans {
-  background-color: $special-blue--light;
+  padding-top: 26px;
+  padding-bottom: 60px;
 
-  @media (max-width: $mobile-width-only) {
-    padding-top: 26px;
-    padding-bottom: 60px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-  }
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  background-color: $special-blue--light;
 
   @media (min-width: $tablet-width) {
     padding-top: 54px;
     padding-bottom: 106px;
     padding-left: 75px;
     padding-right: 75px;
-
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -30,12 +26,10 @@
 }
 
 .plans__list {
+  margin-top: 31px;
+
   list-style: none;
   counter-reset: countrie-iterator;
-
-  @media (max-width: $mobile-width-only) {
-    margin-top: 31px;
-  }
 
   @media (min-width: $tablet-width) {
     margin-top: 51px;
@@ -46,6 +40,11 @@
   position: relative;
   display: flex;
   align-items: flex-start;
+  padding-top: 23px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-top: 10px;
 
   counter-increment: countrie-iterator;
 
@@ -54,11 +53,6 @@
   background-color: $basic-white;
 
   @media (max-width: $mobile-width-only) {
-    padding-top: 23px;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 24px;
-    margin-top: 10px;
     flex-direction: column;
   }
 
@@ -97,6 +91,8 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
@@ -105,9 +101,6 @@
   @media (max-width: $mobile-width-only) {
     margin-top: 20px;
     flex-direction: column;
-
-    font-size: 14px;
-    line-height: 14px;
   }
 
   @media (min-width: $tablet-width) {
@@ -164,13 +157,10 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
 
   color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-    line-height: 16px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 100%;
@@ -210,6 +200,9 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.03em;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
@@ -219,10 +212,6 @@
 
   @media (max-width: $mobile-width-only) {
     margin-top: 23px;
-
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: 0.03em;
   }
 
   @media (min-width: $tablet-width) {

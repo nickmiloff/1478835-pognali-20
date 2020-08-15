@@ -1,13 +1,12 @@
 .add-plan {
-  background-color: $special-grey--dark;
+  padding-top: 28px;
+  padding-bottom: 140px;
+  margin-top: -30px;
 
-  @media (max-width: $mobile-width-only) {
-    margin-top: -30px;
-    padding-top: 28px;
-    padding-bottom: 140px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-  }
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+
+  background-color: $special-grey--dark;
 
   @media (min-width: $tablet-width) {
     padding-top: 51px;
@@ -41,16 +40,13 @@
   &::after {
     content: "";
     display: block;
+    min-width: 5px;
+    width: 5px;
+    height: 5px;
+
+    margin-right: 35px;
 
     border-radius: 50%;
-
-    @media (max-width: $mobile-width-only) {
-      min-width: 5px;
-      width: 5px;
-      height: 5px;
-
-      margin-right: 35px;
-    }
 
     @media (min-width: $tablet-width) {
       min-width: 6px;
@@ -68,11 +64,10 @@
   &--1::after {
     background-color: $basic-blue--dark;
 
-    @media (max-width: $mobile-width-only) {
-      box-shadow:
-        21px 0 0 0 rgba($basic-blue--dark, 0.3),
-        42px 0 0 0 rgba($basic-blue--dark, 0.3);
-    }
+    box-shadow:
+      21px 0 0 0 rgba($basic-blue--dark, 0.3),
+      42px 0 0 0 rgba($basic-blue--dark, 0.3);
+
 
     @media (min-width: $tablet-width) {
       box-shadow:
@@ -84,11 +79,9 @@
   &--2::after {
     background-color: rgba($basic-blue--dark, 0.3);
 
-    @media (max-width: $mobile-width-only) {
-      box-shadow:
-        21px 0 0 0 $basic-blue--dark,
-        42px 0 0 0 rgba($basic-blue--dark, 0.3);
-    }
+    box-shadow:
+      21px 0 0 0 $basic-blue--dark,
+      42px 0 0 0 rgba($basic-blue--dark, 0.3);
 
     @media (min-width: $tablet-width) {
       box-shadow:
@@ -100,11 +93,9 @@
   &--3::after {
     background-color: rgba($basic-blue--dark, 0.3);
 
-    @media (max-width: $mobile-width-only) {
-      box-shadow:
-        21px 0 0 0 rgba($basic-blue--dark, 0.3),
-        42px 0 0 0 $basic-blue--dark;
-    }
+    box-shadow:
+      21px 0 0 0 rgba($basic-blue--dark, 0.3),
+      42px 0 0 0 $basic-blue--dark;
 
     @media (min-width: $tablet-width) {
       box-shadow:

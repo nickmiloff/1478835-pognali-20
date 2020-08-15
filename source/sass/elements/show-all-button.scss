@@ -1,10 +1,19 @@
 .show-all-button {
   position: relative;
   display: block;
+  width: 270px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 23px;
+  padding-right: 60px;
+
+  border-radius: 10px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
   text-align: left;
 
   text-decoration: none;
@@ -12,19 +21,12 @@
   background-color: $basic-yellow;
   color: $basic-blue--dark;
 
-  @media (max-width: $mobile-width-only) {
-    width: 270px;
-    padding: 22px 60px 22px 23px;
-
-    border-radius: 10px;
-
-    font-size: 18px;
-    line-height: 18px;
-  }
-
   @media (min-width: $tablet-width) {
     width: 616px;
-    padding: 26px 60px 30px 32px;
+    padding-top: 26px;
+    padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 60px;
 
     border-radius: 20px;
 
@@ -41,32 +43,33 @@
     content: "";
     position: absolute;
     display: block;
+    top: 25px;
+    right: 23px;
 
-    border: 7px solid transparent;
+    border: 6px solid transparent;
     border-right: 0;
     border-left: 10px solid #1d2e5b;
 
-    @media (max-width: $mobile-width-only) {
-      top: 25px;
-      right: 19px;
-    }
-
     @media (min-width: $tablet-width) {
-      top: 33px;
-      right: 29px;
+      top: 36px;
+      right: 33px;
     }
   }
 
   &--bordered {
-    border: 3px solid $special-blue--dark;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 19px;
+    padding-right: 60px;
 
-    @media (max-width: $mobile-width-only) {
-      padding: 19px 60px 19px 19px;
-    }
+    border: 3px solid $special-blue--dark;
 
     @media (min-width: $tablet-width) {
       width: 618px;
-      padding: 24px 60px 26px 34px;
+      padding-top: 24px;
+      padding-bottom: 26px;
+      padding-left: 34px;
+      padding-right: 60px;
     }
 
     @media (min-width: $desktop-width) {
@@ -75,10 +78,12 @@
   }
 
   &--bordered::after {
-    @media (max-width: $mobile-width-only) {
-      top: 21px;
-      right: 17px;
-    }
+    top: 22px;
+    right: 19px;
+
+    border: 6px solid transparent;
+    border-right: 0;
+    border-left: 12px solid #1d2e5b;
 
     @media (min-width: $tablet-width) {
       top: 31px;

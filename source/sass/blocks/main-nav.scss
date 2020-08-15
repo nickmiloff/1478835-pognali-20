@@ -2,13 +2,10 @@
   z-index: 11;
   display: none;
   flex-direction: column;
+  padding-top: 42px;
+  padding-bottom: 29px;
 
   background-color: $basic-white;
-
-  @media (max-width: $mobile-width-only) {
-    padding-top: 42px;
-    padding-bottom: 29px;
-  }
 
   @media (min-width: $tablet-width) {
     padding-top: 49px;
@@ -46,10 +43,7 @@
     position: fixed;
     left: 0;
     right: 0;
-
-    @media (max-width: $mobile-width-only) {
-      top: 73px;
-    }
+    top: 73px;
 
     @media (min-width: $tablet-width) {
       top: 132px;
@@ -77,8 +71,6 @@
 
   @media (min-width: $tablet-width) {
     margin-left: 57px;
-
-    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -99,7 +91,8 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
-
+  font-size: 30px;
+  line-height: 35px;
   text-transform: uppercase;
   text-decoration: none;
 
@@ -108,17 +101,12 @@
   transition: transform 0.3s;
 
   @media (max-width: $mobile-width-only) {
-    font-size: 30px;
-    line-height: 35px;
-
     align-items: center;
   }
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 71px;
-
-    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
@@ -149,6 +137,7 @@
   display: block;
   width: 270px;
   padding: 10px 0;
+  margin-top: 54px;
   border-radius: 50px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
@@ -174,19 +163,13 @@
     background-color: $basic-yellow--dark;
   }
 
-  @media (max-width: $mobile-width-only) {
-    margin-top: 54px;
-  }
-
   @media (min-width: $tablet-width) {
     display: none;
   }
 }
 
 .main-nav__tel {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 51px;
-  }
+  margin-top: 51px;
 
   @media (min-width: $tablet-width) {
     margin-top: 132px;
@@ -196,10 +179,6 @@
 .main-nav__tel,
 .main-nav__email {
   color: $special-blue--dark;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 
   &:hover {
     color: $basic-yellow;
@@ -212,12 +191,17 @@
   @media (min-width: $tablet-width) {
     margin-left: 57px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .main-nav__socials {
+  margin-top: 30px;
+
   @media (max-width: $mobile-width-only) {
     align-self: center;
-    margin-top: 30px;
   }
 
   @media (min-width: $tablet-width) {

@@ -1,6 +1,12 @@
 .catalog-user {
   position: relative;
   display: grid;
+  grid-template-columns: 86px 95px 53px;
+  width: 270px;
+  padding-top: 13px;
+  padding-bottom: 22px;
+  padding-left: 18px;
+  padding-right: 18px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -8,15 +14,6 @@
   border-radius: 20px;
 
   background-color: $basic-white;
-
-  @media (max-width: $mobile-width-only) {
-    grid-template-columns: 86px 95px 53px;
-    width: 270px;
-    padding-top: 13px;
-    padding-bottom: 22px;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 223px 146px 197px 64px;
@@ -41,13 +38,10 @@
 
 .catalog-user__avatar {
   vertical-align: top;
+  width: 70px;
+  height: 70px;
 
-  @media (max-width: $mobile-width-only) {
-    width: 70px;
-    height: 70px;
-
-    border-radius: 50%;
-  }
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     width: 190px;
@@ -68,20 +62,15 @@
 
 .catalog-user__pic {
   grid-column: 1 / 2;
-
-  @media (max-width: $mobile-width-only) {
-    grid-row: 1 / 3;
-    margin-top: 2px;
-  }
+  grid-row: 1 / 3;
+  margin-top: 2px;
 
   @media (min-width: $tablet-width) {
-    grid-column: 1 / 2;
     grid-row: 1 / 5;
     margin-top: 4px;
   }
 
   @media (min-width: $desktop-width) {
-    grid-column: 1 / 2;
     grid-row: 1 / 4;
     margin-top: 0;
   }
@@ -89,8 +78,11 @@
 
 .catalog-user__name {
   position: relative;
+  grid-column: 2 / -1;
 
   font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
   text-decoration: none;
 
   color: $basic-blue--dark;
@@ -99,8 +91,6 @@
     grid-column: 2 / -1;
 
     word-spacing: 130px;
-    font-size: 20px;
-    line-height: 20px;
   }
 
   @media (min-width: $tablet-width) {
@@ -119,19 +109,15 @@
 
   &::before {
     content: "";
-
     position: absolute;
+    width: 6px;
+    height: 6px;
+    top: 10px;
+    right: 4px;
 
     border-radius: 50%;
 
     background-color: $special-red--offline;
-
-    @media (max-width: $mobile-width-only) {
-      width: 6px;
-      height: 6px;
-      top: 10px;
-      right: 4px;
-    }
 
     @media (min-width: $tablet-width) {
       width: 8px;
@@ -184,19 +170,14 @@
 
 .catalog-user__like {
   display: inline-block;
+  width: 31px;
+  height: 31px;
   vertical-align: middle;
 
   border: none;
   border-radius: 50%;
 
   background-color: $special-grey--filter;
-
-  @media (max-width: $mobile-width-only) {
-    width: 31px;
-    height: 31px;
-    top: 54px;
-    left: 68px;
-  }
 
   @media (min-width: $tablet-width) {
     vertical-align: -19px;
@@ -212,13 +193,10 @@
 
 .catalog-user__likes-count {
   font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
 
   color: $basic-blue;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 14px;
-    line-height: 16px;
-  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -227,16 +205,14 @@
 }
 
 .catalog-user__tags {
+  grid-column: 1 / 3;
+  margin-top: 12px;
+  margin-left: 8px;
+
+  font-size: 15px;
+  line-height: 18px;
+
   color: $special-grey;
-
-  @media (max-width: $mobile-width-only) {
-    grid-column: 1 / 3;
-    margin-top: 12px;
-    margin-left: 8px;
-
-    font-size: 15px;
-    line-height: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 4;
@@ -259,11 +235,8 @@
 
 .catalog-user__countries {
   grid-column: 1 / -1;
+  margin-top: 13px;
   position: relative;
-
-  @media (max-width: $mobile-width-only) {
-    margin-top: 13px;
-  }
 
   @media (min-width: $tablet-width) {
     grid-column: 1 / -1;
@@ -281,17 +254,14 @@
   &::before {
     content: "";
     display: block;
+    width: 270px;
     height: 1px;
     position: absolute;
-    z-index: 1;
     top: 9px;
+    left: -34px;
+    z-index: 1;
 
     background-color: $basic-blue--light;
-
-    @media (max-width: $mobile-width-only) {
-      width: 270px;
-      left: -34px;
-    }
 
     @media (min-width: $tablet-width) {
       width: 688px;
@@ -315,12 +285,10 @@
 }
 
 .catalog-user__list {
-  list-style: none;
+  margin-top: 20px;
+  margin-left: 7px;
 
-  @media (max-width: $mobile-width-only) {
-    margin-top: 20px;
-    margin-left: 7px;
-  }
+  list-style: none;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -337,15 +305,14 @@
 
 .catalog-user__item {
   font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
   text-transform: uppercase;
 
   color: $basic-blue--dark;
 
   @media (max-width: $mobile-width-only) {
     margin-top: 10px;
-
-    font-size: 15px;
-    line-height: 16px;
   }
 
   @media (min-width: $tablet-width) {
@@ -368,19 +335,15 @@
   &::before {
     content: "";
     display: inline-block;
+    width: 26px;
+    height: 18px;
+    margin-right: 10px;
     vertical-align: middle;
 
     border-radius: 2px;
 
+    background-size: 26px 18px;
     background-repeat: no-repeat;
-
-    @media (max-width: $mobile-width-only) {
-      width: 26px;
-      height: 18px;
-      margin-right: 10px;
-
-      background-size: 26px 18px;
-    }
 
     @media (min-width: $tablet-width) {
       width: 35px;
@@ -397,103 +360,43 @@
   }
 
   &--lka::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img//flag-shri-lanka-secondary-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img//flag-shri-lanka-tablet@1x.png");
-    }
+    background-image: url("../img/flag-sri-lanka.svg");
   }
 
   &--tha::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-thailand-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-thailand-tablet@1x.png");
-    }
+    background-image: url("../img/flag-thailand.svg");
   }
 
   &--syc::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-seychelles-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-seychelles-tablet@1x.png");
-    }
+    background-image: url("../img/flag-seychelles.svg");
   }
 
   &--bel::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-belgium-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-belgium-tablet@1x.png");
-    }
+    background-image: url("../../img/flag-belgium.svg");
   }
 
   &--cze::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-czech-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-czech-tablet@1x.png");
-    }
+    background-image: url("../../img/flag-czech.svg");
   }
 
   &--usa::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-usa-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-usa-tablet@1x.png");
-    }
+    background-image: url("../../img/flag-usa.svg");
   }
 
   &--aus::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-australia-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-australia-tablet@1x.png");
-    }
+    background-image: url("../../img/flag-australia.svg");
   }
 
   &--dma::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-dominica-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-dominica-tablet@1x.png");
-    }
+    background-image: url("../../img/flag-dominica.svg");
   }
 
   &--gbr::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-gb-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-gb-tablet@1x.png");
-    }
+    background-image: url("../../img/flag-united-kingdom.svg");
   }
 
   &--deu::before {
-    @media (max-width: $mobile-width-only) {
-      background-image: url("../img/flag-germany-mobile@1x.png");
-    }
-
-    @media (min-width: $tablet-width) {
-      background-image: url("../img/flag-germany-tablet@1x.png");
-    }
+    background-image: url("../../img/flag-germany.svg");
   }
 }
 
@@ -578,10 +481,10 @@
 
 .catalog-user__level-wrapper {
   grid-column: -2 / -1;
+  margin-top: 11px;
 
   @media (max-width: $mobile-width-only) {
     position: relative;
-    margin-top: 11px;
 
     &::before {
       content: "";
@@ -617,10 +520,10 @@
 
 .catalog-user__level {
   align-self: center;
+  width: 45px;
+  height: 45px;
 
   @media (max-width: $mobile-width-only) {
-    width: 45px;
-    height: 45px;
     margin-top: 11px;
     margin-left: auto;
     margin-right: auto;
@@ -666,6 +569,8 @@
   position: relative;
   z-index: 2;
   width: max-content;
+  padding-left: 8px;
+  padding-right: 12px;
 
   font-size: 15px;
   line-height: 16px;
@@ -675,11 +580,6 @@
   color: $special-grey;
   background-color: $basic-white;
 
-  @media (max-width: $mobile-width-only) {
-    padding-left: 8px;
-    padding-right: 12px;
-  }
-
   @media (min-width: $tablet-width) {
     padding-left: 12px;
     padding-right: 12px;
@@ -687,7 +587,15 @@
 }
 
 .catalog-user__link {
+  width: 230px;
+  padding-top: 13px;
+  padding-bottom: 10px;
+  margin-top: 13px;
+  margin-left: 2px;
+
   font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -696,17 +604,6 @@
 
   color: $basic-blue;
   background-color: $basic-yellow;
-
-  @media (max-width: $mobile-width-only) {
-    width: 230px;
-    padding-top: 13px;
-    padding-bottom: 10px;
-    margin-top: 13px;
-    margin-left: 2px;
-
-    font-size: 17px;
-    line-height: 17px;
-  }
 
   @media (min-width: $tablet-width) {
     grid-column: 2 / 3;

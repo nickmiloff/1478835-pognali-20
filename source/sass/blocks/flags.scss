@@ -16,23 +16,23 @@
   background-size: 35px 25px;
 
   &--shri-lanka {
-    background-image: url("../img/flag-shri-lanka-mobile@1x.png");
+    background-image: url("../img/flag-sri-lanka.svg");
   }
 
   &--tai {
-    background-image: url("../img/flag-thailand-mobile@1x.png");
+    background-image: url("../img/flag-thailand.svg");
   }
 
   &--sey {
-    background-image: url("../img/flag-seychelles-mobile@1x.png");
+    background-image: url("../img/flag-seychelles.svg");
   }
 
   &--bel {
-    background-image: url("../img/flag-belgium-mobile@1x.png");
+    background-image: url("../img/flag-belgium.svg");
   }
 
   &--che {
-    background-image: url("../img/flag-czech-mobile@1x.png");
+    background-image: url("../img/flag-czech.svg");
   }
 
   &:last-child {
@@ -74,12 +74,12 @@
     height: 8px;
 
     position: absolute;
-    top: -7px;
+    top: -8px;
     left: 50%;
     transform: translate(-50%);
 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M7 0L13.9282 7.5H0.0717969L7 0Z' fill='%23101D41'/%3E%3C/svg%3E");
+    border: 7px solid transparent;
+    border-top: 0;
+    border-bottom: 8px solid $special-blue--pop-up;
   }
 }

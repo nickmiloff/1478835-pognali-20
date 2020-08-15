@@ -5,17 +5,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -30px;
+  padding-top: 99px;
+  padding-bottom: 34px;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   background-color: $basic-blue--light;
-
-  @media (max-width: $mobile-width-only) {
-    margin-top: -30px;
-    padding-top: 99px;
-    padding-bottom: 34px;
-
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-  }
 
   @media (min-width: $tablet-width) {
     margin-top: -60px;
@@ -24,6 +21,19 @@
 
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+
+    background-repeat: no-repeat;
+    background-position: 40px 466px, 440px 140px;
+    background-size: 141px 141px, 288px 574px;
+    background-image:
+      url("../../img/rectangle-countries.svg"),
+      url("../../img/flags-back@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../../img/rectangle-countries.svg"),
+        url("../../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -38,17 +48,14 @@
 
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
+
+    background-position: 60px 150px, 1093px 148px;
+    background-size: 140px 140px, 287px 575px;
   }
 }
 
 .countries__title {
-  @media (max-width: $mobile-width-only) {
-    align-self: flex-start;
-  }
-
-  @media (min-width: $tablet-width) {
-    align-self: flex-start;
-  }
+  align-self: flex-start;
 
   @media (min-width: $desktop-width) {
     padding-left: 111px;
@@ -56,11 +63,8 @@
 }
 
 .countries__desc {
-  @media (max-width: $mobile-width-only) {
-    align-self: flex-start;
-
-    margin-top: 20px;
-  }
+  align-self: flex-start;
+  margin-top: 20px;
 
   @media (min-width: $tablet-width) {
     max-width: 415px;
@@ -80,9 +84,7 @@
 }
 
 .countries__list {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 61px;
-  }
+  margin-top: 61px;
 
   @media (min-width: $tablet-width) {
     margin-top: 106px;
@@ -110,9 +112,7 @@
 }
 
 .countries__link {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 26px;
-  }
+  margin-top: 26px;
 
   @media (min-width: $tablet-width) {
     margin-top: 46px;

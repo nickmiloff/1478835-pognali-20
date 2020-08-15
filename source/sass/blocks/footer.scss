@@ -4,18 +4,17 @@
 
   display: flex;
   align-items: center;
+  margin-top: -97px;
+  padding-top: 37px;
+  padding-bottom: 20px;
+
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 
   background-color: $basic-white;
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
-
-    margin-top: -97px;
-    padding-top: 37px;
-    padding-bottom: 20px;
-
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
   }
 
   @media (min-width: $tablet-width) {
@@ -75,21 +74,20 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 270px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
 
   text-decoration: none;
 
   color: $special-grey;
 
   @media (max-width: $mobile-width-only) {
-    width: 270px;
     margin-top: 49px;
-
-    font-size: 16px;
-    line-height: 16px;
 
     &::before {
       content: "";

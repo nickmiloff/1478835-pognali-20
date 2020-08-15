@@ -8,15 +8,12 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  width: 45px;
+  height: 44px;
 
   border-radius: 50%;
 
   font-size: 0;
-
-  @media (max-width: $mobile-width-only) {
-    width: 45px;
-    height: 44px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 61px;
@@ -38,11 +35,8 @@
   }
 
   &--fb::before {
-    background-image: url("../../img/facebook.svg");
-
-    @media (max-width: $mobile-width-only) {
-      background-size: 11px 21px;
-    }
+    background-image: url("../img/facebook.svg");
+    background-size: 11px 21px;
 
     @media (min-width: $tablet-width) {
       background-size: 14px 28px;
@@ -50,11 +44,8 @@
   }
 
   &--vk::before {
-    background-image: url("../../img/vk.svg");
-
-    @media (max-width: $mobile-width-only) {
-      background-size: 23px 12px;
-    }
+    background-image: url("../img/vk.svg");
+    background-size: 23px 12px;
 
     @media (min-width: $tablet-width) {
       background-size: 31px 16px;
@@ -62,11 +53,8 @@
   }
 
   &--inst::before {
-    background-image: url("../../img/instagram.svg");
-
-    @media (max-width: $mobile-width-only) {
-      background-size: 18px 18px;
-    }
+    background-image: url("../img/instagram.svg");
+    background-size: 18px 18px;
 
     @media (min-width: $tablet-width) {
       background-size: 24px 24px;
