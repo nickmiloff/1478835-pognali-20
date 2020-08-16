@@ -1,5 +1,9 @@
 .calendar__control {
   position: relative;
+  width: 220px;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  margin-bottom: 21px;
 
   &::after,
   &::before {
@@ -21,13 +25,6 @@
     bottom: 0;
   }
 
-  @media (max-width: $mobile-width-only) {
-    width: 220px;
-    padding-top: 9px;
-    padding-bottom: 10px;
-    margin-bottom: 21px;
-  }
-
   @media (min-width: $tablet-width) {
     width: 532px;
     padding-left: 17px;
@@ -46,7 +43,11 @@
 }
 
 .calendar__button {
+  width: 9px;
+  height: 18px;
+
   border: none;
+  background-size: 9px 18px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
@@ -59,13 +60,6 @@
 
   &--next {
     background-image: url("../img/month-arrow-right.svg");
-  }
-
-  @media (max-width: $mobile-width-only) {
-    width: 9px;
-    height: 18px;
-
-    background-size: 9px 18px;
   }
 
   @media (min-width: $tablet-width) {
@@ -93,24 +87,20 @@
 
 .calendar__date {
   vertical-align: text-bottom;
+  width: 194px;
 
   border: none;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
   text-align: center;
   text-transform: capitalize;
 
   color: $basic-blue--dark;
   background-color: transparent;
-
-  @media (max-width: $mobile-width-only) {
-    width: 194px;
-
-    font-size: 20px;
-    line-height: 20px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 452px;
@@ -130,6 +120,8 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
 
   color: $special-grey;
 
@@ -147,11 +139,6 @@
     }
   }
 
-  @media (min-width: $tablet-width) {
-    font-size: 18px;
-    line-height: 18px;
-  }
-
   @media (min-width: $desktop-width) {
     padding-left: 16px;
     padding-bottom: 21px;
@@ -164,11 +151,11 @@
 }
 
 .calendar__number {
+  height: 31px;
+
   border: 1px solid $special-grey--calendar;
 
   @media (max-width: $mobile-width-only) {
-    height: 31px;
-
     &:nth-child(2n + 1) {
       width: 31px;
     }
@@ -210,16 +197,12 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration: none;
 
   color: $basic-blue--dark;
   background-color: $basic-blue--light;
-
-  text-decoration: none;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 14px;
-    line-height: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     font-size: 18px;

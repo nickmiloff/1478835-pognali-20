@@ -25,9 +25,7 @@
 
   &:nth-of-type(2) {
     .step__desc {
-      @media (max-width: $mobile-width-only) {
-        margin-bottom: 22px;
-      }
+      margin-bottom: 22px;
 
       @media (min-width: $tablet-width) {
         max-width: 410px;
@@ -42,9 +40,7 @@
 
   &:nth-of-type(3) {
     .step__desc {
-      @media (max-width: $mobile-width-only) {
-        margin-bottom: 22px;
-      }
+      margin-bottom: 22px;
 
       @media (min-width: $tablet-width) {
         margin-bottom: 67px;
@@ -88,16 +84,13 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 22px;
+  padding-bottom: 23px;
+  margin-top: 31px;
+
+  border-radius: 10px;
 
   background-color: $basic-white;
-
-  @media (max-width: $mobile-width-only) {
-    padding-top: 22px;
-    padding-bottom: 23px;
-    margin-top: 31px;
-
-    border-radius: 10px;
-  }
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
@@ -124,14 +117,12 @@
 }
 
 .step__title {
+  max-width: 140px;
+
+  font-size: 20px;
+  line-height: 20px;
+
   color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    max-width: 140px;
-
-    font-size: 20px;
-    line-height: 20px;
-  }
 
   @media (min-width: $tablet-width) {
     max-width: 250px;
@@ -202,9 +193,7 @@
 }
 
 .step__desc {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 17px;
-  }
+  margin-top: 17px;
 
   @media (min-width: $tablet-width) {
     max-width: 525px;
@@ -301,20 +290,16 @@
 
 .step__label {
   position: relative;
+  margin-top: 20px;
+  margin-left: 25px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
 
   color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    margin-left: 25px;
-    margin-top: 20px;
-
-    font-size: 15px;
-    line-height: 15px;
-  }
 
   @media (min-width: $tablet-width) {
     order: 3;
@@ -340,42 +325,37 @@
   &::before {
     content: "";
     display: inline-block;
+    vertical-align: -7px;
+    width: 26px;
+    height: 26px;
+    margin-right: 13px;
 
     border: 1px solid $special-grey--light;
     border-radius: 4px;
-
-    @media (max-width: $mobile-width-only) {
-      vertical-align: -7px;
-      width: 26px;
-      height: 26px;
-      margin-right: 13px;
-    }
 
     @media (min-width: $tablet-width) {
       vertical-align: middle;
       width: 36px;
       height: 36px;
-
       margin-right: 22px;
     }
   }
 
   &::after {
     content: "";
+    width: 8px;
+    height: 8px;
     position: absolute;
     left: 0;
 
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 8px 8px;
 
     @media (max-width: $mobile-width-only) {
       top: 10px;
       left: 9px;
-      width: 8px;
-      height: 8px;
       margin-right: 11px;
-
-      background-size: 8px 8px;
     }
 
     @media (min-width: $tablet-width) {
@@ -402,16 +382,13 @@
 
 .step__checkbox:checked + .step__label {
   &::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23161C35' x='0px' y='0px' viewBox='0 0 12 12'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E");
+    background-image: url("../img/tick.svg");
   }
 }
 
 .step__calendar {
   align-self: center;
-
-  @media (max-width: $mobile-width-only) {
-    margin-top: 22px;
-  }
+  margin-top: 22px;
 
   @media (min-width: $tablet-width) {
     order: 5;
@@ -428,12 +405,18 @@
 .step__next-button {
   position: relative;
   display: block;
+  width: 229px;
+  padding: 5px 0;
+  margin-top: 22px;
 
   border: none;
+  border-radius: 50px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
   text-decoration: none;
   text-align: left;
 
@@ -441,15 +424,8 @@
   background-color: $basic-yellow;
 
   @media (max-width: $mobile-width-only) {
-    width: 229px;
-    padding: 5px 0;
-    margin-top: 22px;
     align-self: center;
 
-    border-radius: 50px;
-
-    font-size: 17px;
-    line-height: 30px;
     text-align: center;
     text-transform: uppercase;
   }
@@ -457,7 +433,10 @@
   @media (min-width: $tablet-width) {
     width: 284px;
     margin-top: 47px;
-    padding: 26px 60px 30px 34px;
+    padding-top: 26px;
+    padding-bottom: 30px;
+    padding-left: 34px;
+    padding-right: 60px;
 
     border-radius: 20px;
 
@@ -493,10 +472,11 @@
   }
 
   &--submit {
+    width: 286px;
+
     @media (max-width: $mobile-width-only) {
       width: 230px;
     }
-    width: 286px;
   }
 
   &:hover {
@@ -515,12 +495,15 @@
 .step__prev-button {
   position: relative;
   display: block;
+  width: 229px;
 
   border: none;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
   text-decoration: none;
   text-align: right;
 
@@ -528,11 +511,8 @@
 
   @media (max-width: $mobile-width-only) {
     align-self: center;
-    width: 229px;
     margin-top: 11px;
 
-    font-size: 17px;
-    line-height: 30px;
     letter-spacing: 0.01em;
     text-align: center;
     text-transform: uppercase;
@@ -540,6 +520,7 @@
 
   @media (min-width: $tablet-width) {
     width: 182px;
+
     font-size: 24px;
     line-height: 24px;
   }
@@ -573,13 +554,10 @@
 }
 
 .step__input-countrie {
+  margin-top: 22px;
+
   @media (max-width: $mobile-width-only) {
     align-self: center;
-    margin-top: 22px;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
 
     &:last-of-type {
       margin-bottom: 22px;
@@ -589,10 +567,6 @@
   @media (min-width: $tablet-width) {
     margin-top: 15px;
 
-    &:first-of-type {
-      margin-top: 0;
-    }
-
     &:last-of-type {
       margin-bottom: 15px;
     }
@@ -601,13 +575,13 @@
   @media (min-width: $desktop-width) {
     grid-column: 1 / -1;
 
-    &:first-of-type {
-      margin-top: 0;
-    }
-
     &:last-of-type {
       margin-bottom: 14px;
     }
+  }
+
+  &:first-of-type {
+    margin-top: 0;
   }
 }
 
@@ -626,10 +600,10 @@
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 25px;
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
-    margin-top: 25px;
   }
 
   @media (min-width: $tablet-width) {

@@ -20,16 +20,18 @@ var checkHeader = function () {
 }
 
 var logoChange = function () {
-  if (logo.src.includes("blue")) {
+  if (logo.srcset.includes("blue")) {
+    logo.srcset = logo.srcset.replace(/blue/g, "white");
     logo.src = logo.src.replace("blue", "white");
     logoSource.forEach(function (current) {
-      current.srcset = current.srcset.replace("blue", "white");
+      current.srcset = current.srcset.replace(/blue/g, "white");
     })
   }
   else {
+    logo.srcset = logo.srcset.replace(/white/g, "blue");
     logo.src = logo.src.replace("white", "blue");
     logoSource.forEach(function (current) {
-      current.srcset = current.srcset.replace("white", "blue");
+      current.srcset = current.srcset.replace(/white/g, "blue");
     })
   }
 }

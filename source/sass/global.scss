@@ -24,12 +24,9 @@ body {
 }
 
 .container {
+  width: 320px;
   margin: 0 auto;
-
-  @media (max-width: $mobile-width-only) {
-    width: 320px;
-    padding: 0 25px;
-  }
+  padding: 0 25px;
 
   @media (min-width: $tablet-width) {
     width: 768px;

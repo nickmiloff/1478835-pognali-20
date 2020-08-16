@@ -1,4 +1,10 @@
 .filter {
+  width: 270px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  padding-left: 25px;
+  padding-right: 25px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
 
@@ -6,14 +12,6 @@
 
   color: $basic-blue--dark;
   background-color: $basic-yellow;
-
-  @media (max-width: $mobile-width-only) {
-    width: 270px;
-    padding-top: 24px;
-    padding-bottom: 22px;
-    padding-left: 25px;
-    padding-right: 25px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 688px;
@@ -36,9 +34,10 @@
 }
 
 .filter__title {
+  font-size: 22px;
+  line-height: 22px;
+
   @media (max-width: $mobile-width-only) {
-    font-size: 22px;
-    line-height: 22px;
     letter-spacing: 0.02em;
   }
 
@@ -51,11 +50,8 @@
 .filter__form {
   display: grid;
   grid-column-gap: 10px;
-
-  @media (max-width: $mobile-width-only) {
-    grid-template-columns: 201px 10px;
-    margin-top: 36px;
-  }
+  grid-template-columns: 201px 10px;
+  margin-top: 36px;
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 112px 1fr;
@@ -84,12 +80,10 @@
 
 .filter__subtitle {
   grid-column: 1 / 2;
-  text-transform: uppercase;
 
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-    line-height: 18px;
-  }
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
 
   @media (min-width: $tablet-width) {
     align-self: center;
@@ -109,6 +103,7 @@
   position: relative;
   width: 10px;
   height: 18px;
+  margin-bottom: 21px;
 
   border: none;
 
@@ -128,10 +123,6 @@
     border-bottom: 0;
   }
 
-  @media (max-width: $mobile-width-only) {
-    margin-bottom: 21px;
-  }
-
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -142,13 +133,7 @@
   }
 
   &--active {
-    @media (max-width: $mobile-width-only) {
-      margin-bottom: 15px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 15px;
-    }
+    margin-bottom: 15px;
 
     @media (min-width: $desktop-width) {
       margin-bottom: 28px;
@@ -235,21 +220,17 @@
   &::before {
     content: "";
     display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
     vertical-align: text-top;
 
     border-radius: 4px;
 
+    background-size: 8px 8px;
     background-color: $basic-white;
     background-position: center;
     background-repeat: no-repeat;
-
-    @media (max-width: $mobile-width-only) {
-      width: 18px;
-      height: 18px;
-      margin-right: 9px;
-
-      background-size: 8px 8px;
-    }
 
     @media (min-width: $tablet-width) {
       width: 24px;
@@ -307,7 +288,7 @@
 
 .filter__checkbox:checked + .filter__label {
   &::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23161C35' x='0px' y='0px' viewBox='0 0 12 12'%3E%3Cpolygon points='12,0 3.8,8 0,4.3 0,8.3 3.8,12 12,4 '/%3E%3C/svg%3E");
+    background-image: url("../img/tick.svg");
   }
 
   &:hover {
@@ -322,10 +303,16 @@
 
 .filter__submit {
   grid-column: 1 / -1;
+  width: 230px;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  margin-top: 25px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
   text-align: center;
   text-transform: uppercase;
   color: $basic-blue;
@@ -336,14 +323,7 @@
   background-color: $basic-white;
 
   @media (max-width: $mobile-width-only) {
-    width: 230px;
-    padding-top: 13px;
-    padding-bottom: 11px;
-    margin-top: 25px;
     margin-left: -5px;
-
-    font-size: 17px;
-    line-height: 17px;
   }
 
   @media (min-width: $tablet-width) {

@@ -6,10 +6,6 @@
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
   }
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-  }
 }
 
 .countrie__picture {
@@ -20,17 +16,19 @@
 
 .countrie__img {
   vertical-align: top;
+  width: 270px;
+  height: 110px;
+
+  border-top-right-radius: 10px;
 
   @media (max-width: $mobile-width-only) {
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
   }
 
   @media (min-width: $tablet-width) {
     width: 186px;
     height: 140px;
 
-    border-top-left-radius: 0;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
   }
@@ -38,8 +36,12 @@
 
 .countrie__desc {
   display: flex;
-
+  width: 270px;
   min-height: 89px;
+  padding-top: 26px;
+  padding-bottom: 5px;
+  padding-left: 24px;
+  padding-right: 24px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
@@ -52,8 +54,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    width: 270px;
-    padding: 26px 24px 5px 24px;
+
     margin-top: -11px;
 
     border-radius: 10px;
@@ -62,7 +63,10 @@
   @media (min-width: $tablet-width) {
     flex-direction: column;
     width: 431px;
-    padding: 28px 29px 19px 29px;
+    padding-top: 28px;
+    padding-bottom: 19px;
+    padding-left: 29px;
+    padding-right: 29px;
 
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -70,19 +74,23 @@
 
   @media (min-width: $desktop-width) {
     width: 374px;
-    padding: 22px 30px 19px 30px;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
 .countrie__name {
+  max-width: 80px;
+
+  font-size: 21px;
+  line-height: 21px;
+
   color: $basic-black;
 
   @media (max-width: $mobile-width-only) {
-    max-width: 80px;
     margin-top: -2px;
-
-    font-size: 21px;
-    line-height: 21px;
   }
 
   @media (min-width: $tablet-width) {
@@ -98,12 +106,13 @@
 }
 
 .countrie__slogan {
+  max-width: 120px;
+
+  font-size: 16px;
+  line-height: 18px;
+
   @media (max-width: $mobile-width-only) {
     grid-column: 1 / -1;
-    max-width: 120px;
-
-    font-size: 16px;
-    line-height: 18px;
   }
 
   @media (min-width: $tablet-width) {
@@ -122,23 +131,22 @@
 }
 
 .countrie__users {
+  font-size: 16px;
+  line-height: 20px;
+
   &::before {
     content: "";
     display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
     vertical-align: middle;
 
     background-image: url("../img/user.svg");
+    background-size: 11px 12px;
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.1;
-
-    @media (max-width: $mobile-width-only) {
-      width: 14px;
-      height: 14px;
-      margin-right: 5px;
-
-      background-size: 11px 12px;
-    }
 
     @media (min-width: $tablet-width) {
       width: 24px;
@@ -155,9 +163,6 @@
 
   @media (max-width: $mobile-width-only) {
     justify-self: flex-end;
-
-    font-size: 16px;
-    line-height: 20px;
   }
 
   @media (min-width: $tablet-width) {

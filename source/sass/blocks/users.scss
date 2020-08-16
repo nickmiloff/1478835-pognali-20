@@ -5,16 +5,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -30px;
+  padding-top: 96px;
+  padding-bottom: 31px;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
   background-color: $special-blue--dark;
+  background-repeat: no-repeat;
+  background-size: 71px 71px, 143px 143px, 132px 132px;
+  background-position: -9px 337px, 152px 65px, -19px 64px;
+  background-image:
+    url("../img/rogovaya-back-mobile@1x.png"),
+    url("../img/smolov-back-desktop@1x.png"),
+    url("../img/rectangle-about-mobile.svg");
 
-  @media (max-width: $mobile-width-only) {
-    margin-top: -30px;
-    padding-top: 96px;
-    padding-bottom: 31px;
-
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/rogovaya-back-mobile@2x.png"),
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rectangle-about-mobile.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -24,6 +35,20 @@
 
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+
+    background-size: 285px 285px, 143px 143px, 212px 212px;
+    background-position: 409px 140px, 40px 486px, 40px 131px;
+    background-image:
+      url("../img/rogovaya-back-desktop@1x.png"),
+      url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rectangle-about-mobile.svg");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/rogovaya-back-desktop@2x.png"),
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rectangle-about-mobile.svg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -37,26 +62,22 @@
 
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
+
+    background-position: 190px 446px, 547px 194px, 60px 130px;
   }
 }
 
 .users__title {
-  @media (max-width: $mobile-width-only) {
-    align-self: flex-start;
-  }
-
-  @media (min-width: $tablet-width) {
-    align-self: flex-start;
-  }
+  align-self: flex-start;
 }
 
 .users__desc {
+  margin-top: 20px;
+
   color: $basic-white;
 
   @media (max-width: $mobile-width-only) {
     align-self: flex-start;
-
-    margin-top: 20px;
   }
 
   @media (min-width: $tablet-width) {
@@ -86,18 +107,17 @@
 
 .users__list {
   display: flex;
+  margin-top: 56px;
 
   list-style: none;
 
   @media (max-width: $mobile-width-only) {
-    margin-top: 56px;
     flex-direction: column;
   }
 
   @media (min-width: $tablet-width) {
     width: 620px;
     margin-top: 61px;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -123,9 +143,7 @@
 }
 
 .users__link {
-  @media (max-width: $mobile-width-only) {
-    margin-top: 19px;
-  }
+  margin-top: 19px;
 
   @media (min-width: $tablet-width) {
     margin-top: 81px;

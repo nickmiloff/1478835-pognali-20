@@ -8,25 +8,22 @@
 }
 
 .value-level__value {
+  width: 110px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0.06em;
   text-align: center;
 
   border: 1px solid $special-grey--light;
 
   background-color: $basic-white;
   color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    width: 110px;
-    padding-top: 10px;
-    padding-bottom: 7px;
-
-    font-size: 14px;
-    line-height: 13px;
-    letter-spacing: 0.06em;
-  }
 
   @media (min-width: $tablet-width) {
     width: 74px;
@@ -59,12 +56,12 @@
 
 .value-level__line {
   position: relative;
+  width: 220px;
   height: 2px;
 
   background-color: rgba($basic-blue--dark, 0.2);
 
   @media (max-width: $mobile-width-only) {
-    width: 220px;
     margin-top: 24px;
   }
 
@@ -85,17 +82,14 @@
 .value-level__pin {
   position: absolute;
   z-index: 1;
+  width: 10px;
+  height: 10px;
+  top: -4px;
 
   border: 0;
   border-radius: 50%;
 
   background-color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    top: -4px;
-    width: 10px;
-    height: 10px;
-  }
 
   @media (min-width: $tablet-width) {
     top: -6.5px;
@@ -104,9 +98,7 @@
   }
 
   &--first {
-    @media (max-width: $mobile-width-only) {
-      left: 67px;
-    }
+    left: 67px;
 
     @media (min-width: $tablet-width) {
       left: 68px;
@@ -118,9 +110,7 @@
   }
 
   &--second {
-    @media (max-width: $mobile-width-only) {
-      left: 210px;
-    }
+    left: 210px;
 
     @media (min-width: $tablet-width) {
       left: 269px;
@@ -142,15 +132,12 @@
 }
 
 .value-level__depth {
-  position: absolute;
   height: 2px;
+  position: absolute;
+  left: 67px + 5px;
+  right: 10px - 5px;
 
   background-color: $basic-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    left: 67px + 5px;
-    right: 10px - 5px;
-  }
 
   @media (min-width: $tablet-width) {
     left: 68px + 6.5px;

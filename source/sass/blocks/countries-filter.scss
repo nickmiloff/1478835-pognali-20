@@ -1,18 +1,16 @@
 .countries-filter {
+  padding-top: 40px;
+  padding-bottom: 16px;
+  margin-top: -20px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
 
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
   background-color: $special-grey--filter;
-
-  @media (max-width: $mobile-width-only) {
-    padding-top: 40px;
-    padding-bottom: 16px;
-    margin-top: -20px;
-
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
 
   @media (min-width: $tablet-width) {
     padding-top: 119px;
@@ -34,14 +32,11 @@
 .countries-filter__title {
   display: inline;
 
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 
   color: $special-blue--dark;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-    line-height: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -58,22 +53,17 @@
   &::before {
     content: "";
     display: inline-block;
+    width: 15px;
+    height: 10px;
+    margin-right: 12px;
     vertical-align: revert;
 
     background-image: url("../img/filter.svg");
+    background-size: 15px 10px;
     background-repeat: no-repeat;
     background-position: center;
 
-    @media (max-width: $mobile-width-only) {
-      width: 15px;
-      height: 10px;
-      margin-right: 12px;
-
-      background-size: 15px 10px;
-    }
-
     @media (min-width: $desktop-width) {
-      content: "";
       width: 23px;
       height: 15px;
       margin-right: 22px;
@@ -85,32 +75,31 @@
 
 .countries-filter__toggle {
   position: relative;
+  height: 18px;
   vertical-align: bottom;
   float: right;
 
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 0;
+  line-height: 20px;
+  text-transform: uppercase;
+
   border: none;
 
+  color: $special-blue--dark;
   background-color: transparent;
 
   @media (max-width: $mobile-width-only) {
     width: 17px;
-    height: 18px;
     margin-right: 4px;
-
-    font-size: 0;
   }
 
   @media (min-width: $tablet-width) {
     height: 20px;
 
-    font-family: "Blogger Sans", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: bold;
     font-size: 20px;
-    line-height: 20px;
-    text-transform: uppercase;
-
-    color: $special-blue--dark;
   }
 
   @media (min-width: $desktop-width) {
@@ -120,22 +109,22 @@
   &::after {
     content: "";
     display: inline-block;
+    width: 3px;
+    height: 3px;
     vertical-align: middle;
 
     border-radius: 50%;
 
+    box-shadow:
+      7px 0 0 0 $special-blue--dark,
+      14px 0 0 0 $special-blue--dark;
+
     background-color: $special-blue--dark;
 
     @media (max-width: $mobile-width-only) {
-      width: 3px;
-      height: 3px;
       position: absolute;
       left: 0;
       top: 7.5px;
-
-      box-shadow:
-        7px 0 0 0 $special-blue--dark,
-        14px 0 0 0 $special-blue--dark;
     }
 
     @media (min-width: $tablet-width) {
@@ -153,11 +142,10 @@
 }
 
 .countries-filter__list {
+  display: none;
   list-style: none;
 
   @media (max-width: $mobile-width-only) {
-    display: none;
-
     margin-top: 33px;
     margin-left: 25px;
 
@@ -176,15 +164,12 @@
 }
 
 .countries-filter__link {
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
 
   color: rgba($special-blue--dark, 0.3);
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-    line-height: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -222,13 +207,13 @@
 .countries-filter__alphabet {
   position: relative;
   display: none;
+  width: 220px;
+  margin-top: 23px;
   flex-wrap: wrap;
 
   list-style: none;
 
   @media (max-width: $mobile-width-only) {
-    width: 220px;
-    margin-top: 23px;
     margin-left: auto;
     margin-right: auto;
 
@@ -252,10 +237,11 @@
 }
 
 .countries-filter__letter-wrapper {
+  width: 45px;
+  margin-right: -1px;
+
   @media (max-width: $mobile-width-only) {
-    width: 45px;
     height: 42px;
-    margin-right: -1px;
     margin-top: -1px;
 
     &:nth-child(5n) {
@@ -289,17 +275,16 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
 
+  color: $basic-blue--dark;
+
   @media (max-width: $mobile-width-only) {
-    font-size: 14px;
-    line-height: 18px;
-
     border: 1px solid $special-grey--light;
-
-    color: $basic-blue--dark;
 
     &:hover {
       z-index: 1;
@@ -353,15 +338,12 @@
 
 .countries-filter__cities {
   display: none;
+  width: 220px;
   position: absolute;
+  top: 218px;
+  left: 0;
 
   list-style: none;
-
-  @media (max-width: $mobile-width-only) {
-    top: 218px;
-    left: 0;
-    width: 220px;
-  }
 
   @media (min-width: $tablet-width) {
     top: 3px;
@@ -383,10 +365,7 @@
 
   &--scroll {
     overflow-y: scroll;
-
-    @media (max-width: $mobile-width-only) {
-      max-height: 242px;
-    }
+    max-height: 242px;
 
     @media (min-width: $tablet-width) {
       max-height: 330px;
@@ -406,14 +385,11 @@
 
 .countries-filter__city {
   font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   text-decoration: none;
 
   color: $special-grey;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-    line-height: 22px;
-  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -431,10 +407,17 @@
 
 .countries-filter__button {
   display: none;
+  width: 270px;
+  padding-top: 11px;
+  padding-bottom: 8px;
+  margin-top: 283px;
+  margin-bottom: 12px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
 
   border: none;
   border-radius: 20px;
@@ -445,14 +428,6 @@
   background-color: $special-grey--button;
 
   @media (max-width: $mobile-width-only) {
-    width: 270px;
-    padding-top: 11px;
-    padding-bottom: 8px;
-    margin-top: 283px;
-    margin-bottom: 12px;
-
-    font-size: 16px;
-    line-height: 20px;
     letter-spacing: 0.05em;
   }
 

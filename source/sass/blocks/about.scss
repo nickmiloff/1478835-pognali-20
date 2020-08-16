@@ -4,18 +4,25 @@
 
   background-repeat: no-repeat;
 
-  @media (max-width: $mobile-width-only) {
-    padding-top: 31px;
-    padding-bottom: 84px;
+  padding-top: 31px;
+  padding-bottom: 84px;
 
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 
-    background-color: $special-blue--dark;
-    background-image: url("../img/about-mobile@1x.png");
-    background-size: 292px 353px;
-    background-position-x: 18px;
+  background-color: $special-blue--dark;
+  background-size: 292px 353px, 132px 132px;
+  background-position-x: 18px, -23px;
+  background-image:
+    url("../img/about-mobile@1x.png"),
+    url("../img/rectangle-about-mobile.svg");
+
+  @media (min-resolution: 2dppx) {
+    background-image:
+      url("../img/about-mobile@2x.png"),
+      url("../img/rectangle-about-mobile.svg");
   }
+
 
   @media (min-width: $tablet-width) {
     padding-top: 37px;
@@ -25,9 +32,17 @@
     border-bottom-right-radius: 60px;
 
     background-color: $special-blue--bg;
-    background-image: url("../img/about-tablet@1x.png");
-    background-size: 376px 548px;
-    background-position: 384px 48px;
+    background-size: 376px 548px, 688px 212px;
+    background-position: 384px 48px, 40px 0;
+    background-image:
+      url("../img/about-tablet@1x.png"),
+      url("../img/rectangle-about-tablet.svg");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/about-tablet@2x.png"),
+        url("../img/rectangle-about-tablet.svg");
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -39,9 +54,17 @@
     border-bottom-right-radius: 56px;
 
     background-color: $special-blue--dark;
-    background-image: url("../img/about-desktop@1x.png");
-    background-size: 630px 665px;
-    background-position: 750px 145px;
+    background-size: 630px 665px, 212px 212px;
+    background-position: 750px 145px, 60px 130px;
+    background-image:
+      url("../img/about-desktop@1x.png"),
+      url("../img/rectangle-about-mobile.svg");
+
+    @media (min-resolution: 2dppx) {
+      background-image:
+        url("../img/about-desktop@2x.png"),
+        url("../img/rectangle-about-mobile.svg");
+    }
   }
 }
 
@@ -68,9 +91,7 @@
 .about__desc {
   color: $basic-white;
 
-  @media (max-width: $mobile-width-only) {
-    margin-top: 19px;
-  }
+  margin-top: 19px;
 
   @media (min-width: $tablet-width) {
     max-width: 345px;

@@ -5,13 +5,10 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 300;
+  font-size: 16px;
+  line-height: 16px;
 
   color: $special-grey;
-
-  @media (max-width: $mobile-width-only) {
-    font-size: 16px;
-    line-height: 16px;
-  }
 
   @media (min-width: $tablet-width) {
     font-size: 28px;
@@ -20,28 +17,24 @@
 
   &::before {
     content: "";
-    position: absolute;
     display: block;
+    width: 200px;
     height: 1px;
+    position: absolute;
+    top: -13px;
+    left: 0;
 
     background-color: $special-grey--underline;
 
-    @media (max-width: $mobile-width-only) {
-      width: 200px;
-
-      top: -13px;
-      left: 0;
-    }
-
     @media (min-width: $tablet-width) {
-      width: 398px;
+      width: 562px;
 
       top: 2px;
       left: 92px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 528px;
+      width: 812px;
     }
   }
 }
@@ -50,23 +43,19 @@
   counter-increment: service-iterator;
   position: relative;
   display: flex;
+  width: 245px;
 
   @media (max-width: $mobile-width-only) {
-    width: 245px;
-
-    margin-top: 28px;
-
     flex-direction: column;
+    margin-top: 28px;
   }
 
   @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    align-items: center;
     width: 654px;
     min-height: 68px;
     padding-left: 90px;
-
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
@@ -75,21 +64,19 @@
 
   &::after {
     content: counter(service-iterator);
-    position: absolute;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    top: -9px;
 
     border-radius: 50%;
 
     color: $basic-white;
 
     @media (max-width: $mobile-width-only) {
-      width: 34px;
-      height: 34px;
-
-      top: -9px;
       right: 0;
     }
 
@@ -104,28 +91,24 @@
 
   &::before {
     content: "";
-    position: absolute;
     display: block;
+    width: 200px;
     height: 1px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
 
     background-color: $special-grey--underline;
 
-    @media (max-width: $mobile-width-only) {
-      width: 200px;
-
-      bottom: -15px;
-      left: 0;
-    }
-
     @media (min-width: $tablet-width) {
-      width: 398px;
+      width: 562px;
 
       bottom: 0;
       left: 92px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 528px;
+      width: 812px;
     }
   }
 

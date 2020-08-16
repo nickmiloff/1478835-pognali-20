@@ -1,15 +1,14 @@
 .profile {
   position: relative;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding-top: 24px;
+  padding-bottom: 34px;
 
   @media (max-width: $mobile-width-only) {
     justify-content: space-around;
-    padding-top: 24px;
-    padding-bottom: 34px;
   }
 
   @media (min-width: $tablet-width) {
@@ -57,9 +56,7 @@
 .profile__avatar {
   vertical-align: top;
 
-  @media (max-width: $mobile-width-only) {
-    border-radius: 50%;
-  }
+  border-radius: 50%;
 
   @media (min-width: $tablet-width) {
     width: 94px;
@@ -113,28 +110,23 @@
 
 .profile__change-button {
   display: block;
+  width: 270px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  margin-top: 18px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
-
+  font-size: 20px;
+  line-height: 18px;
   text-align: center;
   text-transform: uppercase;
 
+  border-radius: 40px;
+
   color: $basic-blue;
   background-color: $special-blue--light;
-
-  @media (max-width: $mobile-width-only) {
-    width: 270px;
-    padding-top: 10px;
-    padding-bottom: 12px;
-    margin-top: 18px;
-
-    border-radius: 40px;
-
-    font-size: 20px;
-    line-height: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     order: 3;
@@ -167,13 +159,10 @@
   position: relative;
   display: flex;
   justify-content: center;
+  width: 270px;
 
   border: 1px solid rgba($special-grey--light, 0.3);
   border-radius: 10px;
-
-  @media (max-width: $mobile-width-only) {
-    width: 270px;
-  }
 
   &--tags {
     @media (max-width: $mobile-width-only) {
@@ -239,21 +228,19 @@
 .profile__tags {
   resize: none;
 
+  width: 220px;
+
+
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
 
   border: none;
 
   color: rgba($special-grey, 0.6);
   background-color: transparent;
-
-  @media (max-width: $mobile-width-only) {
-    width: 220px;
-
-    font-size: 16px;
-    line-height: 18px;
-  }
 
   @media (min-width: $tablet-width) {
     width: 538px;
@@ -280,7 +267,8 @@
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-style: normal;
   font-weight: bold;
-
+  font-size: 16px;
+  line-height: 18px;
   text-transform: uppercase;
 
   color: $basic-blue--dark;
@@ -288,9 +276,6 @@
 
   @media (max-width: $mobile-width-only) {
     top: -10px;
-
-    font-size: 16px;
-    line-height: 18px;
   }
 
   @media (min-width: $tablet-width) {

@@ -1,11 +1,9 @@
 .review {
+  max-width: 160px;
+
   font-family: "Blogger Sans", "Arial", sans-serif;
 
   color: $basic-white;
-
-  @media (max-width: $mobile-width-only) {
-    max-width: 160px;
-  }
 
   @media (min-width: $tablet-width) {
     max-width: 265px;
@@ -13,17 +11,13 @@
 }
 
 .review__text {
+  max-width: 150px;
+  margin-bottom: 18px;
+
   font-style: normal;
   font-weight: 300;
-
-  @media (max-width: $mobile-width-only) {
-    max-width: 150px;
-
-    margin-bottom: 18px;
-
-    font-size: 16px;
-    line-height: 22px;
-  }
+  font-size: 16px;
+  line-height: 22px;
 
   @media (min-width: $tablet-width) {
     max-width: 265px;
@@ -40,15 +34,12 @@
 }
 
 .review__author {
+  max-width: 160px;
+
   font-style: normal;
   font-weight: bold;
-
-  @media (max-width: $mobile-width-only) {
-    max-width: 160px;
-
-    font-size: 16px;
-    line-height: 22px;
-  }
+  font-size: 16px;
+  line-height: 22px;
 
   @media (min-width: $tablet-width) {
     max-width: 250px;
