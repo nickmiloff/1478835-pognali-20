@@ -47,7 +47,7 @@
       }
 
       @media (min-width: $desktop-width) {
-        margin-bottom: 135px;
+        margin-bottom: 134px;
       }
     }
   }
@@ -215,6 +215,22 @@
 
 .step__plans-container {
   display: contents;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 1000px;
+      height: 1px;
+      position: relative;
+      top: -78px;
+      left: -2px;
+
+      background-color: $special-grey--underline;
+    }
+  }
 }
 
 .step__input-area {
