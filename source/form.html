@@ -1,64 +1,561 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Погнали</title>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="svg-template">
+      <!-- inject:svg --><svg xmlns="http://www.w3.org/2000/svg"><symbol id="contacts-mail" viewBox="0 0 36 26"><path d="M0 23c0 1.6 1.3 3 3 3h30c1.7 0 3-1.3 3-3V3c0-1.6-1.3-3-3-3H3C1.3 0 0 1.3 0 3v20zm11-10L4.2 6.2c-.6-.6-.6-1.5 0-2 .6-.6 1.5-.6 2.1 0l11 10.9c.4.4 1.2.4 1.6 0l11-10.9c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5 0 2L25 13l6.9 6.8c.6.6.6 1.5 0 2-.6.6-1.5.6-2.1 0L22.9 15s-2.1 2.2-2.5 2.5c-.6.6-1.4 1-2.4 1-.9 0-1.8-.4-2.4-1L13.1 15l-6.9 6.8c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2L11 13z"/></symbol><symbol id="contacts-phone" viewBox="0 0 36 36"><path d="M18 0C11.6 0 5.2 1.1 2.8 3.4.9 5.3.2 8.7 0 10.8v.3c0 .8.7 1.5 1.5 1.5.1 0 3.7-.3 5.9-.5h.2c.8 0 1.5-.7 1.5-1.5v-3C9 6.7 9.7 6 10.7 6h14.7c.8 0 1.6.7 1.6 1.7v3c0 .8.7 1.5 1.5 1.5h.2c2.2.2 5.8.5 5.9.5.8 0 1.5-.7 1.5-1.5v-.3c-.2-2.1-.9-5.5-2.8-7.4C30.8 1.1 24.4 0 18 0zm0 19.5c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3zm-2.3-6.8v-1.9c0-1-.8-1.9-1.9-1.9s-1.8.9-1.8 2v1.9L1.9 23.6c-.7.7-1.1 1.6-1.1 2.7v3c0 1.7 1.3 3 3 3h.8v1.9c0 1 .8 1.9 1.9 1.9s1.9-.8 1.9-1.9v-1.9h19.5v1.9c0 1 .8 1.9 1.9 1.9 1 0 1.9-.8 1.9-1.9v-1.9h.8c1.7 0 3-1.3 3-3v-3c0-1.1-.4-2-1.1-2.7L24 12.7v-1.9c0-1-.8-1.9-1.9-1.9s-1.9.8-1.9 1.9v1.9h-4.5zm2.3 3.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z"/></symbol></svg><!-- endinject -->
+    </div>
+    <header class="header">
+      <div class="header__wrapper container header__wrapper--active header__wrapper--no-js">
+        <a href="index.html"  class="header__logo logo">
+          <picture>
+            <source class="logo__source" type="image/webp" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
+            <source class="logo__source" type="image/webp" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+            <source class="logo__source" type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@1x.webp 2x">
+            <source class="logo__source" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+            <source class="logo__source" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+            <img class="logo__img" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
+          </picture>
+        </a>
+        <button type="button" class="header__toggle" aria-label="Открыть меню"></button>
+        <ul class="header__list contacts">
+          <li class="contacts__item">
+            <a href="tel:+78005558628" class="contacts__link contacts__tel" aria-label="Позвоните нам">
+              8 800 555-86-28
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__email" aria-label="Напишите нам">
+              mail@htmlacademy.ru
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a href="#" class="contacts__link contacts__auth">
+              Авторизация
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class="main-nav container main-nav--active main-nav--no-js">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link" data-hover="О сервисе">
+              О сервисе
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__link" data-hover="Направления">
+              Направления
+            </a>
+          </li>
+          <li class="main-nav__item">
+            <a href="catalog.html" class="main-nav__link" data-hover="Попутчики">
+              Попутчики
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="main-nav__auth">Авторизация</a>
+        <a href="tel:+78005558628" class="main-nav__tel tel">
+          <div class="tel__svg-wrapper">
+            <svg class="tel__svg" width="18" height="17" fill="#ffd74b">
+              <use xlink:href="#contacts-phone"></use>
+            </svg>
+          </div>
+          8 800 555-86-28
+        </a>
+        <a href="mailto:mail@htmlacademy.ru" class="main-nav__email email">
+          <div class="email__svg-wrapper">
+            <svg class="email__svg" width="18" height="13" fill="#ffd74b">
+              <use xlink:href="#contacts-mail"></use>
+            </svg>
+          </div>
+          mail@htmlacademy.ru
+        </a>
+        <ul class="main-nav__socials socials">
+          <li class="socials__item">
+            <a href="" class="socials__link socials__link--fb">
+              Facebook
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="" class="socials__link socials__link--vk">
+              Vkontakte
+            </a>
+          </li>
+          <li class="socials__item">
+            <a href="" class="socials__link socials__link--inst">
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HTML Academy: Погнали</title>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+    <main class="main">
+      <div class="main__title-wrapper">
+        <h1 class="main__title title title--page">Направления</h1>
+      </div>
 
-<body>
-  <header class="header">
-    <div class="header__wrapper container header__wrapper--active header__wrapper--no-js">
-      <a href="index.html"  class="header__logo logo">
+      <section class="profile container">
+        <h2 class="visually-hidden">Профиль</h2>
+        <div class="profile__level profile-level profile-level--80">
+          <span class="profile-level__value">80</span>
+          <span class="profile-level__text">level</span>
+        </div>
+        <div class="profile__img-wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" type="image/webp" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+            <source media="(min-width: 768px)" type="image/webp" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/demin-mobile@1x.webp1x, img/demin-mobile@2x.webp 2x">
+            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+            <img srcset="img/demin-mobile@1x.jpg 1x, img/demin-mobile@2x.jpg 2x" src="img/demin-mobile@1x.jpg" alt="Петя Демин" width="100" height="100" class="profile__avatar" />
+          </picture>
+          <input type="file" name="avatar" id="avatar-1" accept="image/*" class="visually-hidden" />
+          <label for="avatar-1" class="profile__photo-button">Фото</label>
+        </div>
+        <input type="file" name="avatar" id="avatar-2" accept="image/*" class="visually-hidden" />
+        <label for="avatar-2" class="profile__change-button">Сменить фото</label>
+        <div class="profile__field profile__field--tags">
+          <h3 class="profile__subtitle">Тэги</h3>
+          <textarea class="profile__tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
+        </div>
+        <div class="profile__field profile__field--transport">
+          <h3 class="profile__subtitle">Транспорт</h3>
+          <div class="profile__transport transport">
+            <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-1" value="Самолет" checked>
+            <label class="transport__item transport__item--input transport__item--plane" for="transport-1">
+              <span class="transport__name">
+                Самолет
+              </span>
+            </label>
+
+            <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-2" value="Поезд" checked>
+            <label class="transport__item transport__item--input transport__item--bus" for="transport-2">
+              <span class="transport__name">
+                Автобус
+              </span>
+            </label>
+
+            <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-3" value="Велосипед">
+            <label class="transport__item transport__item--input transport__item--bicycle" for="transport-3">
+              <span class="transport__name">
+                Велосипед
+              </span>
+            </label>
+
+            <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-4" value="Пешком" checked>
+            <label class="transport__item transport__item--input transport__item--foot" for="transport-4">
+              <span class="transport__name">
+                Пешком
+              </span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <section class="plans container">
+        <h2 class="plans__title title title--secondary">Мои планы:</h2>
+        <ol class="plans__list">
+          <li class="plans__item">
+            <h3 class="plans__countries">Франция, Италия</h3>
+            <div class="plans__info">
+              <span class="plans__companions">3 попутчика</span>
+              <span class="plans__date">26 мар — 29 мар</span>
+            </div>
+            <a href="#" class="plans__change-button">Изменить</a>
+          </li>
+          <li class="plans__item">
+            <h3 class="plans__countries">Тайланд, Индонезия</h3>
+            <div class="plans__info">
+              <span class="plans__companions">1 попутчик</span>
+              <span class="plans__date">1 июл — 15 июл</span>
+            </div>
+            <a href="#" class="plans__change-button">Изменить</a>
+          </li>
+        </ol>
+      </section>
+
+      <section class="add-plan container">
+        <h2 class="add-plan__title title title--secondary add-plan__title--1">Добавить план:</h2>
+        <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="add-plan__step step step--active" id="field-1">
+            <div class="step__wrapper" id="step-1">
+              <h3 class="step__title title">Шаг 1. Даты&nbsp;пребывания</h3>
+              <ul class="step__list">
+                <li class="step__item step__item--active">Даты</li>
+                <li class="step__item">Маршрут</li>
+                <li class="step__item">Развлечения</li>
+              </ul>
+              <p class="step__desc desc">
+                Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.
+              </p>
+              <div class="step__input-area step__input-area--companions input-area">
+                <label for="travelers-1" class="input-area__title">Ищу попутчиков:</label>
+                <span class="input-area__unit">чел.</span>
+                <div class="input-area__control">
+                  <button type="button" class="input-area__button input-area__button--minus" aria-label="Убрать попутчика"></button>
+                  <input type="text" pattern="[0-9]+" name="travelers" id="travelers-1" value="2" class="input-area__value" required />
+                  <button type="button" class="input-area__button input-area__button--plus" aria-label="Добавить попутчика"></button>
+                </div>
+              </div>
+              <div class="step__input-area step__input-area--duration input-area">
+                <label for="duration-1" class="input-area__title">Длительность:</label>
+                <span class="input-area__unit">дн.</span>
+                <div class="input-area__control">
+                  <button type="button" class="input-area__button input-area__button--minus" aria-label="Уменьшить длительность"></button>
+                  <input type="text" pattern="[0-9]+" name="duration" id="duration-1" value="2" class="input-area__value" required/>
+                  <button type="button" class="input-area__button input-area__button--plus" aria-label="Увеличить длительность"></button>
+                </div>
+              </div>
+              <input type="checkbox" name="children" id="children-1" class="step__checkbox visually-hidden" checked />
+              <label for="children-1" class="step__label">Можно с детьми</label>
+              <div class="step__calendar calendar">
+                <div class="calendar__control">
+                  <button type="button" class="calendar__button calendar__button--prev" aria-label="Предыдущий месяц"></button>
+                  <input class="calendar__date" type="text" name="month" value="Март 2019" readonly/>
+                  <button type="button" class="calendar__button calendar__button--next" aria-label="Следущий месяц"></button>
+                </div>
+                <table class="calendar__table">
+                  <thead class="calendar__days">
+                    <tr class="calendar__row calendar__row--days">
+                      <th class="calendar__day">Пн</th>
+                      <th class="calendar__day">Вт</th>
+                      <th class="calendar__day">Ср</th>
+                      <th class="calendar__day">Чт</th>
+                      <th class="calendar__day">Пт</th>
+                      <th class="calendar__day calendar__day--day-off">Сб</th>
+                      <th class="calendar__day calendar__day--day-off">Вс</th>
+                    </tr>
+                  </thead>
+                  <tbody class="calendar__numbers">
+                    <tr class="calendar__row">
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          23
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          24
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          25
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          26
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          27
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          28
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          1
+                          <span class="calendar__first-day">мар</span>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          2
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          3
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          4
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          5
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          6
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          7
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          8
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          9
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          10
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          11
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          12
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          13
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          14
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          15
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          16
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          17
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          18
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          19
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          20
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          21
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          22
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          23
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          24
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--disabled">
+                          25
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--active calendar__link--check-in">
+                          26
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--active">
+                          27
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link calendar__link--active calendar__link--check-out">
+                          28
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          29
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="calendar__row">
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          30
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          31
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          1
+                          <span class="calendar__first-day">апр</span>
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          2
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          3
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          4
+                        </a>
+                      </td>
+                      <td class="calendar__number">
+                        <a href="" class="calendar__link">
+                          5
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <input type="text" class="calendar__input" name="date-check-in" id="date-check-in" value="26">
+                <input type="text" class="calendar__input" name="date-check-out" id="date-check-out" value="28">
+              </div>
+              <a href="#step-2" class="step__next-button">Следующий шаг</a>
+            </div>
+          </fieldset>
+          <fieldset class="add-plan__step step step--active" id="field-2">
+            <div class="step__wrapper" id="step-2">
+              <h3 class="step__title title">Шаг 2. Маршрут</h3>
+              <ul class="step__list">
+                <li class="step__item">Даты</li>
+                <li class="step__item step__item--active">Маршрут</li>
+                <li class="step__item">Развлечения</li>
+              </ul>
+              <p class="step__desc desc">
+                Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.
+              </p>
+              <div class="step__countries-container">
+                <div class="step__input-countrie input-countrie">
+                  <input type="text" name="chosen-countrie" value="Босния и Герцеговина" class="input-countrie__input" readonly />
+                  <button type="button" class="input-countrie__dropdown-button"
+                    aria-label="Открыть меню выбора страны"></button>
+                  <div class="input-countrie__flag input-countrie__flag--bih"></div>
+                  <button type="button" class="input-countrie__delete-button" aria-label="Удалить пункт маршрута"></button>
+                </div>
+                <div class="step__input-countrie input-countrie">
+                  <input type="text" name="chosen-countrie" value="Чехия" class="input-countrie__input" readonly />
+                  <button type="button" class="input-countrie__dropdown-button"
+                    aria-label="Открыть меню выбора страны"></button>
+                  <div class="input-countrie__flag input-countrie__flag--cze"></div>
+                  <button type="button" class="input-countrie__delete-button" aria-label="Удалить пункт маршрута"></button>
+                </div>
+                <div class="step__input-countrie input-countrie input-countrie--empty">
+                  <input type="text" name="chosen-countrie" value="Выберите страну" class="input-countrie__input" readonly />
+                  <button type="button" class="input-countrie__dropdown-button"
+                    aria-label="Открыть меню выбора страны"></button>
+                  <div class="input-countrie__flag"></div>
+                  <button type="button" class="input-countrie__delete-button" aria-label="Удалить пункт маршрута"></button>
+                </div>
+              </div>
+              <div class="step__input-new-countrie new-countrie">
+                <span class="new-countrie__text">Добавить страну</span>
+                <button type="button" class="new-countrie__add-button" aria-label="Добавить пункт маршрута"></button>
+              </div>
+              <div class="step__control">
+                <a href="#step-3" class="step__next-button">Следующий шаг</a>
+                <a href="#step-1" class="step__prev-button">На шаг назад</a>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="add-plan__step step step--active" id="field-3">
+            <div class="step__wrapper" id="step-3">
+              <h3 class="step__title title">Шаг 3. Развлечения</h3>
+              <ul class="step__list">
+                <li class="step__item">Даты</li>
+                <li class="step__item">Маршрут</li>
+                <li class="step__item step__item--active">Развлечения</li>
+              </ul>
+              <p class="step__desc desc">
+                Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в
+                свободной форме и ставить тэги.
+              </p>
+              <div class="step__plans-container">
+                <div class="step__countrie-plan countrie-plan">
+                  <label for="countrie-plan-0" class="countrie-plan__countrie">Босния и Герцеговина</label>
+                  <textarea name="countrie-plan" id="countrie-plan-0" cols="30" rows="10" placeholder="План действий"
+                    class="countrie-plan__plan" required></textarea>
+                </div>
+                <div class="step__countrie-plan countrie-plan">
+                  <label for="countrie-plan-1" class="countrie-plan__countrie">Чехия</label>
+                  <textarea name="countrie-plan" id="countrie-plan-1" cols="30" rows="10" placeholder="План действий"
+                    class="countrie-plan__plan" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все</textarea>
+                </div>
+              </div>
+              <div class="step__control">
+                <button type="submit" class="step__next-button step__next-button--submit">Отправить</button>
+                <a href="#step-2" class="step__prev-button">На шаг назад</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <a href="index.html" class="footer__logo logo">
         <picture>
-          <source class="logo__source" media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-          <source class="logo__source" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-          <img class="logo__img" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
+          <source media="(min-width: 1440px)" type="image/webp" srcset="img/logo-desktop-blue@1x.webp 1x, img/logo-desktop-blue@2x.webp 2x">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
+          <source type="image/webp" srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@1x.webp 2x">
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="logo__img" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@1x.png 2x" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
         </picture>
       </a>
-      <button type="button" class="header__toggle" aria-label="Открыть меню"></button>
-      <ul class="header__list contacts">
-        <li class="contacts__item">
-          <a href="tel:+78005558628" class="contacts__link contacts__tel" aria-label="Позвоните нам">
-            8 800 555-86-28
-          </a>
-        </li>
-        <li class="contacts__item">
-          <a href="mailto:mail@htmlacademy.ru" class="contacts__link contacts__email" aria-label="Напишите нам">
-            mail@htmlacademy.ru
-          </a>
-        </li>
-        <li class="contacts__item">
-          <a href="#" class="contacts__link contacts__auth">
-            Авторизация
-          </a>
-        </li>
-      </ul>
-    </div>
-    <nav class="main-nav container main-nav--active main-nav--no-js">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link" data-hover="О сервисе">
-            О сервисе
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link" data-hover="Направления">
-            Направления
-          </a>
-        </li>
-        <li class="main-nav__item">
-          <a href="catalog.html" class="main-nav__link" data-hover="Попутчики">
-            Попутчики
-          </a>
-        </li>
-      </ul>
-      <a href="#" class="main-nav__auth">Авторизация</a>
-      <a href="tel:+78005558628" class="main-nav__tel tel">8 800 555-86-28</a>
-      <a href="mailto:mail@htmlacademy.ru" class="main-nav__email email">mail@htmlacademy.ru</a>
-      <ul class="main-nav__socials socials">
+      <ul class="footer__socials socials">
         <li class="socials__item">
           <a href="" class="socials__link socials__link--fb">
             Facebook
@@ -75,1559 +572,1085 @@
           </a>
         </li>
       </ul>
-    </nav>
-  </header>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="footer__in-link-logo" width="27" height="33"></a>
+    </footer>
 
-  <main class="main">
-    <div class="main__title-wrapper">
-      <h1 class="main__title title title--page">Направления</h1>
-    </div>
-
-    <section class="profile container">
-      <h2 class="visually-hidden">Профиль</h2>
-      <div class="profile__level profile-level profile-level--80">
-        <span class="profile-level__value">80</span>
-        <span class="profile-level__text">level</span>
+    <section class="countrie-dropdown">
+      <div class="countrie-dropdown__heder-wrapper">
+        <h2 class="countrie-dropdown__title">Выберите страну</h2>
+        <button type="button" class="countrie-dropdown__close-button" aria-label="Закрыть меню выбора страны"></button>
       </div>
-      <div class="profile__img-wrapper">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
-          <img srcset="img/demin-mobile@1x.jpg 1x, img/demin-mobile@2x.jpg 2x" src="img/demin-mobile@1x.jpg" alt="Петя Демин" width="100" height="100" class="profile__avatar" />
-        </picture>
-        <input type="file" name="avatar" id="avatar-1" accept="image/*" class="visually-hidden" />
-        <label for="avatar-1" class="profile__photo-button">Фото</label>
+      <div class="countrie-dropdown__alphabet-wrapper">
+        <ul class="countrie-dropdown__alphabet">
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter countrie-dropdown__letter--active">
+              А
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Б
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              В
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Г
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Д
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Е
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              З
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              И
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              К
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Л
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              М
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Н
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              О
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              П
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Р
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              С
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Т
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              У
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Ф
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Х
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Ч
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Ш
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Щ
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Э
+            </a>
+          </li>
+          <li class="countrie-dropdown__letter-wrapper">
+            <a href="#" class="countrie-dropdown__letter">
+              Ю
+            </a>
+          </li>
+        </ul>
       </div>
-      <input type="file" name="avatar" id="avatar-2" accept="image/*" class="visually-hidden" />
-      <label for="avatar-2" class="profile__change-button">Сменить фото</label>
-      <div class="profile__field profile__field--tags">
-        <h3 class="profile__subtitle">Тэги</h3>
-        <textarea class="profile__tags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
-      </div>
-      <div class="profile__field profile__field--transport">
-        <h3 class="profile__subtitle">Транспорт</h3>
-        <div class="profile__transport transport">
-          <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-1" value="Самолет" checked>
-          <label class="transport__item transport__item--input transport__item--plane" for="transport-1">
-            <span class="transport__name">
-              Самолет
-            </span>
-          </label>
+      <ul class="countrie-dropdown__list">
+        <li class="countrie-dropdown__item countrie-dropdown__item--active">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="aus">
+                Австралия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="aut">
+                Австрия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="aze">
+                Азербайджан
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="alb">
+                Албания
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="dza">
+                Алжир
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ago">
+                Ангола
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="and">
+                Андорра
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="atg">
+                Антигуа и Барбуда
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="arg">
+                Аргентина
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="arm">
+                Армения
+              </a>
+            </li>
+          </ul>
+        </li>
 
-          <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-2" value="Поезд" checked>
-          <label class="transport__item transport__item--input transport__item--bus" for="transport-2">
-            <span class="transport__name">
-              Автобус
-            </span>
-          </label>
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bhs">
+                Багамские Острова
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bgd">
+                Бангладеш
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="brb">
+                Барбадос
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bhr">
+                Бахрейн
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="blr">
+                Белоруссия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="blz">
+                Белиз
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bel">
+                Бельгия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ben">
+                Бенин
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="aut">
+                Болгария
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bgr">
+                Боливия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bih">
+                Босния и Герцеговина
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bwa">
+                Ботсвана
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bra">
+                Бразилия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="brn">
+                Бруней
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bfa">
+                Буркина-Фасо
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="bdi">
+                Бурунди
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="btn">
+                Бутан
+              </a>
+            </li>
+          </ul>
+        </li>
 
-          <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-3" value="Велосипед">
-          <label class="transport__item transport__item--input transport__item--bicycle" for="transport-3">
-            <span class="transport__name">
-              Велосипед
-            </span>
-          </label>
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="vut">
+                Вануату
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="gbr">
+                Великобритания
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="hun">
+                Венгрия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ven">
+                Венесуэла
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tls">
+                Восточный Тимор
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="vnm">
+                Вьетнам
+              </a>
+            </li>
+          </ul>
+        </li>
 
-          <input class="visually-hidden transport__checkbox" type="checkbox" name="transport" id="transport-4" value="Пешком" checked>
-          <label class="transport__item transport__item--input transport__item--foot" for="transport-4">
-            <span class="transport__name">
-              Пешком
-            </span>
-          </label>
-        </div>
-      </div>
-    </section>
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="gab">
+                Габон
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="hti">
+                Гаити
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="guy">
+                Гайана
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="gmb">
+                Гамбия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="gha">
+                Гана
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="gtm">
+                Гватемала
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="gin">
+                Гвинея
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="gnb">
+                Гвинея-Бисау
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="deu">
+                Германия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="hnd">
+                Гондурас
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="grd">
+                Гренада
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="grc">
+                Греция
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="geo">
+                Грузия
+              </a>
+            </li>
+          </ul>
+        </li>
 
-    <section class="plans container">
-      <h2 class="plans__title title title--secondary">Мои планы:</h2>
-      <ol class="plans__list">
-        <li class="plans__item">
-          <h3 class="plans__countries">Франция, Италия</h3>
-          <div class="plans__info">
-            <span class="plans__companions">3 попутчика</span>
-            <span class="plans__date">26 мар — 29 мар</span>
-          </div>
-          <a href="#" class="plans__change-button">Изменить</a>
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="dnk">
+                Дания
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="dji">
+                Джибути
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="dma">
+                Доминика
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="dom">
+                Доминикана
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="plans__item">
-          <h3 class="plans__countries">Тайланд, Индонезия</h3>
-          <div class="plans__info">
-            <span class="plans__companions">1 попутчик</span>
-            <span class="plans__date">1 июл — 15 июл</span>
-          </div>
-          <a href="#" class="plans__change-button">Изменить</a>
-        </li>
-      </ol>
-    </section>
 
-    <section class="add-plan container">
-      <h2 class="add-plan__title title title--secondary add-plan__title--1">Добавить план:</h2>
-      <form class="add-plan__form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="add-plan__step step step--active" id="field-1">
-          <div class="step__wrapper" id="step-1">
-            <h3 class="step__title title">Шаг 1. Даты&nbsp;пребывания</h3>
-            <ul class="step__list">
-              <li class="step__item step__item--active">Даты</li>
-              <li class="step__item">Маршрут</li>
-              <li class="step__item">Развлечения</li>
-            </ul>
-            <p class="step__desc desc">
-              Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку и&nbsp;ее&nbsp;предполагаемую длительность.
-            </p>
-            <div class="step__input-area step__input-area--companions input-area">
-              <label for="travelers-1" class="input-area__title">Ищу попутчиков:</label>
-              <span class="input-area__unit">чел.</span>
-              <div class="input-area__control">
-                <button type="button" class="input-area__button input-area__button--minus" aria-label="Убрать попутчика"></button>
-                <input type="text" pattern="[0-9]+" name="travelers" id="travelers-1" value="2" class="input-area__value" required />
-                <button type="button" class="input-area__button input-area__button--plus" aria-label="Добавить попутчика"></button>
-              </div>
-            </div>
-            <div class="step__input-area step__input-area--duration input-area">
-              <label for="duration-1" class="input-area__title">Длительность:</label>
-              <span class="input-area__unit">дн.</span>
-              <div class="input-area__control">
-                <button type="button" class="input-area__button input-area__button--minus" aria-label="Уменьшить длительность"></button>
-                <input type="text" pattern="[0-9]+" name="duration" id="duration-1" value="2" class="input-area__value" required/>
-                <button type="button" class="input-area__button input-area__button--plus" aria-label="Увеличить длительность"></button>
-              </div>
-            </div>
-            <input type="checkbox" name="children" id="children-1" class="step__checkbox visually-hidden" checked />
-            <label for="children-1" class="step__label">Можно с детьми</label>
-            <div class="step__calendar calendar">
-              <div class="calendar__control">
-                <button type="button" class="calendar__button calendar__button--prev" aria-label="Предыдущий месяц"></button>
-                <input class="calendar__date" type="text" name="month" value="Март 2019" readonly/>
-                <button type="button" class="calendar__button calendar__button--next" aria-label="Следущий месяц"></button>
-              </div>
-              <table class="calendar__table">
-                <thead class="calendar__days">
-                  <tr class="calendar__row calendar__row--days">
-                    <th class="calendar__day">Пн</th>
-                    <th class="calendar__day">Вт</th>
-                    <th class="calendar__day">Ср</th>
-                    <th class="calendar__day">Чт</th>
-                    <th class="calendar__day">Пт</th>
-                    <th class="calendar__day calendar__day--day-off">Сб</th>
-                    <th class="calendar__day calendar__day--day-off">Вс</th>
-                  </tr>
-                </thead>
-                <tbody class="calendar__numbers">
-                  <tr class="calendar__row">
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        23
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        24
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        25
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        26
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        27
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        28
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        1
-                        <span class="calendar__first-day">мар</span>
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="calendar__row">
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        2
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        3
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        4
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        5
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        6
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        7
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        8
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="calendar__row">
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        9
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        10
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        11
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        12
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        13
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        14
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        15
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="calendar__row">
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        16
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        17
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        18
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        19
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        20
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        21
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        22
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="calendar__row">
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        23
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        24
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--disabled">
-                        25
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--active calendar__link--check-in">
-                        26
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--active">
-                        27
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link calendar__link--active calendar__link--check-out">
-                        28
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        29
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="calendar__row">
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        30
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        31
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        1
-                        <span class="calendar__first-day">апр</span>
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        2
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        3
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        4
-                      </a>
-                    </td>
-                    <td class="calendar__number">
-                      <a href="" class="calendar__link">
-                        5
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <input type="text" class="calendar__input" name="date-check-in" id="date-check-in" value="26">
-              <input type="text" class="calendar__input" name="date-check-out" id="date-check-out" value="28">
-            </div>
-            <a href="#step-2" class="step__next-button">Следующий шаг</a>
-          </div>
-        </fieldset>
-        <fieldset class="add-plan__step step step--active" id="field-2">
-          <div class="step__wrapper" id="step-2">
-            <h3 class="step__title title">Шаг 2. Маршрут</h3>
-            <ul class="step__list">
-              <li class="step__item">Даты</li>
-              <li class="step__item step__item--active">Маршрут</li>
-              <li class="step__item">Развлечения</li>
-            </ul>
-            <p class="step__desc desc">
-              Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.
-            </p>
-            <div class="step__countries-container">
-              <div class="step__input-countrie input-countrie">
-                <input type="text" name="chosen-countrie" value="Босния и Герцеговина" class="input-countrie__input" readonly />
-                <button type="button" class="input-countrie__dropdown-button"
-                  aria-label="Открыть меню выбора страны"></button>
-                <div class="input-countrie__flag input-countrie__flag--bih"></div>
-                <button type="button" class="input-countrie__delete-button" aria-label="Удалить пункт маршрута"></button>
-              </div>
-              <div class="step__input-countrie input-countrie">
-                <input type="text" name="chosen-countrie" value="Чехия" class="input-countrie__input" readonly />
-                <button type="button" class="input-countrie__dropdown-button"
-                  aria-label="Открыть меню выбора страны"></button>
-                <div class="input-countrie__flag input-countrie__flag--cze"></div>
-                <button type="button" class="input-countrie__delete-button" aria-label="Удалить пункт маршрута"></button>
-              </div>
-              <div class="step__input-countrie input-countrie input-countrie--empty">
-                <input type="text" name="chosen-countrie" value="Выберите страну" class="input-countrie__input" readonly />
-                <button type="button" class="input-countrie__dropdown-button"
-                  aria-label="Открыть меню выбора страны"></button>
-                <div class="input-countrie__flag"></div>
-                <button type="button" class="input-countrie__delete-button" aria-label="Удалить пункт маршрута"></button>
-              </div>
-            </div>
-            <div class="step__input-new-countrie new-countrie">
-              <span class="new-countrie__text">Добавить страну</span>
-              <button type="button" class="new-countrie__add-button" aria-label="Добавить пункт маршрута"></button>
-            </div>
-            <div class="step__control">
-              <a href="#step-3" class="step__next-button">Следующий шаг</a>
-              <a href="#step-1" class="step__prev-button">На шаг назад</a>
-            </div>
-          </div>
-        </fieldset>
-        <fieldset class="add-plan__step step step--active" id="field-3">
-          <div class="step__wrapper" id="step-3">
-            <h3 class="step__title title">Шаг 3. Развлечения</h3>
-            <ul class="step__list">
-              <li class="step__item">Даты</li>
-              <li class="step__item">Маршрут</li>
-              <li class="step__item step__item--active">Развлечения</li>
-            </ul>
-            <p class="step__desc desc">
-              Наконец, расскажите о своих планах времяпровождения. Можно&nbsp;писать в
-              свободной форме и ставить тэги.
-            </p>
-            <div class="step__plans-container">
-              <div class="step__countrie-plan countrie-plan">
-                <label for="countrie-plan-0" class="countrie-plan__countrie">Босния и Герцеговина</label>
-                <textarea name="countrie-plan" id="countrie-plan-0" cols="30" rows="10" placeholder="План действий"
-                  class="countrie-plan__plan" required></textarea>
-              </div>
-              <div class="step__countrie-plan countrie-plan">
-                <label for="countrie-plan-1" class="countrie-plan__countrie">Чехия</label>
-                <textarea name="countrie-plan" id="countrie-plan-1" cols="30" rows="10" placeholder="План действий"
-                  class="countrie-plan__plan" required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все</textarea>
-              </div>
-            </div>
-            <div class="step__control">
-              <button type="submit" class="step__next-button step__next-button--submit">Отправить</button>
-              <a href="#step-2" class="step__prev-button">На шаг назад</a>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-    </section>
-  </main>
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="egy">
+                Египет
+              </a>
+            </li>
+          </ul>
+        </li>
 
-  <footer class="footer container">
-    <a href="index.html" class="footer__logo logo">
-      <picture>
-        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
-        <source  media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-        <img class="logo__img" srcset="img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@1x.png 2x" src="img/logo-mobile-blue@1x.png" alt="Логотип Погнали" width="100" height="19">
-      </picture>
-    </a>
-    <ul class="footer__socials socials">
-      <li class="socials__item">
-        <a href="" class="socials__link socials__link--fb">
-          Facebook
-        </a>
-      </li>
-      <li class="socials__item">
-        <a href="" class="socials__link socials__link--vk">
-          Vkontakte
-        </a>
-      </li>
-      <li class="socials__item">
-        <a href="" class="socials__link socials__link--inst">
-          Instagram
-        </a>
-      </li>
-    </ul>
-    <a href="https://htmlacademy.ru/intensive/adaptive" class="footer__link">Разработано <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="footer__in-link-logo" width="27" height="33"></a>
-  </footer>
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="zmb">
+                Замбия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="zwe">
+                Зимбабве
+              </a>
+            </li>
+          </ul>
+        </li>
 
-  <section class="countrie-dropdown">
-    <div class="countrie-dropdown__heder-wrapper">
-      <h2 class="countrie-dropdown__title">Выберите страну</h2>
-      <button type="button" class="countrie-dropdown__close-button" aria-label="Закрыть меню выбора страны"></button>
-    </div>
-    <div class="countrie-dropdown__alphabet-wrapper">
-      <ul class="countrie-dropdown__alphabet">
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter countrie-dropdown__letter--active">
-            А
-          </a>
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="isr">
+                Израиль
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ind">
+                Индия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="idn">
+                Индонезия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="jor">
+                Иордания
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="irq">
+                Ирак
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="irn">
+                Иран
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="irl">
+                Ирландия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="isl">
+                Исландия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="esp">
+                Испания
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ita">
+                Италия
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Б
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="cpv">
+                Кабо-Верде
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="kaz">
+                Казахстан
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="khm">
+                Камбоджа
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="cmr">
+                Камерун
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="can">
+                Канада
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="qat">
+                Катар
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ken">
+                Кения
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="cyp">
+                Кипр
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="kgz">
+                Киргизия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="kir">
+                Кирибати
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="chn">
+                Китай
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="col">
+                Колумбия
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            В
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="aut">
+                Лаос
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lao">
+                Латвия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lso">
+                Лесото
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lbr">
+                Либерия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lbn">
+                Ливан
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lby">
+                Ливия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ltu">
+                Литва
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lie">
+                Лихтенштейн
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lux">
+                Люксембург
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Г
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mus">
+                Маврикий
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mrt">
+                Мавритания
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mdg">
+                Мадагаскар
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mwi">
+                Малави
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mys">
+                Малайзия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mli">
+                Мали
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mdv">
+                Мальдивы
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mlt">
+                Мальта
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mar">
+                Марокко
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Д
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="nam">
+                Намибия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="nru">
+                Науру
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="npl">
+                Непал
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ner">
+                Нигер
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="nga">
+                Нигерия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="nld">
+                Нидерланды
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="nic">
+                Никарагуа
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="nzl">
+                Новая Зеландия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="nor">
+                Норвегия
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Е
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="are">
+                ОАЭ
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="omn">
+                Оман
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            З
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="pak">
+                Пакистан
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="plw">
+                Палау
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="pan">
+                Панама
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="png">
+                Папуа - Новая Гвинея
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="pry">
+                Парагвай
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="per">
+                Перу
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="pol">
+                Польша
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="prt">
+                Португалия
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            И
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="rwa">
+                Руанда
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="rou">
+                Румыния
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="rus">
+                Россия
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            К
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="slv">
+                Сальвадор
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="wsm">
+                Самоа
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="smr">
+                Сан-Марино
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="sau">
+                Саудовская Аравия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="syc">
+                Сейшелы
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="sen">
+                Сенегал
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="srb">
+                Сербия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="sgp">
+                Сингапур
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="syr">
+                Сирия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="svk">
+                Словакия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="svn">
+                Словения
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="usa">
+                США
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Л
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tjk">
+                Таджикистан
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tha">
+                Таиланд
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tza">
+                Танзания
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tgo">
+                Того
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ton">
+                Тонга
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tto">
+                Тринидад и Тобаго
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tuv">
+                Тувалу
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tun">
+                Тунис
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tkm">
+                Туркмения
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tur">
+                Турция
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            М
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="uga">
+                Уганда
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="uzb">
+                Узбекистан
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ukr">
+                Украина
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ury">
+                Уругвай
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Н
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="fji">
+                Фиджи
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="phl">
+                Филиппины
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="fin">
+                Финляндия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="fra">
+                Франция
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            О
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="hrv">
+                Хорватия
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            П
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="tcd">
+                Чад
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="mne">
+                Черногория
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="cze">
+                Чехия
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="chl">
+                Чили
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Р
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="che">
+                Швейцария
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="swe">
+                Швеция
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="lka">
+                Шри-Ланка
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            С
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="ecu">
+                Эквадор
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="eri">
+                Эритрея
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="swz">
+                Эсватини
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="est">
+                Эстония
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="eth">
+                Эфиопия
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Т
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="zaf">
+                ЮАР
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="south-sudan">
+                Южный Судан
+              </a>
+            </li>
+          </ul>
         </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            У
-          </a>
-        </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Ф
-          </a>
-        </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Х
-          </a>
-        </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Ч
-          </a>
-        </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Ш
-          </a>
-        </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Щ
-          </a>
-        </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Э
-          </a>
-        </li>
-        <li class="countrie-dropdown__letter-wrapper">
-          <a href="#" class="countrie-dropdown__letter">
-            Ю
-          </a>
+
+        <li class="countrie-dropdown__item">
+          <ul class="countrie-dropdown__cities">
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="jam">
+                Ямайка
+              </a>
+            </li>
+            <li class="countrie-dropdown__city-wrapper">
+              <a href="" class="countrie-dropdown__city" data-code="jpn">
+                Япония
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
-    </div>
-    <ul class="countrie-dropdown__list">
-      <li class="countrie-dropdown__item countrie-dropdown__item--active">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="aus">
-              Австралия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="aut">
-              Австрия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="aze">
-              Азербайджан
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="alb">
-              Албания
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="dza">
-              Алжир
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ago">
-              Ангола
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="and">
-              Андорра
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="atg">
-              Антигуа и Барбуда
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="arg">
-              Аргентина
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="arm">
-              Армения
-            </a>
-          </li>
-        </ul>
-      </li>
+    </section>
 
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bhs">
-              Багамские Острова
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bgd">
-              Бангладеш
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="brb">
-              Барбадос
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bhr">
-              Бахрейн
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="blr">
-              Белоруссия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="blz">
-              Белиз
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bel">
-              Бельгия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ben">
-              Бенин
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="aut">
-              Болгария
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bgr">
-              Боливия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bih">
-              Босния и Герцеговина
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bwa">
-              Ботсвана
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bra">
-              Бразилия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="brn">
-              Бруней
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bfa">
-              Буркина-Фасо
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="bdi">
-              Бурунди
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="btn">
-              Бутан
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="vut">
-              Вануату
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="gbr">
-              Великобритания
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="hun">
-              Венгрия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ven">
-              Венесуэла
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tls">
-              Восточный Тимор
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="vnm">
-              Вьетнам
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="gab">
-              Габон
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="hti">
-              Гаити
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="guy">
-              Гайана
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="gmb">
-              Гамбия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="gha">
-              Гана
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="gtm">
-              Гватемала
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="gin">
-              Гвинея
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="gnb">
-              Гвинея-Бисау
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="deu">
-              Германия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="hnd">
-              Гондурас
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="grd">
-              Гренада
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="grc">
-              Греция
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="geo">
-              Грузия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="dnk">
-              Дания
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="dji">
-              Джибути
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="dma">
-              Доминика
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="dom">
-              Доминикана
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="egy">
-              Египет
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="zmb">
-              Замбия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="zwe">
-              Зимбабве
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="isr">
-              Израиль
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ind">
-              Индия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="idn">
-              Индонезия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="jor">
-              Иордания
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="irq">
-              Ирак
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="irn">
-              Иран
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="irl">
-              Ирландия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="isl">
-              Исландия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="esp">
-              Испания
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ita">
-              Италия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="cpv">
-              Кабо-Верде
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="kaz">
-              Казахстан
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="khm">
-              Камбоджа
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="cmr">
-              Камерун
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="can">
-              Канада
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="qat">
-              Катар
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ken">
-              Кения
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="cyp">
-              Кипр
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="kgz">
-              Киргизия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="kir">
-              Кирибати
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="chn">
-              Китай
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="col">
-              Колумбия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="aut">
-              Лаос
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lao">
-              Латвия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lso">
-              Лесото
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lbr">
-              Либерия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lbn">
-              Ливан
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lby">
-              Ливия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ltu">
-              Литва
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lie">
-              Лихтенштейн
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lux">
-              Люксембург
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mus">
-              Маврикий
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mrt">
-              Мавритания
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mdg">
-              Мадагаскар
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mwi">
-              Малави
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mys">
-              Малайзия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mli">
-              Мали
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mdv">
-              Мальдивы
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mlt">
-              Мальта
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mar">
-              Марокко
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="nam">
-              Намибия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="nru">
-              Науру
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="npl">
-              Непал
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ner">
-              Нигер
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="nga">
-              Нигерия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="nld">
-              Нидерланды
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="nic">
-              Никарагуа
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="nzl">
-              Новая Зеландия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="nor">
-              Норвегия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="are">
-              ОАЭ
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="omn">
-              Оман
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="pak">
-              Пакистан
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="plw">
-              Палау
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="pan">
-              Панама
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="png">
-              Папуа - Новая Гвинея
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="pry">
-              Парагвай
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="per">
-              Перу
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="pol">
-              Польша
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="prt">
-              Португалия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="rwa">
-              Руанда
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="rou">
-              Румыния
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="rus">
-              Россия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="slv">
-              Сальвадор
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="wsm">
-              Самоа
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="smr">
-              Сан-Марино
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="sau">
-              Саудовская Аравия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="syc">
-              Сейшелы
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="sen">
-              Сенегал
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="srb">
-              Сербия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="sgp">
-              Сингапур
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="syr">
-              Сирия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="svk">
-              Словакия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="svn">
-              Словения
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="usa">
-              США
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tjk">
-              Таджикистан
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tha">
-              Таиланд
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tza">
-              Танзания
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tgo">
-              Того
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ton">
-              Тонга
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tto">
-              Тринидад и Тобаго
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tuv">
-              Тувалу
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tun">
-              Тунис
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tkm">
-              Туркмения
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tur">
-              Турция
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="uga">
-              Уганда
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="uzb">
-              Узбекистан
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ukr">
-              Украина
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ury">
-              Уругвай
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="fji">
-              Фиджи
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="phl">
-              Филиппины
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="fin">
-              Финляндия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="fra">
-              Франция
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="hrv">
-              Хорватия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="tcd">
-              Чад
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="mne">
-              Черногория
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="cze">
-              Чехия
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="chl">
-              Чили
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="che">
-              Швейцария
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="swe">
-              Швеция
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="lka">
-              Шри-Ланка
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="ecu">
-              Эквадор
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="eri">
-              Эритрея
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="swz">
-              Эсватини
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="est">
-              Эстония
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="eth">
-              Эфиопия
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="zaf">
-              ЮАР
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="south-sudan">
-              Южный Судан
-            </a>
-          </li>
-        </ul>
-      </li>
-
-      <li class="countrie-dropdown__item">
-        <ul class="countrie-dropdown__cities">
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="jam">
-              Ямайка
-            </a>
-          </li>
-          <li class="countrie-dropdown__city-wrapper">
-            <a href="" class="countrie-dropdown__city" data-code="jpn">
-              Япония
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <script src="js/utils.js"></script>
-  <script src="js/steps.js"></script>
-  <script src="js/countrie.js"></script>
-  <script src="js/calendar.js"></script>
-  <script src="js/dropdown-menu.js"></script>
-</body>
-
+    <script src="js/utils.js"></script>
+    <script src="js/steps.js"></script>
+    <script src="js/countrie.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/dropdown-menu.js"></script>
+  </body>
 </html>

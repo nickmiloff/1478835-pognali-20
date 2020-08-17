@@ -1,13 +1,64 @@
 .value-level__inputs {
+  position: relative;
   display: flex;
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     order: 1;
     margin-right: 4px;
   }
+
+  &::after {
+    content: "";
+    z-index: 2;
+    display: block;
+    width: 16px;
+    height: 1px;
+    position: absolute;
+    top: 15.5px;
+    left: 102px;
+
+    background-color: $special-grey--light;
+
+    @media (min-width: $tablet-width) {
+      width: 21px;
+      top: 22px;
+      left: 63px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 20px;
+      left: 86px;
+    }
+  }
+
+  &::before {
+    content: "";
+    z-index: 2;
+    display: block;
+    width: 16px;
+    height: 11px;
+    position: absolute;
+    top: 12px;
+    left: 102px;
+
+    background-color: $basic-white;
+
+    @media (min-width: $tablet-width) {
+      width: 21px;
+      height: 15px;
+      top: 15px;
+      left: 63px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 20px;
+      left: 86px;
+    }
+  }
 }
 
 .value-level__value {
+  position: relative;
   width: 110px;
   padding-top: 10px;
   padding-bottom: 7px;
@@ -36,21 +87,44 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 96px;
+    width: 96.5px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
   &--first {
+    width: 110.5px;
+
+    border-right-width: 0.5px;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    border-right: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 74.5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 96.5px;
+    }
   }
 
   &--second {
+    margin-left: -1px;
+    border-left-width: 0.5px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
-    border-left: 0;
+  }
+
+  &:hover {
+    z-index: 1;
+    border-color: rgba($basic-black, 0.3);
+  }
+
+  &:active,
+  &:focus {
+    z-index: 1;
+    border-color: $basic-black;
+    outline: none;
   }
 }
 

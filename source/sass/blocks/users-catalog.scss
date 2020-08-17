@@ -32,7 +32,9 @@
 }
 
 .users-catalog__more {
+  position: relative;
   justify-self: center;
+  padding-left: 30px;
   margin-top: 16px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
@@ -45,7 +47,39 @@
 
   color: $basic-blue--dark;
 
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    position: absolute;
+    top: 14px;
+    left: -3px;
+
+    border-radius: 2px;
+
+    background-color: $basic-blue--dark;
+
+    @media (min-width: $tablet-width) {
+      width: 26px;
+      height: 2px;
+      top: 8px;
+      left: -7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 10px;
+      left: -6px;
+    }
+  }
+
+  &::before {
+    transform: rotate(90deg);
+  }
+
   @media (min-width: $tablet-width) {
+    padding-left: 44px;
     margin-top: 49px;
 
     font-size: 20px;
@@ -53,7 +87,18 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: -69px;
     margin-top: 64px;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 0.6;
+  }
+
+  &:active::before,
+  &:active::after {
+    opacity: 0.3;
   }
 }
 

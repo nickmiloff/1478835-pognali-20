@@ -295,6 +295,11 @@
   }
 }
 
+.feedback__tel .tel__svg,
+.feedback__email .email__svg {
+  fill: currentColor;
+}
+
 .feedback__tel {
   @media (min-width: $desktop-width) {
     margin-right: 110px;

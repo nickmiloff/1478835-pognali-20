@@ -197,6 +197,11 @@
   }
 }
 
+.main-nav__tel:hover .tel__svg,
+.main-nav__email:hover .email__svg {
+  fill: currentColor;
+}
+
 .main-nav__socials {
   margin-top: 30px;
 

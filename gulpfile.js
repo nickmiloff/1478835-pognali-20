@@ -5,6 +5,13 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const svgstore = require("gulp-svgstore");
+const svgmin = require("gulp-svgmin");
+const inject = require("gulp-inject");
+const webp = require("gulp-webp");
+const rename = require("gulp-rename");
+const csso = require("gulp-csso");
+const imagemin = require("gulp-imagemin");
 
 // Styles
 
@@ -16,6 +23,10 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
@@ -28,7 +39,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: "source"
     },
     cors: true,
     notify: false,
@@ -39,6 +50,18 @@ const server = (done) => {
 
 exports.server = server;
 
+// localSprites
+
+const localSprites = () => {
+  let svgs = gulp.src("source/img/sprite-*.svg");
+
+  let fileContents = (filePath, file) => file.contents.toString();
+
+  return gulp.src("source/*.html")
+  .pipe(inject(svgs, { transform: fileContents }))
+  .pipe(gulp.dest("source/"));
+}
+
 // Watcher
 
 const watcher = () => {
@@ -47,5 +70,98 @@ const watcher = () => {
 }
 
 exports.default = gulp.series(
-  styles, server, watcher
+  styles, localSprites, server, watcher
+);
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/*.{woff,woff2}",
+    "source/js/*.js",
+    "source/*.html"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+}
+
+// CSS
+
+const css = () => {
+  return gulp.src("source/sass/style.scss")
+  .pipe(plumber())
+  .pipe(sourcemap.init())
+  .pipe(sass())
+  .pipe(postcss([
+    autoprefixer()
+  ]))
+  .pipe(csso())
+  .pipe(rename({
+    suffix: ".min"
+  }))
+  .pipe(sourcemap.write("."))
+  .pipe(gulp.dest("build/css"));
+}
+
+// SVG sprite
+
+const sprite = () => {
+  let svgs = gulp.src("source/img/contacts-*.svg")
+  .pipe(svgstore({ inlineSvg: true }))
+  .pipe(svgmin({
+    plugins: [{
+        removeStyleElement: true
+      },
+      {
+        removeAttrs: {
+          attrs: [
+            "fill",
+            "class",
+            "stroke"
+          ]
+        }
+      }
+    ]
+  }));
+
+  let fileContents = (filePath, file) => file.contents.toString();
+
+  return gulp.src("build/*.html")
+  .pipe(inject(svgs, { transform: fileContents }))
+  .pipe(gulp.dest("build/"));
+}
+
+exports.sprite = sprite;
+
+// Images min
+
+const images = () => {
+  return gulp.src("source/img/*.{png,jpg,svg}")
+  .pipe(imagemin([
+    imagemin.optipng({
+      optimizationLevel: 3
+    }),
+    imagemin.mozjpeg({
+      progressive: true
+    }),
+    imagemin.svgo(),
+  ]))
+  .pipe(gulp.dest("build/img"));
+}
+
+exports.images = images;
+
+// From png, jpg to webp
+
+const webpConv = () => {
+  return gulp.src("source/img/*.{png,jpg}")
+  .pipe(webp())
+  .pipe(gulp.dest("source/img"));
+}
+
+exports.webp = webpConv;
+
+exports.build = gulp.series(
+  copy, sprite, css, images, webpConv
 );
