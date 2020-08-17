@@ -26,13 +26,13 @@
     background-position: 40px 466px, 440px 140px;
     background-size: 141px 141px, 288px 574px;
     background-image:
-      url("../../img/rectangle-countries.svg"),
-      url("../../img/flags-back@1x.png");
+      url("../img/rectangle-countries.svg"),
+      url("../img/flags-back@1x.png");
 
     @media (min-resolution: 2dppx) {
       background-image:
-        url("../../img/rectangle-countries.svg"),
-        url("../../img/flags-back@2x.png");
+        url("../img/rectangle-countries.svg"),
+        url("../img/flags-back@2x.png");
     }
   }
 

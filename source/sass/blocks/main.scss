@@ -99,7 +99,28 @@
 
   color: $basic-white;
 
+  &::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 21px;
+    margin-left: 28px;
+
+    background-image: url("../img/return.svg");
+    background-repeat: no-repeat;
+    background-size: 30px 19px;
+  }
+
   @media (max-width: $mobile-width-only) {
     display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

@@ -92,12 +92,13 @@
   background-color: transparent;
 
   @media (max-width: $mobile-width-only) {
-    width: 17px;
+    width: 20px;
     margin-right: 4px;
   }
 
   @media (min-width: $tablet-width) {
     height: 20px;
+    padding-right: 56px;
 
     font-size: 20px;
   }
@@ -108,10 +109,12 @@
 
   &::after {
     content: "";
-    display: inline-block;
+    display: block;
     width: 3px;
     height: 3px;
-    vertical-align: middle;
+    position: absolute;
+    left: 3px;
+    top: 7.5px;
 
     border-radius: 50%;
 
@@ -121,22 +124,73 @@
 
     background-color: $special-blue--dark;
 
-    @media (max-width: $mobile-width-only) {
-      position: absolute;
-      left: 0;
-      top: 7.5px;
-    }
+    transition: 0.3s ease all;
 
     @media (min-width: $tablet-width) {
       width: 6px;
       height: 6px;
-
-      margin-right: 24px;
-      margin-left: 25px;
+      right: 24px;
+      left: unset;
 
       box-shadow:
         12px 0 0 0 $special-blue--dark,
         24px 0 0 0 $special-blue--dark;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 7.5px;
+  }
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      padding-right: 85px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-right: 89px;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      width: 19px;
+      height: 2px;
+      position: absolute;
+      top: 7px;
+      left: unset;
+      right: 0;
+
+      border-radius: 2px;
+      box-shadow: none;
+
+      background-color: $special-blue--dark;
+
+      transition: 0.3s ease transform;
+
+      @media (min-width: $tablet-width) {
+        width: 26px;
+        height: 2px;
+        right: 0;
+        top: 9px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 4px;
+        top: 10px;
+      }
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      transform: rotate(45deg);
     }
   }
 }
@@ -427,6 +481,25 @@
   color: $special-blue--dark;
   background-color: $special-grey--button;
 
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    margin-top: -3px;
+    margin-right: 12px;
+
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+      margin-right: 20px;
+    }
+  }
+
   @media (max-width: $mobile-width-only) {
     letter-spacing: 0.05em;
   }
@@ -455,6 +528,10 @@
 
   &:active {
     color: rgba($special-blue--dark, 0.3);
+  }
+
+  &:active::before {
+    opacity: 0.3;
   }
 
   &--active {
