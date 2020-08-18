@@ -12,6 +12,7 @@ const webp = require("gulp-webp");
 const rename = require("gulp-rename");
 const csso = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
+const del = require("del");
 
 // Styles
 
@@ -73,6 +74,14 @@ exports.default = gulp.series(
   styles, localSprites, server, watcher
 );
 
+// Clean
+
+const clean = () => {
+  return del("build/");
+}
+
+exports.clean = clean
+
 // Copy
 
 const copy = () => {
@@ -85,6 +94,8 @@ const copy = () => {
   })
   .pipe(gulp.dest("build"));
 }
+
+exports.copy = copy;
 
 // CSS
 
@@ -103,6 +114,8 @@ const css = () => {
   .pipe(sourcemap.write("."))
   .pipe(gulp.dest("build/css"));
 }
+
+exports.css = css;
 
 // SVG sprite
 
@@ -157,11 +170,11 @@ exports.images = images;
 const webpConv = () => {
   return gulp.src("source/img/*.{png,jpg}")
   .pipe(webp())
-  .pipe(gulp.dest("source/img"));
+  .pipe(gulp.dest("build/img"));
 }
 
 exports.webp = webpConv;
 
 exports.build = gulp.series(
-  copy, sprite, css, images, webpConv
+  clean, copy, sprite, css, images, webpConv
 );
