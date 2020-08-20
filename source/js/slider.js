@@ -136,6 +136,13 @@ var numberChange = function (index) {
   }
 };
 
+var initSlider = function () {
+  MAX = line.offsetWidth - firstPin.pin.offsetWidth;
+  console.log(MAX);
+  firstPin.getX(firstPin.value.value * MAX / maxValue);
+  secondPin.getX(secondPin.value.value * MAX / maxValue);
+}
+
 document.querySelectorAll(".value-level__value").forEach(function (value, index) {
   value.addEventListener("change", function () { numberChange(index); })
 })
@@ -154,3 +161,19 @@ document.querySelectorAll(".value-level__pin").forEach(function (pin, index) {
     }
   })
 })
+
+window.addEventListener("resize", function () {
+  if (currentDevice !== getCurrentDevice()) {
+    var currentFilterItem = line.closest(".filter__category");
+    if (!currentFilterItem.classList.contains("filter__category--active")) {
+      currentFilterItem.classList.toggle("filter__category--active");
+      initSlider();
+      currentFilterItem.classList.toggle("filter__category--active");
+    }
+    else {
+      initSlider();
+    }
+  }
+})
+
+initSlider();

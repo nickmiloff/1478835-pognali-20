@@ -11,12 +11,13 @@ var menu = document.querySelector(".main-nav");
 var currentDevice = null;
 
 var getCurrentDevice = function () {
-  if (window.matchMedia("(max-width: 1439px)").matches) {
-    return "tablet";
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    return "mobile";
   }
-  else {
+  else if (window.matchMedia("(min-width: 1440px)").matches) {
     return "desktop";
   }
+  return "tablet";
 }
 
 var checkHeader = function () {
@@ -36,7 +37,7 @@ var checkHeader = function () {
     })
   }
 
-  if (currentDevice === "tablet") {
+  if (currentDevice === "tablet" || currentDevice === "mobile") {
     header = document.querySelector(".header__wrapper");
     return "header__wrapper--active";
   }
@@ -152,7 +153,7 @@ window.addEventListener("scroll", function () {
 window.addEventListener("resize", function () {
   if (currentDevice !== getCurrentDevice()) {
     currentDevice = getCurrentDevice();
-    headerClass = checkHeader ();
+    headerClass = checkHeader();
   }
   if (pageYOffset > 1) {
     scrollMenu();
