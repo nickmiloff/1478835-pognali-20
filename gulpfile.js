@@ -46,6 +46,7 @@ exports.reload = reload;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(css));
   gulp.watch("source/*.html", gulp.series(html, sprite, reload));
+  gulp.watch("source/js/**/*.js", gulp.series(js, reload));
 }
 
 exports.watcher = watcher;
@@ -71,6 +72,19 @@ const copy = () => {
 }
 
 exports.copy = copy;
+
+// Js-copy
+
+const js = () => {
+  return gulp.src([
+    "source/js/*.js"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+}
+
+exports.js = js;
 
 // CSS
 
