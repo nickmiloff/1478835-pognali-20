@@ -361,7 +361,16 @@
             <a href="https://www.google.com/maps/dir/home/Bolshaya+Konyushennaya+St,+19%2F8,+Sankt-Peterburg,+191186/" class="map__link show-all-button show-all-button--bordered">Проложить маршрут</a>
           </div>
         </div>
-        <div id="map" class="map__wrapper"></div>
+        <div id="map" class="map__wrapper">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+              <img class="map__img" srcset="img/map-mobile@1x.jpg 1x, img/map-mobile@2x.jpg 2x" src="img/map-mobile@1x.jpg" alt="Логотип Погнали" width="320" height="424">
+            </picture>
+        </div>
       </section>
     </main>
 

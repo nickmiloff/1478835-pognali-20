@@ -45,7 +45,7 @@ exports.reload = reload;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(css));
-  gulp.watch("source/*.html", gulp.series(html, reload));
+  gulp.watch("source/*.html", gulp.series(html, sprite, reload));
 }
 
 exports.watcher = watcher;

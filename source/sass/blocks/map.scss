@@ -111,6 +111,7 @@
 }
 
 .map__wrapper {
+  overflow: hidden;
   position: relative;
   z-index: 1;
   height: 424px;
@@ -127,5 +128,22 @@
     height: 584px;
 
     margin-top: -93px;
+  }
+}
+
+.map__img {
+  display: block;
+  margin: 0 auto;
+  width: 320px;
+  height: 424px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    height: 581px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    height: 584px;
   }
 }
