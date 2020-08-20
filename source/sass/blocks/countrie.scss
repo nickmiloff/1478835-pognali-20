@@ -1,10 +1,49 @@
 .countrie {
   display: flex;
-
-  list-style: none;
+  position: relative;
 
   @media (max-width: $mobile-width-only) {
     flex-direction: column;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 24px;
+    position: absolute;
+    top: 86px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $mobile-width-only) {
+      left: 25px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 70px;
+      height: 47px;
+      top: 17px;
+      right: 149px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 24px;
+      right: 152px;
+    }
+  }
+
+  &--tha::before {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--fra::before {
+    background-image: url("../img/flag-france.svg");
+  }
+
+  &--cze::before {
+    background-image: url("../img/flag-czech.svg");
   }
 }
 

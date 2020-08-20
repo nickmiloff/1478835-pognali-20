@@ -1,11 +1,20 @@
 .plans {
-  padding-top: 26px;
-  padding-bottom: 60px;
+  overflow: hidden;
 
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
   background-color: $special-blue--light;
+
+  @media (min-width: $desktop-width) {
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+}
+
+.plans .container {
+  padding-top: 26px;
+  padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
     padding-top: 54px;
@@ -19,9 +28,12 @@
     padding-bottom: 125px;
     padding-left: 124px;
     padding-right: 58px;
+  }
+}
 
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
+.plans__title {
+  @media (min-width: $desktop-width) {
+    margin-left: 7px;
   }
 }
 

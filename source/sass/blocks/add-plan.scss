@@ -1,10 +1,23 @@
 .add-plan {
-  padding-top: 28px;
-  padding-bottom: 140px;
+  overflow: hidden;
   margin-top: -30px;
 
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+
+  background-color: $special-grey--dark;
+
+  @media (min-width: $desktop-width) {
+    margin-top: -60px;
+
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+  }
+}
+
+.add-plan .container {
+  padding-top: 28px;
+  padding-bottom: 140px;
 
   background-color: $special-grey--dark;
 
@@ -13,10 +26,6 @@
     padding-bottom: 125px;
     padding-left: 75px;
     padding-right: 75px;
-    margin-top: -30px;
-
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
   }
 
   @media (min-width: $desktop-width) {
@@ -24,10 +33,6 @@
     padding-bottom: 166px;
     padding-left: 60px;
     padding-right: 60px;
-    margin-top: -60px;
-
-    border-top-left-radius: 60px;
-    border-top-right-radius: 60px;
   }
 }
 

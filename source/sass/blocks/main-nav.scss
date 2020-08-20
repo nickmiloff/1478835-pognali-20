@@ -1,11 +1,36 @@
 .main-nav {
+  position: relative;
   z-index: 11;
+
+  background-color: $basic-white;
+
+  @media (min-width: $desktop-width) {
+    display: contents;
+    background-color: transparent;
+  }
+
+  &--active {
+    width: 100%;
+    position: fixed;
+    top: 73px;
+
+    @media (min-width: $tablet-width) {
+      top: 132px;
+    }
+  }
+
+  &--no-js {
+    display: flex;
+    position: relative;
+    top: 0;
+  }
+}
+
+.main-nav .container {
   display: none;
   flex-direction: column;
   padding-top: 42px;
   padding-bottom: 29px;
-
-  background-color: $basic-white;
 
   @media (min-width: $tablet-width) {
     padding-top: 49px;
@@ -37,24 +62,10 @@
       background-color: $basic-white;
     }
   }
+}
 
-  &--active {
-    display: flex;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 73px;
-
-    @media (min-width: $tablet-width) {
-      top: 132px;
-    }
-  }
-
-  &--no-js {
-    display: flex;
-    position: relative;
-    top: 0;
-  }
+.main-nav--active .container {
+  display: flex;
 }
 
 .main-nav__list {

@@ -20,7 +20,7 @@
   vertical-align: middle;
   width: 45px;
   height: 45px;
-  margin-right: 16px;
+  margin-right: 11px;
 
   border-radius: 50%;
 
@@ -29,13 +29,13 @@
   @media (min-width: $tablet-width) {
     width: 68px;
     height: 68px;
-    margin-right: 23px;
+    margin-right: 14px;
   }
 
   @media (min-width: $desktop-width) {
     width: 90px;
     height: 90px;
-    margin-right: 32px;
+    margin-right: 23px;
   }
 }
 

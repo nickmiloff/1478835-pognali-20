@@ -9,6 +9,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &--25 {
+    background-image: url("../img/level-25.svg");
+  }
+
+  &--50 {
+    background-image: url("../img/level-50.svg");
+  }
+
   &--80 {
     background-image: url("../img/level-80.svg");
   }

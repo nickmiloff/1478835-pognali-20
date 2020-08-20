@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var main = document.querySelector(".main");
 var logo = document.querySelector(".logo__img");
@@ -8,8 +8,35 @@ var header = document.querySelector(".header__wrapper");
 var headerClass = "";
 var menu = document.querySelector(".main-nav");
 
-var checkHeader = function () {
+var currentDevice = null;
+
+var getCurrentDevice = function () {
   if (window.matchMedia("(max-width: 1439px)").matches) {
+    return "tablet";
+  }
+  else {
+    return "desktop";
+  }
+}
+
+var checkHeader = function () {
+  var mainHeader = document.querySelector(".header");
+  var secondaryHeader = document.querySelector(".header__wrapper");
+
+  mainHeader.classList.remove("header--active");
+  secondaryHeader.classList.remove("header__wrapper--active");
+  menu.classList.remove("main-nav--active");
+  toggle.classList.remove("header__toggle--close");
+
+  if (logo.srcset.includes("blue")) {
+    logo.srcset = logo.srcset.replace(/blue/g, "white");
+    logo.src = logo.src.replace("blue", "white");
+    logoSource.forEach(function (current) {
+      current.srcset = current.srcset.replace(/blue/g, "white");
+    })
+  }
+
+  if (currentDevice === "tablet") {
     header = document.querySelector(".header__wrapper");
     return "header__wrapper--active";
   }
@@ -36,6 +63,18 @@ var logoChange = function () {
   }
 }
 
+var setDefault = function () {
+  if (logo.srcset.includes("blue")) {
+    logo.srcset = logo.srcset.replace(/blue/g, "white");
+    logo.src = logo.src.replace("blue", "white");
+    logoSource.forEach(function (current) {
+      current.srcset = current.srcset.replace(/blue/g, "white");
+    })
+  }
+  document.querySelector(".header__wrapper").classList.remove("header__wrapper--active");
+  document.querySelector(".header").classList.remove("header--active")
+}
+
 var initMenu = function () {
   logoChange();
   toggle.classList.add("header__toggle--active");
@@ -43,6 +82,8 @@ var initMenu = function () {
   header.classList.remove("header__wrapper--no-js")
   menu.classList.remove("main-nav--active");
   menu.classList.remove("main-nav--no-js");
+
+  currentDevice = getCurrentDevice();
 
   headerClass = checkHeader ();
 }
@@ -109,7 +150,13 @@ window.addEventListener("scroll", function () {
 })
 
 window.addEventListener("resize", function () {
-  headerClass = checkHeader ();
+  if (currentDevice !== getCurrentDevice()) {
+    currentDevice = getCurrentDevice();
+    headerClass = checkHeader ();
+  }
+  if (pageYOffset > 1) {
+    scrollMenu();
+  }
 })
 
 initMenu();

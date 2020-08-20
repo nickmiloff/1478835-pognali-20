@@ -1,11 +1,9 @@
 .countries-filter {
-  padding-top: 40px;
-  padding-bottom: 16px;
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
   margin-top: -20px;
-
-  font-family: "Blogger Sans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: bold;
 
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -13,14 +11,30 @@
   background-color: $special-grey--filter;
 
   @media (min-width: $tablet-width) {
-    padding-top: 119px;
-    padding-bottom: 58px;
     margin-top: -60px;
-    padding-left: 73px;
-    padding-right: 73px;
 
     border-bottom-left-radius: 56px;
     border-bottom-right-radius: 56px;
+  }
+
+  &--no-js {
+    position: static;
+  }
+}
+
+.countries-filter .container {
+  padding-top: 40px;
+  padding-bottom: 16px;
+
+  font-family: "Blogger Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 119px;
+    padding-bottom: 58px;
+    padding-left: 73px;
+    padding-right: 73px;
   }
 
   @media (min-width: $desktop-width) {
@@ -193,6 +207,10 @@
       transform: rotate(45deg);
     }
   }
+
+  &--no-js {
+    display: none;
+  }
 }
 
 .countries-filter__list {
@@ -270,6 +288,8 @@
   @media (max-width: $mobile-width-only) {
     margin-left: auto;
     margin-right: auto;
+    background-clip: content-box;
+    padding-bottom: 270px;
 
     background-color: $basic-white;
   }
@@ -282,7 +302,7 @@
   @media (min-width: $desktop-width) {
     width: 1250px;
     margin-top: 71px;
-    margin-left: 38px;
+    margin-left: 41px;
   }
 
   &--active {
@@ -316,6 +336,12 @@
 
   &:nth-child(5n) {
     margin-right: 0;
+  }
+}
+
+.countries-filter__layout-crutch {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 57px;
   }
 }
 
@@ -383,7 +409,7 @@
   @media (min-width: $desktop-width) {
     pointer-events: none;
 
-    width: 38px;
+    width: min-content;
     height: 60px;
 
     color: $basic-blue--dark;
@@ -464,7 +490,7 @@
   width: 270px;
   padding-top: 11px;
   padding-bottom: 8px;
-  margin-top: 283px;
+  margin-top: 13px;
   margin-bottom: 12px;
 
   font-family: "Blogger Sans", "Arial", sans-serif;
@@ -518,7 +544,7 @@
 
   @media (min-width: $desktop-width) {
     width: 1320px;
-    margin-top: 14px;
+    margin-top: 18px;
     margin-left: 0;
   }
 
