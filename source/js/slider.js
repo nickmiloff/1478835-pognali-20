@@ -138,7 +138,6 @@ var numberChange = function (index) {
 
 var initSlider = function () {
   MAX = line.offsetWidth - firstPin.pin.offsetWidth;
-  console.log(MAX);
   firstPin.getX(firstPin.value.value * MAX / maxValue);
   secondPin.getX(secondPin.value.value * MAX / maxValue);
 }
