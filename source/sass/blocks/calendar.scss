@@ -1,7 +1,7 @@
 .calendar__control {
   position: relative;
   width: 220px;
-  padding-top: 9px;
+  padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 21px;
 
@@ -29,7 +29,7 @@
     width: 532px;
     padding-left: 17px;
     padding-top: 21px;
-    padding-bottom: 22px;
+    padding-bottom: 23px;
     margin-bottom: 39px;
   }
 
@@ -37,7 +37,7 @@
     width: 1000px;
     padding-left: 0;
     padding-top: 22px;
-    padding-bottom: 21px;
+    padding-bottom: 22px;
     margin-bottom: 16px;
   }
 }
@@ -86,7 +86,7 @@
 }
 
 .calendar__date {
-  vertical-align: text-bottom;
+  vertical-align: bottom;
   width: 194px;
 
   border: none;

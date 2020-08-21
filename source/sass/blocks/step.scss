@@ -216,19 +216,29 @@
 .step__plans-container {
   display: contents;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     position: relative;
 
     &::before {
       content: "";
       display: block;
-      width: 1000px;
+      width: 532px;
       height: 1px;
+      position: relative;
+      top: -32px;
+      left: 1px;
+
+      background-color: $special-grey--underline;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      content: "";
+      width: 1000px;
       position: relative;
       top: -78px;
       left: -2px;
-
-      background-color: $special-grey--underline;
     }
   }
 }
