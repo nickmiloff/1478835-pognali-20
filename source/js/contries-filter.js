@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var filter = document.querySelector(".countries-filter");
 var filterElements = {
@@ -34,6 +34,14 @@ var closeFilter = function () {
   filterElements.parts.classList.remove("countries-filter__list--active");
   filterElements.alphabet.classList.remove("countries-filter__alphabet--active");
   filterElements.rollUpButton.classList.remove("countries-filter__button--active");
+}
+
+var initFilter = function () {
+  filter.classList.remove("countries-filter--no-js");
+  document.querySelector(".main__catalog-wrapper").classList.remove("main__catalog-wrapper--no-js");
+  filterElements.toggle.classList.remove("countries-filter__toggle--no-js");
+
+  closeFilter();
 }
 
 filterElements.toggle.addEventListener("click", function (evt) {
@@ -83,4 +91,4 @@ filterElements.alphabet.addEventListener("click", function (evt) {
   }
 })
 
-closeFilter();
+initFilter();

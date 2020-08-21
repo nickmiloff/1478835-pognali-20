@@ -1,13 +1,9 @@
 .feedback {
   position: relative;
   z-index: 3;
+  overflow: hidden;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: -30px;
-  padding-top: 100px;
-  padding-bottom: 28px;
 
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -16,8 +12,6 @@
 
   @media (min-width: $tablet-width) {
     margin-top: -60px;
-    padding-top: 132px;
-    padding-bottom: 58px;
 
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -25,7 +19,22 @@
 
   @media (min-width: $desktop-width) {
     margin-top: -60px;
+  }
+}
 
+.feedback .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 132px;
+    padding-bottom: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
     padding-top: 165px;
     padding-bottom: 102px;
   }
@@ -70,7 +79,7 @@
     @media (min-width: $desktop-width) {
       line-height: 30px;
 
-      margin-top: 60px;
+      margin-top: 68px;
       margin-left: -10px;
     }
   }
@@ -276,7 +285,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    margin-top: 54px;
+    margin-top: 46px;
     margin-left: 0;
     align-self: center;
   }

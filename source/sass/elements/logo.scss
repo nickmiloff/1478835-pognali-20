@@ -8,6 +8,10 @@
   }
 }
 
+.logo:not([href]) {
+  pointer-events: none;
+}
+
 .logo__img {
   width: 100px;
   height: 19px;

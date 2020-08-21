@@ -1,16 +1,35 @@
 .about {
   position: relative;
   z-index: 7;
-
-  background-repeat: no-repeat;
-
-  padding-top: 31px;
-  padding-bottom: 84px;
+  overflow: hidden;
 
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
   background-color: $special-blue--dark;
+
+  @media (min-width: $tablet-width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    background-color: $special-blue--bg;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -60px;
+
+    border-bottom-left-radius: 56px;
+    border-bottom-right-radius: 56px;
+
+    background-color: $special-blue--dark;
+  }
+}
+
+.about .container {
+  padding-top: 31px;
+  padding-bottom: 84px;
+
+  background-repeat: no-repeat;
   background-size: 292px 353px, 132px 132px;
   background-position-x: 18px, -23px;
   background-image:
@@ -23,15 +42,10 @@
       url("../img/rectangle-about-mobile.svg");
   }
 
-
   @media (min-width: $tablet-width) {
     padding-top: 37px;
     padding-bottom: 89px;
 
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
-
-    background-color: $special-blue--bg;
     background-size: 376px 548px, 688px 212px;
     background-position: 384px 48px, 40px 0;
     background-image:
@@ -48,12 +62,7 @@
   @media (min-width: $desktop-width) {
     padding-top: 188px;
     padding-bottom: 163px;
-    margin-top: -60px;
 
-    border-bottom-left-radius: 56px;
-    border-bottom-right-radius: 56px;
-
-    background-color: $special-blue--dark;
     background-size: 630px 665px, 212px 212px;
     background-position: 750px 145px, 60px 130px;
     background-image:
@@ -121,5 +130,13 @@
     margin-top: 38px;
 
     line-height: 24px;
+  }
+}
+
+.about__crutch {
+  display: none;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    display: block;
   }
 }

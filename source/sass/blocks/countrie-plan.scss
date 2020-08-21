@@ -156,6 +156,10 @@
     background-repeat: no-repeat, no-repeat;
     background-position: right, center;
 
+    @media (max-width: $mobile-width-only) {
+      background-size: 35px 24px, cover;
+    }
+
     @media (min-width: $tablet-width) {
       width: 70px;
       height: 47px;

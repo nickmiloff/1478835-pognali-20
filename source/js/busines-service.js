@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var popUp = document.querySelector(".busines-service");
 var openButton = document.querySelector(".regular-service__link");

@@ -1,28 +1,17 @@
 .footer {
   position: relative;
   z-index: 2;
+  overflow: hidden;
 
-  display: flex;
-  align-items: center;
   margin-top: -97px;
-  padding-top: 37px;
-  padding-bottom: 20px;
 
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
 
   background-color: $basic-white;
 
-  @media (max-width: $mobile-width-only) {
-    flex-direction: column;
-  }
-
   @media (min-width: $tablet-width) {
-    justify-content: space-between;
-
     margin-top: -67px;
-    padding-top: 47px;
-    padding-bottom: 31px;
 
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
@@ -30,11 +19,31 @@
 
   @media (min-width: $desktop-width) {
     margin-top: -95px;
-    padding-top: 48px;
-    padding-bottom: 43px;
 
     border-top-left-radius: 56px;
     border-top-right-radius: 56px;
+  }
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+  padding-top: 37px;
+  padding-bottom: 20px;
+
+  @media (max-width: $mobile-width-only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    padding-top: 47px;
+    padding-bottom: 31px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 48px;
+    padding-bottom: 43px;
   }
 }
 

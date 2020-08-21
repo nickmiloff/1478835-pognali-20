@@ -110,6 +110,11 @@
   }
 }
 
+.transport__checkbox:focus + .transport__item {
+  outline: 2px solid $special-blue--dark;
+}
+
+
 .transport__name {
   display: none;
   width: max-content;
