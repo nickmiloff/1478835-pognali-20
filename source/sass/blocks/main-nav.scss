@@ -12,7 +12,7 @@
   &--active {
     width: 100%;
     position: fixed;
-    top: 73px;
+    top: 65px;
 
     @media (min-width: $tablet-width) {
       top: 132px;
@@ -23,6 +23,12 @@
     display: flex;
     position: relative;
     top: 0;
+  }
+}
+
+.main-nav--main-page.main-nav--active {
+  @media (max-width: $mobile-width-only) {
+    top: 73px;
   }
 }
 
