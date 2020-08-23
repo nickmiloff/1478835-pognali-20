@@ -118,7 +118,6 @@
   border: none;
 
   @media (max-width: $mobile-width-only) {
-    display: flex;
     position: relative;
 
     &::before {

@@ -1,5 +1,8 @@
 .calendar__control {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 220px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -28,6 +31,7 @@
   @media (min-width: $tablet-width) {
     width: 532px;
     padding-left: 17px;
+    padding-right: 17px;
     padding-top: 21px;
     padding-bottom: 23px;
     margin-bottom: 39px;
@@ -36,6 +40,7 @@
   @media (min-width: $desktop-width) {
     width: 1000px;
     padding-left: 0;
+    padding-right: 0;
     padding-top: 22px;
     padding-bottom: 22px;
     margin-bottom: 16px;
