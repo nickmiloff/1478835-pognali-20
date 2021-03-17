@@ -33,7 +33,7 @@
     "build": "gulp build",
     "start": "gulp",
     "clean": "gulp clean",
-    "deploy": "gh-pages -d public",
+    "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
   "browserslist": [
