@@ -30,7 +30,7 @@
     "yargs-parser": "^5.0.0-security.0",
     "object-path": "^0.11.5",
     "http-proxy": "^1.18.1",
-    "merge": "^1.2.1",
+    "merge": "^2.1.1",
     "deep-extend": "^0.5.1"
   },
   "scripts": {
